@@ -1,0 +1,16 @@
+# References
+
+Claims trace to the sources below, verified against primary sources in August 2026. The failure rates and ETTR anchors are the load-bearing citations; the model is calibrated to [1] and cross-checked against [2].
+
+- **[1]** Grattafiori et al. (Meta), "The Llama 3 Herd of Models," arXiv:2407.21783, §3.3.4. 419 unexpected interruptions in a 54-day snapshot on 16,384 H100s (≈ one per ~3 h); **>90% effective training time**; only 3 of 419 needed significant manual intervention; ~78% of interruptions hardware-attributed. Used as the base-rate calibration and the ETTR anchor. https://arxiv.org/abs/2407.21783
+- **[2]** Kokolis et al. (Meta), "Revisiting Reliability in Large-Scale Machine Learning Research Clusters," arXiv:2410.21680. 150M+ A100 GPU-hours; failure rate 2.5–17.5 /1,000 node-days (time-varying); **MTTF ∝ 1/N** scaling (≈1.8 h projected at 16,384 GPUs); ETTR model with checkpoint interval + restart tax; lemon-node concentration and restart cascades. The scaling and time-variation anchors. https://arxiv.org/abs/2410.21680
+- **[3]** ByteDance large-cluster training reliability. MegaScale (Jiang et al., NSDI'24, arXiv:2402.15627): 12,288-GPU training, deep observability and straggler/fault diagnosis, 55.2% MFU. The overlapped/every-step-checkpoint regime this model represents (high ETTR at <1% checkpoint overhead) is reported by the later ByteRobust production-robustness work (ByteDance, 2025); exact figures vary by system. https://www.usenix.org/conference/nsdi24/presentation/jiang-ziheng
+- **[4]** Checkpoint-recovery systems that make cadence/overlap a first-class lever: Mohan et al., "CheckFreq" (FAST'21); Wang et al., "GEMINI: Fast Failure Recovery with In-Memory Checkpoints" (SOSP'23); Gupta et al., "Just-In-Time Checkpointing" (EuroSys'24). https://www.usenix.org/conference/fast21/presentation/mohan
+- **[5]** Young/Daly optimal checkpoint interval: J. W. Young, "A first order approximation to the optimum checkpoint interval," CACM 1974; J. T. Daly, "A higher order estimate of the optimum checkpoint interval," FGCS 2006. The write-cost-vs-lost-work optimum this model's cadence sweep reproduces.
+- **[6]** Silent data corruption (named as a regime, out of scope for device-level modelling): Dixit et al. (Meta), "Silent Data Corruptions at Scale," arXiv:2102.11245; Hochschild et al. (Google), "Cores that don't count," HotOS 2021. SDC can invalidate the last good checkpoint — an economic effect representable here, a detection problem for the companion chaos standard. https://arxiv.org/abs/2102.11245
+- **[7]** NVIDIA NCCL / PyTorch timeout semantics (the "two clocks", carried from the chaos standard): NCCL_IB_TIMEOUT ≈ 30 s at defaults vs the 600 s PyTorch NCCL watchdog. Detection time is a swept parameter here. https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/env.html
+
+## Companion / series
+
+- **[8]** DIMAGGI AI, Chaos Fidelity Standard (ai-cluster-chaos-fidelity) — certifies that a recovery behavior fires on the real fault. https://github.com/dimaggi-ai/ai-cluster-chaos-fidelity
+- **[9]** DIMAGGI AI, scheduler-vs-more-gpus and network-vs-more-gpus — the allocation and interconnect pillars of the same `usable = nominal × A × E × P` framework. https://github.com/dimaggi-ai/scheduler-vs-more-gpus

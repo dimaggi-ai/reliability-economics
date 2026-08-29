@@ -1,0 +1,15 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r sim/requirements.txt
+      - name: Invariants + validation anchors
+        run: cd sim && python3 test_reliability_sim.py
+      - name: Figures + results regenerate without error
+        run: cd sim && python3 run.py

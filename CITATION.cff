@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Reliability Economics: which recovery policy wins in which failure regime"
+authors:
+  - family-names: Nanyonga
+    given-names: Margaret
+    affiliation: DIMAGGI AI
+repository-code: "https://github.com/dimaggi-ai/reliability-economics"
+license: MIT
+year: 2026
+keywords:
+  - GPU cluster reliability
+  - ETTR
+  - MTBF
+  - MTTR
+  - checkpointing
+  - fault tolerance
+  - AI training infrastructure
