@@ -13,9 +13,13 @@ design choices that matter (see ../BUILD_SPEC.md):
   2. CORRELATED failures. A base rate of single-node faults PLUS rarer
      common-cause bursts (rack/PDU/switch) that fail a blast radius of nodes at
      once. Poisson single-node is the b=1 special case, not the whole model.
-  3. SPARES AS A FINITE QUEUE with four clocks: failover (swap), repair,
-     requalification, return-to-pool. A used spare is unavailable until
-     repair+requal complete — the pool can be exhausted.
+  3. SPARES AS A FINITE QUEUE with three clocks: swap-in-and-reload, repair,
+     requalification. A used spare is unavailable until repair+requal complete
+     (return-to-pool is their sum, not a fourth clock) — the pool can be
+     exhausted. Bringing a warm spare in is folded into reload_h rather than
+     charged separately; that is the optimistic reading, and ETTR is sensitive
+     to it (doubling reload_h costs ~6 points), so sim/validation.py reports
+     that sensitivity next to the ETTR anchor.
   4. CHECKPOINT is a policy lever with a WRITE COST: interval c and per-write
      stall w. Lost work per interruption ~ progress since last checkpoint;
      frequent checkpointing trades lost work for write overhead (Young/Daly).
@@ -53,9 +57,12 @@ class Config:
     burst_rate_per_h: float = 0.0             # common-cause events per hour (0 = independent)
     burst_blast: int = 1                      # nodes lost per burst event
     # recovery timing (hours)
-    detect_h: float = 0.033               # ~2 min (tuned); manual overridden below
-    reload_h: float = 0.25                # checkpoint reload + rendezvous
-    swap_h: float = 0.25                  # warm-spare failover
+    detect_h: float = 0.033               # ~2 min: a TUNED detection posture
+                                          # (~30 s NCCL transport timeout, not
+                                          # the 600 s watchdog) [7]. Not swept;
+                                          # the manual policy uses operator_h.
+    reload_h: float = 0.25                # warm-spare swap-in + checkpoint
+                                          # reload + rendezvous, together
     repair_h: float = 4.0                 # physical repair of a failed node
     requal_h: float = 1.0                 # burn-in / requalification before reuse
     operator_h: float = 1.0               # human response (manual policy only)
@@ -186,7 +193,7 @@ class Sim:
                     spare_avail -= nfail
                     for _ in range(nfail):
                         heapq.heappush(spare_returns, te + c.repair_h + c.requal_h)
-                    outage = detect + c.reload_h                    # fast swap
+                    outage = detect + c.reload_h    # swap-in folded into reload
                 else:
                     outage = detect + c.repair_h + c.reload_h       # wait for repair
                 if te >= busy_until:

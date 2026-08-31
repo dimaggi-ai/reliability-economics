@@ -2,7 +2,7 @@
 
 **At scale a GPU cluster faults every few hours, so you will spend on recovery — the question is on *what*.** Warm spares, elastic degradation, frequent checkpointing, faster repair: which one buys the most usable capacity per dollar is not fixed — it depends on your failure process. This repository maps it, with a reproducible simulator that reports the answer in the field's units (ETTR/goodput) and in dollars.
 
-**TL;DR:** the headline is a **phase diagram**, not a number. On a 16,384-GPU training job, no-spares always loses to elastic-shrink; **elastic-shrink is a strong robust default (~0.80)** that beats a tiny spare pool even under independent failures; a **right-sized pool + overlapped checkpointing (k ≈ 8) is the best policy (~0.87), but only in a band and by a thin margin** — and *over-provisioning the pool is charged and hurts*. The gap between a naive and a well-provisioned recovery posture is **~\$21M/month on one cluster**. A Meta-like configuration reproduces Meta's published >90% effective-training-time regime; the model is checked against that and against Meta RSC's MTTF-vs-N scaling.
+**TL;DR:** the headline is a **phase diagram**, not a number. On a 16,384-GPU training job, no-spares always loses to elastic-shrink; **elastic-shrink is a strong robust default (~0.80)** that beats a tiny spare pool even under independent failures; a **right-sized pool + overlapped checkpointing (k ≈ 8) is the best policy (~0.87), but only in a band and by a thin margin** — and *over-provisioning the pool is charged and hurts*. The gap between a naive and a well-provisioned recovery posture is **~\$21M/month on one cluster**. A Meta-like configuration lands at ~0.87 ETTR, just under Meta's published >90% effective-training-time bound — the same regime, against ~16–22% for a naive posture; the model is checked against that and against Meta RSC's MTTF-vs-N scaling.
 
 *Third quantitative pillar of the DIMAGGI series on turning GPU capital into usable compute, and the companion to the [Chaos Fidelity Standard](https://github.com/dimaggi-ai/ai-cluster-chaos-fidelity) — chaos certifies that a recovery behavior works; this prices what it is worth. Full analysis in [docs/study.md](docs/study.md) and the staged preprint [paper/paper.md](paper/paper.md); all claims trace to [REFERENCES.md](REFERENCES.md).*
 
@@ -22,13 +22,57 @@ Blue = warm spares + overlapped checkpoint win; red = elastic-shrink wins. The w
 
 ![Validation](figures/validation.png)
 
-A model that cannot reproduce known numbers is a toy. A Meta-like config (right-sized pool, overlapped checkpointing, fast detection) reaches ~0.87 ETTR against Meta's published >90% [1]; MTTF falls with cluster size, consistent with Meta RSC's ∝ 1/N (slightly steeper at the top end) [2]. This also explains why a naive config sits at ~16–22% ETTR while Meta hit >90% on the same hardware — different regime, same model.
+A model that cannot reproduce known numbers is a toy. A Meta-like config (right-sized pool, overlapped checkpointing, fast detection) reaches ~0.87 ETTR against Meta's published >90% [1]; MTTF falls with cluster size, consistent with Meta RSC's ∝ 1/N (slightly steeper at the top end) [2] — though rate ∝ N is an *input* of the fault generator, so this is a direction check, not a fitted validation. This also explains why a naive config sits at ~16–22% ETTR while Meta hit >90% on the same hardware — different regime, same model.
+
+These anchors are machine-checked by a six-point validation registry
+([sim/validation.py](sim/validation.py)) run in CI, split into three
+kinds by how much each is actually worth.
+
+**Calibrated** points pin constants fitted to published figures so they
+cannot drift silently: the single-node fault rate (1.58×10⁻⁴/node-h,
+implied by 419 interruptions / 54 days / 2,048 nodes [1]) and the
+latent-fault count it generates at the published exposure (413.5 vs
+419, inside a band set at 1.2× the Poisson sd of a 419-count). Neither
+is evidence — the rate was *derived from* 419, so these points cannot
+disagree with their own reference by more than sampling noise, and the
+registry says so.
+
+**Emergent** points are behaviors nothing was tuned to produce, each
+averaged over eight seeds. ETTR lands at **0.865** against Meta's
+published >90% [1] — and the assertion is deliberately *directional*
+(0.85 ≤ ETTR < 0.90) rather than a band around 0.90, because >90% is a
+published **lower bound**: a model with zero detection and zero reload
+scores 0.947 and would have passed a two-sided band while being
+physically impossible. A companion test asserts that impossible model
+**fails**. The swept checkpoint-interval optimum lands within 0.5% of
+Young's first-order √(2wM) [5], with a band derived from grid
+resolution rather than fitted.
+
+**Sanity** points pin the model's own machinery and cite nothing.
+An automation-class policy surfaces 91% of latent faults as separate
+interruptions (vs a naive no-spare posture's 107, a 3.5× gap that *is*
+policy-conditioned — the repo's core point). And MTTF degradation
+steepens past linear across four doublings (2.07×, 2.25×, 2.53×,
+4.07×): a ~2× ratio is *structural*, since rate ∝ N is an input of the
+generator, so only the excess above 2× — the recovery layer saturating
+at width — is a model result. Agreement with Meta's ∝1/N [2] and the
+LANL study [10] is a direction check discussed in
+[docs/study.md](docs/study.md), not evidence produced here.
+
+The registry also prints the two anchors it **declines** to check — [2]'s
+absolute ~1.8 h MTTF projection and [3]'s <1% checkpoint overhead — and
+why the model would miss them. Synthetic data is the seeded
+latent-event generator itself.
+
+```
+cd sim && python3 validation.py     # the registry, model vs public record
+```
 
 ## Reproduce
 
 ```
 pip install -r sim/requirements.txt
-make test        # invariants + validation-against-anchors
+make test        # invariants + the validation registry (incl. its negative controls)
 make figures     # phase diagram, crossover, checkpoint optimum, validation (~1 s)
 ```
 

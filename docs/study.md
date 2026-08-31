@@ -51,7 +51,7 @@ The spread between a naive posture and a well-provisioned one is **~\$21M/month 
 
 ## Validation against published anchors
 
-A model that cannot reproduce known numbers is a toy. Detection time — the gap between the ~30 s InfiniBand transport timeout and the 600 s PyTorch watchdog [7] — is one swept input; the model is checked against two published anchors:
+A model that cannot reproduce known numbers is a toy. Detection time — the gap between the ~30 s InfiniBand transport timeout and the 600 s PyTorch watchdog [7] — is fixed at ~2 min, a tuned posture rather than a swept input, and the validation registry publishes the ETTR sensitivity to it. The model is checked against two published anchors:
 
 ![Validation against anchors](../figures/validation.png)
 

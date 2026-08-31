@@ -11,5 +11,7 @@ jobs:
       - run: pip install -r sim/requirements.txt
       - name: Invariants + validation anchors
         run: cd sim && python3 test_reliability_sim.py
+      - name: Validation registry (model vs public record)
+        run: cd sim && python3 test_validation.py && python3 validation.py
       - name: Figures + results regenerate without error
         run: cd sim && python3 run.py
