@@ -1,0 +1,334 @@
+{
+  "schema_version": "dimaggi-evidence/v1",
+  "coverage_scope": "Consequential headline claims, governing assumptions and model limits. Not a catalog of helper constants or proof that citations are correct.",
+  "sources": {
+    "sim/reliability_sim.py": {
+      "source_type": "model-assumption",
+      "location": "sim/reliability_sim.py",
+      "version_date": "2026-09-10 closure working tree; SHA-256 bound below",
+      "license_or_reuse": "Repository-authored analysis; third-party facts referenced, no new external raw data redistributed",
+      "scope": "Local authoritative definition or claim. External provenance retained in SOURCES/REFERENCES and inline citations; scenario choices are not empirical measurements."
+    },
+    "sim/recovery_sensitivity.py": {
+      "source_type": "model-assumption",
+      "location": "sim/recovery_sensitivity.py",
+      "version_date": "2026-09-10 closure working tree; SHA-256 bound below",
+      "license_or_reuse": "Repository-authored analysis; third-party facts referenced, no new external raw data redistributed",
+      "scope": "Local authoritative definition or claim. External provenance retained in SOURCES/REFERENCES and inline citations; scenario choices are not empirical measurements."
+    },
+    "REFERENCES.md": {
+      "source_type": "model-assumption",
+      "location": "REFERENCES.md",
+      "version_date": "2026-09-10 closure working tree; SHA-256 bound below",
+      "license_or_reuse": "Repository-authored analysis; third-party facts referenced, no new external raw data redistributed",
+      "scope": "Local authoritative definition or claim. External provenance retained in SOURCES/REFERENCES and inline citations; scenario choices are not empirical measurements."
+    },
+    "README.md": {
+      "source_type": "model-assumption",
+      "location": "README.md",
+      "version_date": "2026-09-10 closure working tree; SHA-256 bound below",
+      "license_or_reuse": "Repository-authored analysis; third-party facts referenced, no new external raw data redistributed",
+      "scope": "Local authoritative definition or claim. External provenance retained in SOURCES/REFERENCES and inline citations; scenario choices are not empirical measurements."
+    },
+    "llama": {
+      "source_type": "primary-publication",
+      "location": "https://arxiv.org/abs/2407.21783",
+      "version_date": "2024; section3.3.4",
+      "license_or_reuse": "Facts/aggregates with attribution only; 419 interruptions / (54 days *24 hours *2048 nodes); assumes homogeneous independent hazards",
+      "scope": "419 interruptions / (54 days *24 hours *2048 nodes); assumes homogeneous independent hazards"
+    }
+  },
+  "inputs": [
+    {
+      "name": "single-node hazard",
+      "unit": "failures/node-hour",
+      "evidence_class": "calibrated",
+      "sources": [
+        "sim/reliability_sim.py",
+        "llama"
+      ],
+      "transformation": "Published Meta interruption context transferred to independent Poisson process",
+      "uncertainty": "Scope and qualifications stated in transformation and linked source; no unreported confidence interval",
+      "affected_outputs": [
+        "published conclusion",
+        "README.md"
+      ],
+      "value": 0.000158,
+      "valid_bounds": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "detection",
+      "unit": "hours",
+      "evidence_class": "scenario",
+      "sources": [
+        "sim/reliability_sim.py"
+      ],
+      "transformation": "Tuned detection assumption, not measured result",
+      "uncertainty": "Deliberately hypothetical/operator policy; not an observed universal bound",
+      "affected_outputs": [
+        "published conclusion",
+        "README.md"
+      ],
+      "value": 0.033,
+      "valid_bounds": [
+        0,
+        3.3000000000000003
+      ]
+    },
+    {
+      "name": "reload",
+      "unit": "hours",
+      "evidence_class": "scenario",
+      "sources": [
+        "sim/reliability_sim.py"
+      ],
+      "transformation": "Swap, reload and rendezvous combined",
+      "uncertainty": "Deliberately hypothetical/operator policy; not an observed universal bound",
+      "affected_outputs": [
+        "published conclusion",
+        "README.md"
+      ],
+      "value": 0.25,
+      "valid_bounds": [
+        0,
+        25
+      ]
+    },
+    {
+      "name": "repair",
+      "unit": "hours",
+      "evidence_class": "scenario",
+      "sources": [
+        "sim/reliability_sim.py"
+      ],
+      "transformation": "Physical repair assumed; sensitivity varies 1/4/12 hours",
+      "uncertainty": "Deliberately hypothetical/operator policy; not an observed universal bound",
+      "affected_outputs": [
+        "published conclusion",
+        "README.md"
+      ],
+      "value": 4,
+      "valid_bounds": [
+        0,
+        400
+      ]
+    },
+    {
+      "name": "reshard",
+      "unit": "hours",
+      "evidence_class": "scenario",
+      "sources": [
+        "sim/reliability_sim.py"
+      ],
+      "transformation": "Elastic rebuild cost assumed",
+      "uncertainty": "Deliberately hypothetical/operator policy; not an observed universal bound",
+      "affected_outputs": [
+        "published conclusion",
+        "README.md"
+      ],
+      "value": 0.5,
+      "valid_bounds": [
+        0,
+        50
+      ]
+    },
+    {
+      "name": "blocking checkpoint interval",
+      "unit": "hours",
+      "evidence_class": "scenario",
+      "sources": [
+        "sim/reliability_sim.py"
+      ],
+      "transformation": "Policy input",
+      "uncertainty": "Deliberately hypothetical/operator policy; not an observed universal bound",
+      "affected_outputs": [
+        "published conclusion",
+        "README.md"
+      ],
+      "value": 0.5,
+      "valid_bounds": [
+        0,
+        50
+      ]
+    },
+    {
+      "name": "blocking write",
+      "unit": "hours",
+      "evidence_class": "scenario",
+      "sources": [
+        "sim/reliability_sim.py"
+      ],
+      "transformation": "Checkpoint stall input",
+      "uncertainty": "Deliberately hypothetical/operator policy; not an observed universal bound",
+      "affected_outputs": [
+        "published conclusion",
+        "README.md"
+      ],
+      "value": 0.02,
+      "valid_bounds": [
+        0,
+        2
+      ]
+    },
+    {
+      "name": "overlapped write",
+      "unit": "hours",
+      "evidence_class": "scenario",
+      "sources": [
+        "sim/reliability_sim.py"
+      ],
+      "transformation": "Effective stall, not asynchronous framework implementation",
+      "uncertainty": "Deliberately hypothetical/operator policy; not an observed universal bound",
+      "affected_outputs": [
+        "published conclusion",
+        "README.md"
+      ],
+      "value": 0.003,
+      "valid_bounds": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "accelerator price",
+      "unit": "USD/GPU-hour",
+      "evidence_class": "scenario",
+      "sources": [
+        "sim/reliability_sim.py"
+      ],
+      "transformation": "Scenario valuation, not a current price quote",
+      "uncertainty": "Deliberately hypothetical/operator policy; not an observed universal bound",
+      "affected_outputs": [
+        "published conclusion",
+        "README.md"
+      ],
+      "value": 2.5,
+      "valid_bounds": [
+        0,
+        250
+      ]
+    }
+  ],
+  "results": [
+    {
+      "name": "phase-map goodput",
+      "unit": "claim",
+      "evidence_class": "simulated",
+      "sources": [
+        "README.md"
+      ],
+      "transformation": "Reported roughly .80 elastic and .87 well-provisioned recovery are scenario-dependent, not measured ETTR",
+      "uncertainty": "Conditional model result; not production outcome or empirical confidence interval",
+      "affected_outputs": [
+        "published conclusion",
+        "README.md"
+      ],
+      "statement": "Reported roughly .80 elastic and .87 well-provisioned recovery are scenario-dependent, not measured ETTR"
+    },
+    {
+      "name": "monthly valuation",
+      "unit": "claim",
+      "evidence_class": "derived",
+      "sources": [
+        "README.md"
+      ],
+      "transformation": "Reported roughly USD21M/month is model-based GPU-hour valuation, not realized savings",
+      "uncertainty": "Scope and qualifications stated in transformation and linked source; no unreported confidence interval",
+      "affected_outputs": [
+        "published conclusion",
+        "README.md"
+      ],
+      "statement": "Reported roughly USD21M/month is model-based GPU-hour valuation, not realized savings"
+    },
+    {
+      "name": "common-regime sensitivity",
+      "unit": "claim",
+      "evidence_class": "simulated",
+      "sources": [
+        "sim/recovery_sensitivity.py"
+      ],
+      "transformation": "972 policy runs use common latent events and checkpoint policy; no localized/masking recovery claimed",
+      "uncertainty": "Conditional model result; not production outcome or empirical confidence interval",
+      "affected_outputs": [
+        "published conclusion",
+        "README.md"
+      ],
+      "statement": "972 policy runs use common latent events and checkpoint policy; no localized/masking recovery claimed"
+    },
+    {
+      "name": "elastic reference goodput",
+      "value": 0.8,
+      "unit": "fraction",
+      "evidence_class": "simulated",
+      "sources": [
+        "README.md"
+      ],
+      "transformation": "Rounded scenario phase-map outcome",
+      "uncertainty": "Rounded published model output; conditional scenario, not production benefit",
+      "affected_outputs": [
+        "published headline"
+      ],
+      "valid_bounds": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "provisioned reference goodput",
+      "value": 0.87,
+      "unit": "fraction",
+      "evidence_class": "simulated",
+      "sources": [
+        "README.md"
+      ],
+      "transformation": "Rounded scenario phase-map outcome; below reported >90% reference ETTR",
+      "uncertainty": "Rounded published model output; conditional scenario, not production benefit",
+      "affected_outputs": [
+        "published headline"
+      ],
+      "valid_bounds": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "monthly capacity valuation",
+      "value": 21000000,
+      "unit": "USD/month",
+      "evidence_class": "derived",
+      "sources": [
+        "README.md"
+      ],
+      "transformation": "Approximate GPU-hour recovery valued at assumed GPU-hour price; not savings",
+      "uncertainty": "Rounded published model output; conditional scenario, not production benefit",
+      "affected_outputs": [
+        "published headline"
+      ],
+      "valid_bounds": [
+        0,
+        1000000000000
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "sim/reliability_sim.py",
+      "sha256": "320821f1c26a1c55e504b867abd52926bd3af2965baf4edbca84fe48c1b0f4a2"
+    },
+    {
+      "path": "sim/recovery_sensitivity.py",
+      "sha256": "d5d391de396d7df77b150065f7888c3daa33b62227795025def8410ee43c8696"
+    },
+    {
+      "path": "REFERENCES.md",
+      "sha256": "8b91a6c0e77b0e94c0e1e3a7c75381fcff796dd8cd2bd14f1bc8543a1312704f"
+    },
+    {
+      "path": "README.md",
+      "sha256": "0482011e9ec9b75343f8632efa6ba3bfe237b703af0c3c4c0db89f1221a486eb"
+    }
+  ]
+}

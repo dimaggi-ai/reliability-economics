@@ -124,7 +124,7 @@ def fig_validation(seeds, figdir):
     axL.set_xticks(range(len(configs)), [c[0] for c in configs], fontsize=8)
     axL.set_ylabel("ETTR")
     axL.set_ylim(0, 1)
-    axL.set_title("Anchor 1 — a Meta-like config reproduces the >90% regime")
+    axL.set_title("Anchor 1 — modeled ETTR versus Meta's reported >90%")
     # right: MTTF ~ 1/N (RSC anchor)
     Ns = [512, 1024, 2048, 4096, 8192]
     mttf = [statistics.mean(run_policy(Config(seed=s, nodes=n, spare_nodes=8), "elastic")["mttf_h"]
