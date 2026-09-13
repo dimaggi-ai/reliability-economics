@@ -1,0 +1,18 @@
+[
+  {
+    "repo": "reliability-economics",
+    "label": "AI INFRASTRUCTURE RESEARCH",
+    "title": [
+      "Which recovery",
+      "policy wins?"
+    ],
+    "subtitle": [
+      "A simulator comparing spares,",
+      "checkpointing, and elastic recovery."
+    ],
+    "fontSize": 58,
+    "background": "illustration-v2.png",
+    "output": ".",
+    "source_readme_commit": "6e7ccafc925d11b73e4a33ab30fdae4cbdc016b3"
+  }
+]
