@@ -55,15 +55,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 0,
-          "ettr": 0.8145,
+          "ettr": 0.8135,
           "availability": 0.8549,
           "mttf_h": 2.94,
           "mttr_h": 0.5,
           "interruptions": 209,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9607885.7,
-          "waste_gpu_h": 2188594.3,
-          "waste_dollars": 5471486.0
+          "productive_gpu_h": 9597022.8,
+          "waste_gpu_h": 2199457.2,
+          "waste_dollars": 5498643.0
         }
       },
       "winner": "auto-spares"
@@ -121,15 +121,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 1,
-          "ettr": 0.8004,
+          "ettr": 0.7994,
           "availability": 0.8417,
           "mttf_h": 2.66,
           "mttr_h": 0.5,
           "interruptions": 228,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9441476.7,
-          "waste_gpu_h": 2355003.3,
-          "waste_dollars": 5887508.0
+          "productive_gpu_h": 9430311.9,
+          "waste_gpu_h": 2366168.1,
+          "waste_dollars": 5915420.0
         }
       },
       "winner": "auto-spares"
@@ -187,15 +187,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 2,
-          "ettr": 0.7911,
+          "ettr": 0.7902,
           "availability": 0.8331,
           "mttf_h": 2.49,
           "mttr_h": 0.5,
           "interruptions": 241,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9332243.2,
-          "waste_gpu_h": 2464236.8,
-          "waste_dollars": 6160592.0
+          "productive_gpu_h": 9321218.7,
+          "waste_gpu_h": 2475261.3,
+          "waste_dollars": 6188153.0
         }
       },
       "winner": "auto-spares"
@@ -253,15 +253,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 3,
-          "ettr": 0.8175,
+          "ettr": 0.8165,
           "availability": 0.8576,
           "mttf_h": 3.01,
           "mttr_h": 0.5,
           "interruptions": 205,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9643347.1,
-          "waste_gpu_h": 2153132.9,
-          "waste_dollars": 5382832.0
+          "productive_gpu_h": 9632339.6,
+          "waste_gpu_h": 2164140.4,
+          "waste_dollars": 5410351.0
         }
       },
       "winner": "auto-spares"
@@ -319,15 +319,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 4,
-          "ettr": 0.8112,
+          "ettr": 0.8103,
           "availability": 0.8519,
           "mttf_h": 2.87,
           "mttr_h": 0.5,
           "interruptions": 214,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9569717.4,
-          "waste_gpu_h": 2226762.6,
-          "waste_dollars": 5566907.0
+          "productive_gpu_h": 9558762.9,
+          "waste_gpu_h": 2237717.1,
+          "waste_dollars": 5594293.0
         }
       },
       "winner": "auto-spares"
@@ -385,15 +385,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 5,
-          "ettr": 0.7907,
+          "ettr": 0.7897,
           "availability": 0.8326,
           "mttf_h": 2.49,
           "mttr_h": 0.5,
           "interruptions": 241,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9327645.2,
-          "waste_gpu_h": 2468834.8,
-          "waste_dollars": 6172087.0
+          "productive_gpu_h": 9315396.0,
+          "waste_gpu_h": 2481084.0,
+          "waste_dollars": 6202710.0
         }
       },
       "winner": "auto-spares"
@@ -451,15 +451,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 6,
-          "ettr": 0.7869,
+          "ettr": 0.7859,
           "availability": 0.8292,
           "mttf_h": 2.43,
           "mttr_h": 0.5,
           "interruptions": 246,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9282367.0,
-          "waste_gpu_h": 2514113.0,
-          "waste_dollars": 6285283.0
+          "productive_gpu_h": 9270885.0,
+          "waste_gpu_h": 2525595.0,
+          "waste_dollars": 6313988.0
         }
       },
       "winner": "auto-spares"
@@ -517,15 +517,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 7,
-          "ettr": 0.8026,
+          "ettr": 0.8017,
           "availability": 0.8438,
           "mttf_h": 2.7,
           "mttr_h": 0.5,
           "interruptions": 225,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9468308.9,
-          "waste_gpu_h": 2328171.1,
-          "waste_dollars": 5820428.0
+          "productive_gpu_h": 9457354.1,
+          "waste_gpu_h": 2339125.9,
+          "waste_dollars": 5847815.0
         }
       },
       "winner": "auto-spares"
@@ -583,15 +583,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 8,
-          "ettr": 0.7853,
+          "ettr": 0.7844,
           "availability": 0.8276,
           "mttf_h": 2.39,
           "mttr_h": 0.5,
           "interruptions": 249,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9263479.2,
-          "waste_gpu_h": 2533000.8,
-          "waste_dollars": 6332502.0
+          "productive_gpu_h": 9252605.5,
+          "waste_gpu_h": 2543874.5,
+          "waste_dollars": 6359686.0
         }
       },
       "winner": "auto-spares"
@@ -649,15 +649,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 9,
-          "ettr": 0.8025,
+          "ettr": 0.8016,
           "availability": 0.8437,
           "mttf_h": 2.69,
           "mttr_h": 0.5,
           "interruptions": 226,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9467068.4,
-          "waste_gpu_h": 2329411.6,
-          "waste_dollars": 5823529.0
+          "productive_gpu_h": 9455852.1,
+          "waste_gpu_h": 2340627.9,
+          "waste_dollars": 5851570.0
         }
       },
       "winner": "auto-spares"
@@ -715,15 +715,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 10,
-          "ettr": 0.7742,
+          "ettr": 0.7732,
           "availability": 0.8174,
           "mttf_h": 2.24,
           "mttr_h": 0.5,
           "interruptions": 263,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9133343.9,
-          "waste_gpu_h": 2663136.1,
-          "waste_dollars": 6657840.0
+          "productive_gpu_h": 9121428.7,
+          "waste_gpu_h": 2675051.3,
+          "waste_dollars": 6687628.0
         }
       },
       "winner": "auto-spares"
@@ -781,15 +781,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 11,
-          "ettr": 0.7995,
+          "ettr": 0.7986,
           "availability": 0.8409,
           "mttf_h": 2.63,
           "mttr_h": 0.5,
           "interruptions": 230,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9431089.4,
-          "waste_gpu_h": 2365390.6,
-          "waste_dollars": 5913476.0
+          "productive_gpu_h": 9420356.1,
+          "waste_gpu_h": 2376123.9,
+          "waste_dollars": 5940310.0
         }
       },
       "winner": "auto-spares"
@@ -847,15 +847,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 0,
-          "ettr": 0.8135,
+          "ettr": 0.8123,
           "availability": 0.8549,
           "mttf_h": 2.94,
           "mttr_h": 0.5,
           "interruptions": 209,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9596862.0,
-          "waste_gpu_h": 2199618.0,
-          "waste_dollars": 5499045.0
+          "productive_gpu_h": 9582534.0,
+          "waste_gpu_h": 2213946.0,
+          "waste_dollars": 5534865.0
         }
       },
       "winner": "auto-spares"
@@ -913,15 +913,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 1,
-          "ettr": 0.7994,
+          "ettr": 0.7982,
           "availability": 0.8417,
           "mttf_h": 2.66,
           "mttr_h": 0.5,
           "interruptions": 228,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9429684.7,
-          "waste_gpu_h": 2366795.3,
-          "waste_dollars": 5916988.0
+          "productive_gpu_h": 9416338.6,
+          "waste_gpu_h": 2380141.4,
+          "waste_dollars": 5950353.0
         }
       },
       "winner": "auto-spares"
@@ -979,15 +979,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 2,
-          "ettr": 0.79,
+          "ettr": 0.7889,
           "availability": 0.8331,
           "mttf_h": 2.49,
           "mttr_h": 0.5,
           "interruptions": 241,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9319631.1,
-          "waste_gpu_h": 2476848.9,
-          "waste_dollars": 6192122.0
+          "productive_gpu_h": 9306627.6,
+          "waste_gpu_h": 2489852.4,
+          "waste_dollars": 6224631.0
         }
       },
       "winner": "auto-spares"
@@ -1045,15 +1045,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 3,
-          "ettr": 0.8165,
+          "ettr": 0.8153,
           "availability": 0.8576,
           "mttf_h": 3.01,
           "mttr_h": 0.5,
           "interruptions": 205,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9631296.2,
-          "waste_gpu_h": 2165183.8,
-          "waste_dollars": 5412960.0
+          "productive_gpu_h": 9617169.6,
+          "waste_gpu_h": 2179310.4,
+          "waste_dollars": 5448276.0
         }
       },
       "winner": "auto-spares"
@@ -1111,15 +1111,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 4,
-          "ettr": 0.8101,
+          "ettr": 0.8092,
           "availability": 0.8519,
           "mttf_h": 2.87,
           "mttr_h": 0.5,
           "interruptions": 214,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9555960.5,
-          "waste_gpu_h": 2240519.5,
-          "waste_dollars": 5601299.0
+          "productive_gpu_h": 9545726.5,
+          "waste_gpu_h": 2250753.5,
+          "waste_dollars": 5626884.0
         }
       },
       "winner": "auto-spares"
@@ -1177,15 +1177,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 5,
-          "ettr": 0.7894,
+          "ettr": 0.7884,
           "availability": 0.8326,
           "mttf_h": 2.49,
           "mttr_h": 0.5,
           "interruptions": 241,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9311853.4,
-          "waste_gpu_h": 2484626.6,
-          "waste_dollars": 6211566.0
+          "productive_gpu_h": 9299926.3,
+          "waste_gpu_h": 2496553.7,
+          "waste_dollars": 6241384.0
         }
       },
       "winner": "auto-spares"
@@ -1243,15 +1243,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 6,
-          "ettr": 0.7857,
+          "ettr": 0.7847,
           "availability": 0.8292,
           "mttf_h": 2.43,
           "mttr_h": 0.5,
           "interruptions": 246,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9268968.1,
-          "waste_gpu_h": 2527511.9,
-          "waste_dollars": 6318780.0
+          "productive_gpu_h": 9256476.9,
+          "waste_gpu_h": 2540003.1,
+          "waste_dollars": 6350008.0
         }
       },
       "winner": "auto-spares"
@@ -1309,15 +1309,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 7,
-          "ettr": 0.8015,
+          "ettr": 0.8005,
           "availability": 0.8438,
           "mttf_h": 2.7,
           "mttr_h": 0.5,
           "interruptions": 225,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9455107.2,
-          "waste_gpu_h": 2341372.8,
-          "waste_dollars": 5853432.0
+          "productive_gpu_h": 9443181.7,
+          "waste_gpu_h": 2353298.3,
+          "waste_dollars": 5883246.0
         }
       },
       "winner": "auto-spares"
@@ -1375,15 +1375,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 8,
-          "ettr": 0.7842,
+          "ettr": 0.7832,
           "availability": 0.8276,
           "mttf_h": 2.39,
           "mttr_h": 0.5,
           "interruptions": 249,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9250548.6,
-          "waste_gpu_h": 2545931.4,
-          "waste_dollars": 6364828.0
+          "productive_gpu_h": 9239184.2,
+          "waste_gpu_h": 2557295.8,
+          "waste_dollars": 6393240.0
         }
       },
       "winner": "auto-spares"
@@ -1441,15 +1441,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 9,
-          "ettr": 0.8015,
+          "ettr": 0.8004,
           "availability": 0.8437,
           "mttf_h": 2.69,
           "mttr_h": 0.5,
           "interruptions": 226,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9454929.5,
-          "waste_gpu_h": 2341550.5,
-          "waste_dollars": 5853876.0
+          "productive_gpu_h": 9442485.4,
+          "waste_gpu_h": 2353994.6,
+          "waste_dollars": 5884987.0
         }
       },
       "winner": "auto-spares"
@@ -1507,15 +1507,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 10,
-          "ettr": 0.7729,
+          "ettr": 0.772,
           "availability": 0.8174,
           "mttf_h": 2.24,
           "mttr_h": 0.5,
           "interruptions": 263,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9117871.2,
-          "waste_gpu_h": 2678608.8,
-          "waste_dollars": 6696522.0
+          "productive_gpu_h": 9106786.8,
+          "waste_gpu_h": 2689693.2,
+          "waste_dollars": 6724233.0
         }
       },
       "winner": "auto-spares"
@@ -1573,15 +1573,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 11,
-          "ettr": 0.7985,
+          "ettr": 0.7974,
           "availability": 0.8409,
           "mttf_h": 2.63,
           "mttr_h": 0.5,
           "interruptions": 230,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9419530.9,
-          "waste_gpu_h": 2376949.1,
-          "waste_dollars": 5942373.0
+          "productive_gpu_h": 9406300.0,
+          "waste_gpu_h": 2390180.0,
+          "waste_dollars": 5975450.0
         }
       },
       "winner": "auto-spares"
@@ -1639,15 +1639,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 0,
-          "ettr": 0.8117,
+          "ettr": 0.8115,
           "availability": 0.8549,
           "mttf_h": 2.94,
           "mttr_h": 0.5,
           "interruptions": 209,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9575128.5,
-          "waste_gpu_h": 2221351.5,
-          "waste_dollars": 5553379.0
+          "productive_gpu_h": 9573378.8,
+          "waste_gpu_h": 2223101.2,
+          "waste_dollars": 5557753.0
         }
       },
       "winner": "auto-spares"
@@ -1705,15 +1705,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 1,
-          "ettr": 0.7979,
+          "ettr": 0.7976,
           "availability": 0.8417,
           "mttf_h": 2.66,
           "mttr_h": 0.5,
           "interruptions": 228,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9411828.9,
-          "waste_gpu_h": 2384651.1,
-          "waste_dollars": 5961628.0
+          "productive_gpu_h": 9408369.6,
+          "waste_gpu_h": 2388110.4,
+          "waste_dollars": 5970276.0
         }
       },
       "winner": "auto-spares"
@@ -1771,15 +1771,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 2,
-          "ettr": 0.7885,
+          "ettr": 0.7882,
           "availability": 0.8331,
           "mttf_h": 2.49,
           "mttr_h": 0.5,
           "interruptions": 241,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9301277.0,
-          "waste_gpu_h": 2495203.0,
-          "waste_dollars": 6238008.0
+          "productive_gpu_h": 9298415.8,
+          "waste_gpu_h": 2498064.2,
+          "waste_dollars": 6245160.0
         }
       },
       "winner": "auto-spares"
@@ -1837,15 +1837,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 3,
-          "ettr": 0.8147,
+          "ettr": 0.8144,
           "availability": 0.8576,
           "mttf_h": 3.01,
           "mttr_h": 0.5,
           "interruptions": 205,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9610336.1,
-          "waste_gpu_h": 2186143.9,
-          "waste_dollars": 5465360.0
+          "productive_gpu_h": 9607642.5,
+          "waste_gpu_h": 2188837.5,
+          "waste_dollars": 5472094.0
         }
       },
       "winner": "auto-spares"
@@ -1903,15 +1903,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 4,
-          "ettr": 0.8086,
+          "ettr": 0.8084,
           "availability": 0.8519,
           "mttf_h": 2.87,
           "mttr_h": 0.5,
           "interruptions": 214,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9538628.5,
-          "waste_gpu_h": 2257851.5,
-          "waste_dollars": 5644629.0
+          "productive_gpu_h": 9536214.5,
+          "waste_gpu_h": 2260265.5,
+          "waste_dollars": 5650664.0
         }
       },
       "winner": "auto-spares"
@@ -1969,15 +1969,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 5,
-          "ettr": 0.7879,
+          "ettr": 0.7878,
           "availability": 0.8326,
           "mttf_h": 2.49,
           "mttr_h": 0.5,
           "interruptions": 241,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9294628.6,
-          "waste_gpu_h": 2501851.4,
-          "waste_dollars": 6254629.0
+          "productive_gpu_h": 9293244.2,
+          "waste_gpu_h": 2503235.8,
+          "waste_dollars": 6258090.0
         }
       },
       "winner": "auto-spares"
@@ -2035,15 +2035,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 6,
-          "ettr": 0.7844,
+          "ettr": 0.7841,
           "availability": 0.8292,
           "mttf_h": 2.43,
           "mttr_h": 0.5,
           "interruptions": 246,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9253390.7,
-          "waste_gpu_h": 2543089.3,
-          "waste_dollars": 6357723.0
+          "productive_gpu_h": 9250206.7,
+          "waste_gpu_h": 2546273.3,
+          "waste_dollars": 6365683.0
         }
       },
       "winner": "auto-spares"
@@ -2101,15 +2101,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 7,
-          "ettr": 0.8001,
+          "ettr": 0.7998,
           "availability": 0.8438,
           "mttf_h": 2.7,
           "mttr_h": 0.5,
           "interruptions": 225,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9438567.9,
-          "waste_gpu_h": 2357912.1,
-          "waste_dollars": 5894780.0
+          "productive_gpu_h": 9434324.4,
+          "waste_gpu_h": 2362155.6,
+          "waste_dollars": 5905389.0
         }
       },
       "winner": "auto-spares"
@@ -2167,15 +2167,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 8,
-          "ettr": 0.7828,
+          "ettr": 0.7823,
           "availability": 0.8276,
           "mttf_h": 2.39,
           "mttr_h": 0.5,
           "interruptions": 249,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9233782.6,
-          "waste_gpu_h": 2562697.4,
-          "waste_dollars": 6406743.0
+          "productive_gpu_h": 9228638.3,
+          "waste_gpu_h": 2567841.7,
+          "waste_dollars": 6419604.0
         }
       },
       "winner": "auto-spares"
@@ -2233,15 +2233,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 9,
-          "ettr": 0.8,
+          "ettr": 0.7997,
           "availability": 0.8437,
           "mttf_h": 2.69,
           "mttr_h": 0.5,
           "interruptions": 226,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9437596.8,
-          "waste_gpu_h": 2358883.2,
-          "waste_dollars": 5897208.0
+          "productive_gpu_h": 9433224.7,
+          "waste_gpu_h": 2363255.3,
+          "waste_dollars": 5908138.0
         }
       },
       "winner": "auto-spares"
@@ -2299,15 +2299,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 10,
-          "ettr": 0.7717,
+          "ettr": 0.7715,
           "availability": 0.8174,
           "mttf_h": 2.24,
           "mttr_h": 0.5,
           "interruptions": 263,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9103321.9,
-          "waste_gpu_h": 2693158.1,
-          "waste_dollars": 6732895.0
+          "productive_gpu_h": 9101186.4,
+          "waste_gpu_h": 2695293.6,
+          "waste_dollars": 6738234.0
         }
       },
       "winner": "auto-spares"
@@ -2365,15 +2365,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 11,
-          "ettr": 0.7967,
+          "ettr": 0.7965,
           "availability": 0.8409,
           "mttf_h": 2.63,
           "mttr_h": 0.5,
           "interruptions": 230,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9398317.8,
-          "waste_gpu_h": 2398162.2,
-          "waste_dollars": 5995405.0
+          "productive_gpu_h": 9396418.2,
+          "waste_gpu_h": 2400061.8,
+          "waste_dollars": 6000154.0
         }
       },
       "winner": "auto-spares"
@@ -2431,15 +2431,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 0,
-          "ettr": 0.8145,
+          "ettr": 0.8135,
           "availability": 0.8549,
           "mttf_h": 2.94,
           "mttr_h": 0.5,
           "interruptions": 209,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9607885.7,
-          "waste_gpu_h": 2188594.3,
-          "waste_dollars": 5471486.0
+          "productive_gpu_h": 9597022.8,
+          "waste_gpu_h": 2199457.2,
+          "waste_dollars": 5498643.0
         }
       },
       "winner": "auto-spares"
@@ -2497,15 +2497,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 1,
-          "ettr": 0.8004,
+          "ettr": 0.7994,
           "availability": 0.8417,
           "mttf_h": 2.66,
           "mttr_h": 0.5,
           "interruptions": 228,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9441476.7,
-          "waste_gpu_h": 2355003.3,
-          "waste_dollars": 5887508.0
+          "productive_gpu_h": 9430311.9,
+          "waste_gpu_h": 2366168.1,
+          "waste_dollars": 5915420.0
         }
       },
       "winner": "auto-spares"
@@ -2563,15 +2563,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 2,
-          "ettr": 0.7911,
+          "ettr": 0.7902,
           "availability": 0.8331,
           "mttf_h": 2.49,
           "mttr_h": 0.5,
           "interruptions": 241,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9332243.2,
-          "waste_gpu_h": 2464236.8,
-          "waste_dollars": 6160592.0
+          "productive_gpu_h": 9321218.7,
+          "waste_gpu_h": 2475261.3,
+          "waste_dollars": 6188153.0
         }
       },
       "winner": "auto-spares"
@@ -2629,15 +2629,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 3,
-          "ettr": 0.8175,
+          "ettr": 0.8165,
           "availability": 0.8576,
           "mttf_h": 3.01,
           "mttr_h": 0.5,
           "interruptions": 205,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9643347.1,
-          "waste_gpu_h": 2153132.9,
-          "waste_dollars": 5382832.0
+          "productive_gpu_h": 9632339.6,
+          "waste_gpu_h": 2164140.4,
+          "waste_dollars": 5410351.0
         }
       },
       "winner": "auto-spares"
@@ -2695,15 +2695,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 4,
-          "ettr": 0.8112,
+          "ettr": 0.8103,
           "availability": 0.8519,
           "mttf_h": 2.87,
           "mttr_h": 0.5,
           "interruptions": 214,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9569717.4,
-          "waste_gpu_h": 2226762.6,
-          "waste_dollars": 5566907.0
+          "productive_gpu_h": 9558762.9,
+          "waste_gpu_h": 2237717.1,
+          "waste_dollars": 5594293.0
         }
       },
       "winner": "auto-spares"
@@ -2761,15 +2761,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 5,
-          "ettr": 0.7907,
+          "ettr": 0.7897,
           "availability": 0.8326,
           "mttf_h": 2.49,
           "mttr_h": 0.5,
           "interruptions": 241,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9327645.2,
-          "waste_gpu_h": 2468834.8,
-          "waste_dollars": 6172087.0
+          "productive_gpu_h": 9315396.0,
+          "waste_gpu_h": 2481084.0,
+          "waste_dollars": 6202710.0
         }
       },
       "winner": "auto-spares"
@@ -2827,15 +2827,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 6,
-          "ettr": 0.7869,
+          "ettr": 0.7859,
           "availability": 0.8292,
           "mttf_h": 2.43,
           "mttr_h": 0.5,
           "interruptions": 246,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9282367.0,
-          "waste_gpu_h": 2514113.0,
-          "waste_dollars": 6285283.0
+          "productive_gpu_h": 9270885.0,
+          "waste_gpu_h": 2525595.0,
+          "waste_dollars": 6313988.0
         }
       },
       "winner": "auto-spares"
@@ -2893,15 +2893,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 7,
-          "ettr": 0.8026,
+          "ettr": 0.8017,
           "availability": 0.8438,
           "mttf_h": 2.7,
           "mttr_h": 0.5,
           "interruptions": 225,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9468308.9,
-          "waste_gpu_h": 2328171.1,
-          "waste_dollars": 5820428.0
+          "productive_gpu_h": 9457354.1,
+          "waste_gpu_h": 2339125.9,
+          "waste_dollars": 5847815.0
         }
       },
       "winner": "auto-spares"
@@ -2959,15 +2959,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 8,
-          "ettr": 0.7853,
+          "ettr": 0.7844,
           "availability": 0.8276,
           "mttf_h": 2.39,
           "mttr_h": 0.5,
           "interruptions": 249,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9263479.2,
-          "waste_gpu_h": 2533000.8,
-          "waste_dollars": 6332502.0
+          "productive_gpu_h": 9252605.5,
+          "waste_gpu_h": 2543874.5,
+          "waste_dollars": 6359686.0
         }
       },
       "winner": "auto-spares"
@@ -3025,15 +3025,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 9,
-          "ettr": 0.8025,
+          "ettr": 0.8016,
           "availability": 0.8437,
           "mttf_h": 2.69,
           "mttr_h": 0.5,
           "interruptions": 226,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9467068.4,
-          "waste_gpu_h": 2329411.6,
-          "waste_dollars": 5823529.0
+          "productive_gpu_h": 9455852.1,
+          "waste_gpu_h": 2340627.9,
+          "waste_dollars": 5851570.0
         }
       },
       "winner": "auto-spares"
@@ -3091,15 +3091,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 10,
-          "ettr": 0.7742,
+          "ettr": 0.7732,
           "availability": 0.8174,
           "mttf_h": 2.24,
           "mttr_h": 0.5,
           "interruptions": 263,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9133343.9,
-          "waste_gpu_h": 2663136.1,
-          "waste_dollars": 6657840.0
+          "productive_gpu_h": 9121428.7,
+          "waste_gpu_h": 2675051.3,
+          "waste_dollars": 6687628.0
         }
       },
       "winner": "auto-spares"
@@ -3157,15 +3157,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 11,
-          "ettr": 0.7995,
+          "ettr": 0.7986,
           "availability": 0.8409,
           "mttf_h": 2.63,
           "mttr_h": 0.5,
           "interruptions": 230,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9431089.4,
-          "waste_gpu_h": 2365390.6,
-          "waste_dollars": 5913476.0
+          "productive_gpu_h": 9420356.1,
+          "waste_gpu_h": 2376123.9,
+          "waste_dollars": 5940310.0
         }
       },
       "winner": "auto-spares"
@@ -3223,15 +3223,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 0,
-          "ettr": 0.8135,
+          "ettr": 0.8123,
           "availability": 0.8549,
           "mttf_h": 2.94,
           "mttr_h": 0.5,
           "interruptions": 209,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9596862.0,
-          "waste_gpu_h": 2199618.0,
-          "waste_dollars": 5499045.0
+          "productive_gpu_h": 9582534.0,
+          "waste_gpu_h": 2213946.0,
+          "waste_dollars": 5534865.0
         }
       },
       "winner": "auto-spares"
@@ -3289,15 +3289,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 1,
-          "ettr": 0.7994,
+          "ettr": 0.7982,
           "availability": 0.8417,
           "mttf_h": 2.66,
           "mttr_h": 0.5,
           "interruptions": 228,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9429684.7,
-          "waste_gpu_h": 2366795.3,
-          "waste_dollars": 5916988.0
+          "productive_gpu_h": 9416338.6,
+          "waste_gpu_h": 2380141.4,
+          "waste_dollars": 5950353.0
         }
       },
       "winner": "auto-spares"
@@ -3355,15 +3355,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 2,
-          "ettr": 0.79,
+          "ettr": 0.7889,
           "availability": 0.8331,
           "mttf_h": 2.49,
           "mttr_h": 0.5,
           "interruptions": 241,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9319631.1,
-          "waste_gpu_h": 2476848.9,
-          "waste_dollars": 6192122.0
+          "productive_gpu_h": 9306627.6,
+          "waste_gpu_h": 2489852.4,
+          "waste_dollars": 6224631.0
         }
       },
       "winner": "auto-spares"
@@ -3421,15 +3421,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 3,
-          "ettr": 0.8165,
+          "ettr": 0.8153,
           "availability": 0.8576,
           "mttf_h": 3.01,
           "mttr_h": 0.5,
           "interruptions": 205,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9631296.2,
-          "waste_gpu_h": 2165183.8,
-          "waste_dollars": 5412960.0
+          "productive_gpu_h": 9617169.6,
+          "waste_gpu_h": 2179310.4,
+          "waste_dollars": 5448276.0
         }
       },
       "winner": "auto-spares"
@@ -3487,15 +3487,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 4,
-          "ettr": 0.8101,
+          "ettr": 0.8092,
           "availability": 0.8519,
           "mttf_h": 2.87,
           "mttr_h": 0.5,
           "interruptions": 214,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9555960.5,
-          "waste_gpu_h": 2240519.5,
-          "waste_dollars": 5601299.0
+          "productive_gpu_h": 9545726.5,
+          "waste_gpu_h": 2250753.5,
+          "waste_dollars": 5626884.0
         }
       },
       "winner": "auto-spares"
@@ -3553,15 +3553,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 5,
-          "ettr": 0.7894,
+          "ettr": 0.7884,
           "availability": 0.8326,
           "mttf_h": 2.49,
           "mttr_h": 0.5,
           "interruptions": 241,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9311853.4,
-          "waste_gpu_h": 2484626.6,
-          "waste_dollars": 6211566.0
+          "productive_gpu_h": 9299926.3,
+          "waste_gpu_h": 2496553.7,
+          "waste_dollars": 6241384.0
         }
       },
       "winner": "auto-spares"
@@ -3619,15 +3619,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 6,
-          "ettr": 0.7857,
+          "ettr": 0.7847,
           "availability": 0.8292,
           "mttf_h": 2.43,
           "mttr_h": 0.5,
           "interruptions": 246,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9268968.1,
-          "waste_gpu_h": 2527511.9,
-          "waste_dollars": 6318780.0
+          "productive_gpu_h": 9256476.9,
+          "waste_gpu_h": 2540003.1,
+          "waste_dollars": 6350008.0
         }
       },
       "winner": "auto-spares"
@@ -3685,15 +3685,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 7,
-          "ettr": 0.8015,
+          "ettr": 0.8005,
           "availability": 0.8438,
           "mttf_h": 2.7,
           "mttr_h": 0.5,
           "interruptions": 225,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9455107.2,
-          "waste_gpu_h": 2341372.8,
-          "waste_dollars": 5853432.0
+          "productive_gpu_h": 9443181.7,
+          "waste_gpu_h": 2353298.3,
+          "waste_dollars": 5883246.0
         }
       },
       "winner": "auto-spares"
@@ -3751,15 +3751,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 8,
-          "ettr": 0.7842,
+          "ettr": 0.7832,
           "availability": 0.8276,
           "mttf_h": 2.39,
           "mttr_h": 0.5,
           "interruptions": 249,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9250548.6,
-          "waste_gpu_h": 2545931.4,
-          "waste_dollars": 6364828.0
+          "productive_gpu_h": 9239184.2,
+          "waste_gpu_h": 2557295.8,
+          "waste_dollars": 6393240.0
         }
       },
       "winner": "auto-spares"
@@ -3817,15 +3817,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 9,
-          "ettr": 0.8015,
+          "ettr": 0.8004,
           "availability": 0.8437,
           "mttf_h": 2.69,
           "mttr_h": 0.5,
           "interruptions": 226,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9454929.5,
-          "waste_gpu_h": 2341550.5,
-          "waste_dollars": 5853876.0
+          "productive_gpu_h": 9442485.4,
+          "waste_gpu_h": 2353994.6,
+          "waste_dollars": 5884987.0
         }
       },
       "winner": "auto-spares"
@@ -3883,15 +3883,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 10,
-          "ettr": 0.7729,
+          "ettr": 0.772,
           "availability": 0.8174,
           "mttf_h": 2.24,
           "mttr_h": 0.5,
           "interruptions": 263,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9117871.2,
-          "waste_gpu_h": 2678608.8,
-          "waste_dollars": 6696522.0
+          "productive_gpu_h": 9106786.8,
+          "waste_gpu_h": 2689693.2,
+          "waste_dollars": 6724233.0
         }
       },
       "winner": "auto-spares"
@@ -3949,15 +3949,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 11,
-          "ettr": 0.7985,
+          "ettr": 0.7974,
           "availability": 0.8409,
           "mttf_h": 2.63,
           "mttr_h": 0.5,
           "interruptions": 230,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9419530.9,
-          "waste_gpu_h": 2376949.1,
-          "waste_dollars": 5942373.0
+          "productive_gpu_h": 9406300.0,
+          "waste_gpu_h": 2390180.0,
+          "waste_dollars": 5975450.0
         }
       },
       "winner": "auto-spares"
@@ -4015,15 +4015,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 0,
-          "ettr": 0.8117,
+          "ettr": 0.8115,
           "availability": 0.8549,
           "mttf_h": 2.94,
           "mttr_h": 0.5,
           "interruptions": 209,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9575128.5,
-          "waste_gpu_h": 2221351.5,
-          "waste_dollars": 5553379.0
+          "productive_gpu_h": 9573378.8,
+          "waste_gpu_h": 2223101.2,
+          "waste_dollars": 5557753.0
         }
       },
       "winner": "auto-spares"
@@ -4081,15 +4081,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 1,
-          "ettr": 0.7979,
+          "ettr": 0.7976,
           "availability": 0.8417,
           "mttf_h": 2.66,
           "mttr_h": 0.5,
           "interruptions": 228,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9411828.9,
-          "waste_gpu_h": 2384651.1,
-          "waste_dollars": 5961628.0
+          "productive_gpu_h": 9408369.6,
+          "waste_gpu_h": 2388110.4,
+          "waste_dollars": 5970276.0
         }
       },
       "winner": "auto-spares"
@@ -4147,15 +4147,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 2,
-          "ettr": 0.7885,
+          "ettr": 0.7882,
           "availability": 0.8331,
           "mttf_h": 2.49,
           "mttr_h": 0.5,
           "interruptions": 241,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9301277.0,
-          "waste_gpu_h": 2495203.0,
-          "waste_dollars": 6238008.0
+          "productive_gpu_h": 9298415.8,
+          "waste_gpu_h": 2498064.2,
+          "waste_dollars": 6245160.0
         }
       },
       "winner": "auto-spares"
@@ -4213,15 +4213,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 3,
-          "ettr": 0.8147,
+          "ettr": 0.8144,
           "availability": 0.8576,
           "mttf_h": 3.01,
           "mttr_h": 0.5,
           "interruptions": 205,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9610336.1,
-          "waste_gpu_h": 2186143.9,
-          "waste_dollars": 5465360.0
+          "productive_gpu_h": 9607642.5,
+          "waste_gpu_h": 2188837.5,
+          "waste_dollars": 5472094.0
         }
       },
       "winner": "auto-spares"
@@ -4279,15 +4279,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 4,
-          "ettr": 0.8086,
+          "ettr": 0.8084,
           "availability": 0.8519,
           "mttf_h": 2.87,
           "mttr_h": 0.5,
           "interruptions": 214,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9538628.5,
-          "waste_gpu_h": 2257851.5,
-          "waste_dollars": 5644629.0
+          "productive_gpu_h": 9536214.5,
+          "waste_gpu_h": 2260265.5,
+          "waste_dollars": 5650664.0
         }
       },
       "winner": "auto-spares"
@@ -4345,15 +4345,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 5,
-          "ettr": 0.7879,
+          "ettr": 0.7878,
           "availability": 0.8326,
           "mttf_h": 2.49,
           "mttr_h": 0.5,
           "interruptions": 241,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9294628.6,
-          "waste_gpu_h": 2501851.4,
-          "waste_dollars": 6254629.0
+          "productive_gpu_h": 9293244.2,
+          "waste_gpu_h": 2503235.8,
+          "waste_dollars": 6258090.0
         }
       },
       "winner": "auto-spares"
@@ -4411,15 +4411,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 6,
-          "ettr": 0.7844,
+          "ettr": 0.7841,
           "availability": 0.8292,
           "mttf_h": 2.43,
           "mttr_h": 0.5,
           "interruptions": 246,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9253390.7,
-          "waste_gpu_h": 2543089.3,
-          "waste_dollars": 6357723.0
+          "productive_gpu_h": 9250206.7,
+          "waste_gpu_h": 2546273.3,
+          "waste_dollars": 6365683.0
         }
       },
       "winner": "auto-spares"
@@ -4477,15 +4477,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 7,
-          "ettr": 0.8001,
+          "ettr": 0.7998,
           "availability": 0.8438,
           "mttf_h": 2.7,
           "mttr_h": 0.5,
           "interruptions": 225,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9438567.9,
-          "waste_gpu_h": 2357912.1,
-          "waste_dollars": 5894780.0
+          "productive_gpu_h": 9434324.4,
+          "waste_gpu_h": 2362155.6,
+          "waste_dollars": 5905389.0
         }
       },
       "winner": "auto-spares"
@@ -4543,15 +4543,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 8,
-          "ettr": 0.7828,
+          "ettr": 0.7823,
           "availability": 0.8276,
           "mttf_h": 2.39,
           "mttr_h": 0.5,
           "interruptions": 249,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9233782.6,
-          "waste_gpu_h": 2562697.4,
-          "waste_dollars": 6406743.0
+          "productive_gpu_h": 9228638.3,
+          "waste_gpu_h": 2567841.7,
+          "waste_dollars": 6419604.0
         }
       },
       "winner": "auto-spares"
@@ -4609,15 +4609,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 9,
-          "ettr": 0.8,
+          "ettr": 0.7997,
           "availability": 0.8437,
           "mttf_h": 2.69,
           "mttr_h": 0.5,
           "interruptions": 226,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9437596.8,
-          "waste_gpu_h": 2358883.2,
-          "waste_dollars": 5897208.0
+          "productive_gpu_h": 9433224.7,
+          "waste_gpu_h": 2363255.3,
+          "waste_dollars": 5908138.0
         }
       },
       "winner": "auto-spares"
@@ -4675,15 +4675,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 10,
-          "ettr": 0.7717,
+          "ettr": 0.7715,
           "availability": 0.8174,
           "mttf_h": 2.24,
           "mttr_h": 0.5,
           "interruptions": 263,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9103321.9,
-          "waste_gpu_h": 2693158.1,
-          "waste_dollars": 6732895.0
+          "productive_gpu_h": 9101186.4,
+          "waste_gpu_h": 2695293.6,
+          "waste_dollars": 6738234.0
         }
       },
       "winner": "auto-spares"
@@ -4741,15 +4741,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 11,
-          "ettr": 0.7967,
+          "ettr": 0.7965,
           "availability": 0.8409,
           "mttf_h": 2.63,
           "mttr_h": 0.5,
           "interruptions": 230,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9398317.8,
-          "waste_gpu_h": 2398162.2,
-          "waste_dollars": 5995405.0
+          "productive_gpu_h": 9396418.2,
+          "waste_gpu_h": 2400061.8,
+          "waste_dollars": 6000154.0
         }
       },
       "winner": "auto-spares"
@@ -4807,15 +4807,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 0,
-          "ettr": 0.8145,
+          "ettr": 0.8135,
           "availability": 0.8549,
           "mttf_h": 2.94,
           "mttr_h": 0.5,
           "interruptions": 209,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9607885.7,
-          "waste_gpu_h": 2188594.3,
-          "waste_dollars": 5471486.0
+          "productive_gpu_h": 9597022.8,
+          "waste_gpu_h": 2199457.2,
+          "waste_dollars": 5498643.0
         }
       },
       "winner": "elastic"
@@ -4873,15 +4873,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 1,
-          "ettr": 0.8004,
+          "ettr": 0.7994,
           "availability": 0.8417,
           "mttf_h": 2.66,
           "mttr_h": 0.5,
           "interruptions": 228,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9441476.7,
-          "waste_gpu_h": 2355003.3,
-          "waste_dollars": 5887508.0
+          "productive_gpu_h": 9430311.9,
+          "waste_gpu_h": 2366168.1,
+          "waste_dollars": 5915420.0
         }
       },
       "winner": "elastic"
@@ -4939,15 +4939,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 2,
-          "ettr": 0.7911,
+          "ettr": 0.7902,
           "availability": 0.8331,
           "mttf_h": 2.49,
           "mttr_h": 0.5,
           "interruptions": 241,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9332243.2,
-          "waste_gpu_h": 2464236.8,
-          "waste_dollars": 6160592.0
+          "productive_gpu_h": 9321218.7,
+          "waste_gpu_h": 2475261.3,
+          "waste_dollars": 6188153.0
         }
       },
       "winner": "elastic"
@@ -5005,15 +5005,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 3,
-          "ettr": 0.8175,
+          "ettr": 0.8165,
           "availability": 0.8576,
           "mttf_h": 3.01,
           "mttr_h": 0.5,
           "interruptions": 205,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9643347.1,
-          "waste_gpu_h": 2153132.9,
-          "waste_dollars": 5382832.0
+          "productive_gpu_h": 9632339.6,
+          "waste_gpu_h": 2164140.4,
+          "waste_dollars": 5410351.0
         }
       },
       "winner": "elastic"
@@ -5071,15 +5071,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 4,
-          "ettr": 0.8112,
+          "ettr": 0.8103,
           "availability": 0.8519,
           "mttf_h": 2.87,
           "mttr_h": 0.5,
           "interruptions": 214,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9569717.4,
-          "waste_gpu_h": 2226762.6,
-          "waste_dollars": 5566907.0
+          "productive_gpu_h": 9558762.9,
+          "waste_gpu_h": 2237717.1,
+          "waste_dollars": 5594293.0
         }
       },
       "winner": "elastic"
@@ -5137,15 +5137,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 5,
-          "ettr": 0.7907,
+          "ettr": 0.7897,
           "availability": 0.8326,
           "mttf_h": 2.49,
           "mttr_h": 0.5,
           "interruptions": 241,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9327645.2,
-          "waste_gpu_h": 2468834.8,
-          "waste_dollars": 6172087.0
+          "productive_gpu_h": 9315396.0,
+          "waste_gpu_h": 2481084.0,
+          "waste_dollars": 6202710.0
         }
       },
       "winner": "elastic"
@@ -5203,15 +5203,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 6,
-          "ettr": 0.7869,
+          "ettr": 0.7859,
           "availability": 0.8292,
           "mttf_h": 2.43,
           "mttr_h": 0.5,
           "interruptions": 246,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9282367.0,
-          "waste_gpu_h": 2514113.0,
-          "waste_dollars": 6285283.0
+          "productive_gpu_h": 9270885.0,
+          "waste_gpu_h": 2525595.0,
+          "waste_dollars": 6313988.0
         }
       },
       "winner": "elastic"
@@ -5269,15 +5269,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 7,
-          "ettr": 0.8026,
+          "ettr": 0.8017,
           "availability": 0.8438,
           "mttf_h": 2.7,
           "mttr_h": 0.5,
           "interruptions": 225,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9468308.9,
-          "waste_gpu_h": 2328171.1,
-          "waste_dollars": 5820428.0
+          "productive_gpu_h": 9457354.1,
+          "waste_gpu_h": 2339125.9,
+          "waste_dollars": 5847815.0
         }
       },
       "winner": "elastic"
@@ -5335,15 +5335,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 8,
-          "ettr": 0.7853,
+          "ettr": 0.7844,
           "availability": 0.8276,
           "mttf_h": 2.39,
           "mttr_h": 0.5,
           "interruptions": 249,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9263479.2,
-          "waste_gpu_h": 2533000.8,
-          "waste_dollars": 6332502.0
+          "productive_gpu_h": 9252605.5,
+          "waste_gpu_h": 2543874.5,
+          "waste_dollars": 6359686.0
         }
       },
       "winner": "elastic"
@@ -5401,15 +5401,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 9,
-          "ettr": 0.8025,
+          "ettr": 0.8016,
           "availability": 0.8437,
           "mttf_h": 2.69,
           "mttr_h": 0.5,
           "interruptions": 226,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9467068.4,
-          "waste_gpu_h": 2329411.6,
-          "waste_dollars": 5823529.0
+          "productive_gpu_h": 9455852.1,
+          "waste_gpu_h": 2340627.9,
+          "waste_dollars": 5851570.0
         }
       },
       "winner": "elastic"
@@ -5467,15 +5467,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 10,
-          "ettr": 0.7742,
+          "ettr": 0.7732,
           "availability": 0.8174,
           "mttf_h": 2.24,
           "mttr_h": 0.5,
           "interruptions": 263,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9133343.9,
-          "waste_gpu_h": 2663136.1,
-          "waste_dollars": 6657840.0
+          "productive_gpu_h": 9121428.7,
+          "waste_gpu_h": 2675051.3,
+          "waste_dollars": 6687628.0
         }
       },
       "winner": "elastic"
@@ -5533,15 +5533,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 11,
-          "ettr": 0.7995,
+          "ettr": 0.7986,
           "availability": 0.8409,
           "mttf_h": 2.63,
           "mttr_h": 0.5,
           "interruptions": 230,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9431089.4,
-          "waste_gpu_h": 2365390.6,
-          "waste_dollars": 5913476.0
+          "productive_gpu_h": 9420356.1,
+          "waste_gpu_h": 2376123.9,
+          "waste_dollars": 5940310.0
         }
       },
       "winner": "elastic"
@@ -5599,15 +5599,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 0,
-          "ettr": 0.8135,
+          "ettr": 0.8123,
           "availability": 0.8549,
           "mttf_h": 2.94,
           "mttr_h": 0.5,
           "interruptions": 209,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9596862.0,
-          "waste_gpu_h": 2199618.0,
-          "waste_dollars": 5499045.0
+          "productive_gpu_h": 9582534.0,
+          "waste_gpu_h": 2213946.0,
+          "waste_dollars": 5534865.0
         }
       },
       "winner": "elastic"
@@ -5665,15 +5665,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 1,
-          "ettr": 0.7994,
+          "ettr": 0.7982,
           "availability": 0.8417,
           "mttf_h": 2.66,
           "mttr_h": 0.5,
           "interruptions": 228,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9429684.7,
-          "waste_gpu_h": 2366795.3,
-          "waste_dollars": 5916988.0
+          "productive_gpu_h": 9416338.6,
+          "waste_gpu_h": 2380141.4,
+          "waste_dollars": 5950353.0
         }
       },
       "winner": "elastic"
@@ -5731,15 +5731,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 2,
-          "ettr": 0.79,
+          "ettr": 0.7889,
           "availability": 0.8331,
           "mttf_h": 2.49,
           "mttr_h": 0.5,
           "interruptions": 241,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9319631.1,
-          "waste_gpu_h": 2476848.9,
-          "waste_dollars": 6192122.0
+          "productive_gpu_h": 9306627.6,
+          "waste_gpu_h": 2489852.4,
+          "waste_dollars": 6224631.0
         }
       },
       "winner": "elastic"
@@ -5797,15 +5797,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 3,
-          "ettr": 0.8165,
+          "ettr": 0.8153,
           "availability": 0.8576,
           "mttf_h": 3.01,
           "mttr_h": 0.5,
           "interruptions": 205,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9631296.2,
-          "waste_gpu_h": 2165183.8,
-          "waste_dollars": 5412960.0
+          "productive_gpu_h": 9617169.6,
+          "waste_gpu_h": 2179310.4,
+          "waste_dollars": 5448276.0
         }
       },
       "winner": "elastic"
@@ -5863,15 +5863,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 4,
-          "ettr": 0.8101,
+          "ettr": 0.8092,
           "availability": 0.8519,
           "mttf_h": 2.87,
           "mttr_h": 0.5,
           "interruptions": 214,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9555960.5,
-          "waste_gpu_h": 2240519.5,
-          "waste_dollars": 5601299.0
+          "productive_gpu_h": 9545726.5,
+          "waste_gpu_h": 2250753.5,
+          "waste_dollars": 5626884.0
         }
       },
       "winner": "elastic"
@@ -5929,15 +5929,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 5,
-          "ettr": 0.7894,
+          "ettr": 0.7884,
           "availability": 0.8326,
           "mttf_h": 2.49,
           "mttr_h": 0.5,
           "interruptions": 241,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9311853.4,
-          "waste_gpu_h": 2484626.6,
-          "waste_dollars": 6211566.0
+          "productive_gpu_h": 9299926.3,
+          "waste_gpu_h": 2496553.7,
+          "waste_dollars": 6241384.0
         }
       },
       "winner": "elastic"
@@ -5995,15 +5995,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 6,
-          "ettr": 0.7857,
+          "ettr": 0.7847,
           "availability": 0.8292,
           "mttf_h": 2.43,
           "mttr_h": 0.5,
           "interruptions": 246,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9268968.1,
-          "waste_gpu_h": 2527511.9,
-          "waste_dollars": 6318780.0
+          "productive_gpu_h": 9256476.9,
+          "waste_gpu_h": 2540003.1,
+          "waste_dollars": 6350008.0
         }
       },
       "winner": "elastic"
@@ -6061,15 +6061,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 7,
-          "ettr": 0.8015,
+          "ettr": 0.8005,
           "availability": 0.8438,
           "mttf_h": 2.7,
           "mttr_h": 0.5,
           "interruptions": 225,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9455107.2,
-          "waste_gpu_h": 2341372.8,
-          "waste_dollars": 5853432.0
+          "productive_gpu_h": 9443181.7,
+          "waste_gpu_h": 2353298.3,
+          "waste_dollars": 5883246.0
         }
       },
       "winner": "elastic"
@@ -6127,15 +6127,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 8,
-          "ettr": 0.7842,
+          "ettr": 0.7832,
           "availability": 0.8276,
           "mttf_h": 2.39,
           "mttr_h": 0.5,
           "interruptions": 249,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9250548.6,
-          "waste_gpu_h": 2545931.4,
-          "waste_dollars": 6364828.0
+          "productive_gpu_h": 9239184.2,
+          "waste_gpu_h": 2557295.8,
+          "waste_dollars": 6393240.0
         }
       },
       "winner": "elastic"
@@ -6193,15 +6193,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 9,
-          "ettr": 0.8015,
+          "ettr": 0.8004,
           "availability": 0.8437,
           "mttf_h": 2.69,
           "mttr_h": 0.5,
           "interruptions": 226,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9454929.5,
-          "waste_gpu_h": 2341550.5,
-          "waste_dollars": 5853876.0
+          "productive_gpu_h": 9442485.4,
+          "waste_gpu_h": 2353994.6,
+          "waste_dollars": 5884987.0
         }
       },
       "winner": "elastic"
@@ -6259,15 +6259,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 10,
-          "ettr": 0.7729,
+          "ettr": 0.772,
           "availability": 0.8174,
           "mttf_h": 2.24,
           "mttr_h": 0.5,
           "interruptions": 263,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9117871.2,
-          "waste_gpu_h": 2678608.8,
-          "waste_dollars": 6696522.0
+          "productive_gpu_h": 9106786.8,
+          "waste_gpu_h": 2689693.2,
+          "waste_dollars": 6724233.0
         }
       },
       "winner": "elastic"
@@ -6325,15 +6325,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 11,
-          "ettr": 0.7985,
+          "ettr": 0.7974,
           "availability": 0.8409,
           "mttf_h": 2.63,
           "mttr_h": 0.5,
           "interruptions": 230,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9419530.9,
-          "waste_gpu_h": 2376949.1,
-          "waste_dollars": 5942373.0
+          "productive_gpu_h": 9406300.0,
+          "waste_gpu_h": 2390180.0,
+          "waste_dollars": 5975450.0
         }
       },
       "winner": "elastic"
@@ -6391,15 +6391,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 0,
-          "ettr": 0.8117,
+          "ettr": 0.8115,
           "availability": 0.8549,
           "mttf_h": 2.94,
           "mttr_h": 0.5,
           "interruptions": 209,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9575128.5,
-          "waste_gpu_h": 2221351.5,
-          "waste_dollars": 5553379.0
+          "productive_gpu_h": 9573378.8,
+          "waste_gpu_h": 2223101.2,
+          "waste_dollars": 5557753.0
         }
       },
       "winner": "elastic"
@@ -6457,15 +6457,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 1,
-          "ettr": 0.7979,
+          "ettr": 0.7976,
           "availability": 0.8417,
           "mttf_h": 2.66,
           "mttr_h": 0.5,
           "interruptions": 228,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9411828.9,
-          "waste_gpu_h": 2384651.1,
-          "waste_dollars": 5961628.0
+          "productive_gpu_h": 9408369.6,
+          "waste_gpu_h": 2388110.4,
+          "waste_dollars": 5970276.0
         }
       },
       "winner": "elastic"
@@ -6523,15 +6523,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 2,
-          "ettr": 0.7885,
+          "ettr": 0.7882,
           "availability": 0.8331,
           "mttf_h": 2.49,
           "mttr_h": 0.5,
           "interruptions": 241,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9301277.0,
-          "waste_gpu_h": 2495203.0,
-          "waste_dollars": 6238008.0
+          "productive_gpu_h": 9298415.8,
+          "waste_gpu_h": 2498064.2,
+          "waste_dollars": 6245160.0
         }
       },
       "winner": "elastic"
@@ -6589,15 +6589,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 3,
-          "ettr": 0.8147,
+          "ettr": 0.8144,
           "availability": 0.8576,
           "mttf_h": 3.01,
           "mttr_h": 0.5,
           "interruptions": 205,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9610336.1,
-          "waste_gpu_h": 2186143.9,
-          "waste_dollars": 5465360.0
+          "productive_gpu_h": 9607642.5,
+          "waste_gpu_h": 2188837.5,
+          "waste_dollars": 5472094.0
         }
       },
       "winner": "elastic"
@@ -6655,15 +6655,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 4,
-          "ettr": 0.8086,
+          "ettr": 0.8084,
           "availability": 0.8519,
           "mttf_h": 2.87,
           "mttr_h": 0.5,
           "interruptions": 214,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9538628.5,
-          "waste_gpu_h": 2257851.5,
-          "waste_dollars": 5644629.0
+          "productive_gpu_h": 9536214.5,
+          "waste_gpu_h": 2260265.5,
+          "waste_dollars": 5650664.0
         }
       },
       "winner": "elastic"
@@ -6721,15 +6721,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 5,
-          "ettr": 0.7879,
+          "ettr": 0.7878,
           "availability": 0.8326,
           "mttf_h": 2.49,
           "mttr_h": 0.5,
           "interruptions": 241,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9294628.6,
-          "waste_gpu_h": 2501851.4,
-          "waste_dollars": 6254629.0
+          "productive_gpu_h": 9293244.2,
+          "waste_gpu_h": 2503235.8,
+          "waste_dollars": 6258090.0
         }
       },
       "winner": "elastic"
@@ -6787,15 +6787,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 6,
-          "ettr": 0.7844,
+          "ettr": 0.7841,
           "availability": 0.8292,
           "mttf_h": 2.43,
           "mttr_h": 0.5,
           "interruptions": 246,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9253390.7,
-          "waste_gpu_h": 2543089.3,
-          "waste_dollars": 6357723.0
+          "productive_gpu_h": 9250206.7,
+          "waste_gpu_h": 2546273.3,
+          "waste_dollars": 6365683.0
         }
       },
       "winner": "elastic"
@@ -6853,15 +6853,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 7,
-          "ettr": 0.8001,
+          "ettr": 0.7998,
           "availability": 0.8438,
           "mttf_h": 2.7,
           "mttr_h": 0.5,
           "interruptions": 225,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9438567.9,
-          "waste_gpu_h": 2357912.1,
-          "waste_dollars": 5894780.0
+          "productive_gpu_h": 9434324.4,
+          "waste_gpu_h": 2362155.6,
+          "waste_dollars": 5905389.0
         }
       },
       "winner": "elastic"
@@ -6919,15 +6919,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 8,
-          "ettr": 0.7828,
+          "ettr": 0.7823,
           "availability": 0.8276,
           "mttf_h": 2.39,
           "mttr_h": 0.5,
           "interruptions": 249,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9233782.6,
-          "waste_gpu_h": 2562697.4,
-          "waste_dollars": 6406743.0
+          "productive_gpu_h": 9228638.3,
+          "waste_gpu_h": 2567841.7,
+          "waste_dollars": 6419604.0
         }
       },
       "winner": "elastic"
@@ -6985,15 +6985,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 9,
-          "ettr": 0.8,
+          "ettr": 0.7997,
           "availability": 0.8437,
           "mttf_h": 2.69,
           "mttr_h": 0.5,
           "interruptions": 226,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9437596.8,
-          "waste_gpu_h": 2358883.2,
-          "waste_dollars": 5897208.0
+          "productive_gpu_h": 9433224.7,
+          "waste_gpu_h": 2363255.3,
+          "waste_dollars": 5908138.0
         }
       },
       "winner": "elastic"
@@ -7051,15 +7051,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 10,
-          "ettr": 0.7717,
+          "ettr": 0.7715,
           "availability": 0.8174,
           "mttf_h": 2.24,
           "mttr_h": 0.5,
           "interruptions": 263,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9103321.9,
-          "waste_gpu_h": 2693158.1,
-          "waste_dollars": 6732895.0
+          "productive_gpu_h": 9101186.4,
+          "waste_gpu_h": 2695293.6,
+          "waste_dollars": 6738234.0
         }
       },
       "winner": "elastic"
@@ -7117,15 +7117,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 11,
-          "ettr": 0.7967,
+          "ettr": 0.7965,
           "availability": 0.8409,
           "mttf_h": 2.63,
           "mttr_h": 0.5,
           "interruptions": 230,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 9398317.8,
-          "waste_gpu_h": 2398162.2,
-          "waste_dollars": 5995405.0
+          "productive_gpu_h": 9396418.2,
+          "waste_gpu_h": 2400061.8,
+          "waste_dollars": 6000154.0
         }
       },
       "winner": "elastic"
@@ -7183,15 +7183,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 0,
-          "ettr": 0.9009,
+          "ettr": 0.9003,
           "availability": 0.9354,
           "mttf_h": 7.24,
           "mttr_h": 0.5,
           "interruptions": 93,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10626934.9,
-          "waste_gpu_h": 1169545.1,
-          "waste_dollars": 2923863.0
+          "productive_gpu_h": 10620152.9,
+          "waste_gpu_h": 1176327.1,
+          "waste_dollars": 2940818.0
         }
       },
       "winner": "auto-spares"
@@ -7249,15 +7249,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 1,
-          "ettr": 0.8964,
+          "ettr": 0.8958,
           "availability": 0.9313,
           "mttf_h": 6.77,
           "mttr_h": 0.5,
           "interruptions": 99,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10574000.5,
-          "waste_gpu_h": 1222479.5,
-          "waste_dollars": 3056199.0
+          "productive_gpu_h": 10567156.5,
+          "waste_gpu_h": 1229323.5,
+          "waste_dollars": 3073309.0
         }
       },
       "winner": "auto-spares"
@@ -7315,15 +7315,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 2,
-          "ettr": 0.8882,
+          "ettr": 0.8875,
           "availability": 0.9236,
           "mttf_h": 6.05,
           "mttr_h": 0.5,
           "interruptions": 110,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10477625.9,
-          "waste_gpu_h": 1318854.1,
-          "waste_dollars": 3297135.0
+          "productive_gpu_h": 10469506.0,
+          "waste_gpu_h": 1326974.0,
+          "waste_dollars": 3317435.0
         }
       },
       "winner": "auto-spares"
@@ -7381,15 +7381,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 3,
-          "ettr": 0.8956,
+          "ettr": 0.895,
           "availability": 0.9306,
           "mttf_h": 6.7,
           "mttr_h": 0.5,
           "interruptions": 100,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10565135.5,
-          "waste_gpu_h": 1231344.5,
-          "waste_dollars": 3078361.0
+          "productive_gpu_h": 10558207.2,
+          "waste_gpu_h": 1238272.8,
+          "waste_dollars": 3095682.0
         }
       },
       "winner": "auto-spares"
@@ -7447,15 +7447,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 4,
-          "ettr": 0.8941,
+          "ettr": 0.8935,
           "availability": 0.9292,
           "mttf_h": 6.56,
           "mttr_h": 0.5,
           "interruptions": 102,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10547519.9,
-          "waste_gpu_h": 1248960.1,
-          "waste_dollars": 3122400.0
+          "productive_gpu_h": 10540533.8,
+          "waste_gpu_h": 1255946.2,
+          "waste_dollars": 3139866.0
         }
       },
       "winner": "auto-spares"
@@ -7513,15 +7513,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 5,
-          "ettr": 0.8897,
+          "ettr": 0.889,
           "availability": 0.925,
           "mttf_h": 6.17,
           "mttr_h": 0.5,
           "interruptions": 108,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10495269.6,
-          "waste_gpu_h": 1301210.4,
-          "waste_dollars": 3253026.0
+          "productive_gpu_h": 10487609.1,
+          "waste_gpu_h": 1308870.9,
+          "waste_dollars": 3272177.0
         }
       },
       "winner": "auto-spares"
@@ -7579,15 +7579,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 6,
-          "ettr": 0.8889,
+          "ettr": 0.8883,
           "availability": 0.9243,
           "mttf_h": 6.11,
           "mttr_h": 0.5,
           "interruptions": 109,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10486404.1,
-          "waste_gpu_h": 1310075.9,
-          "waste_dollars": 3275190.0
+          "productive_gpu_h": 10478512.9,
+          "waste_gpu_h": 1317967.1,
+          "waste_dollars": 3294918.0
         }
       },
       "winner": "auto-spares"
@@ -7645,15 +7645,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 7,
-          "ettr": 0.8934,
+          "ettr": 0.8928,
           "availability": 0.9285,
           "mttf_h": 6.49,
           "mttr_h": 0.5,
           "interruptions": 103,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10538968.3,
-          "waste_gpu_h": 1257511.7,
-          "waste_dollars": 3143779.0
+          "productive_gpu_h": 10531882.6,
+          "waste_gpu_h": 1264597.4,
+          "waste_dollars": 3161493.0
         }
       },
       "winner": "auto-spares"
@@ -7711,15 +7711,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 8,
-          "ettr": 0.8867,
+          "ettr": 0.8861,
           "availability": 0.9222,
           "mttf_h": 5.93,
           "mttr_h": 0.5,
           "interruptions": 112,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10459942.8,
-          "waste_gpu_h": 1336537.2,
-          "waste_dollars": 3341343.0
+          "productive_gpu_h": 10452671.3,
+          "waste_gpu_h": 1343808.7,
+          "waste_dollars": 3359522.0
         }
       },
       "winner": "auto-spares"
@@ -7777,15 +7777,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 9,
-          "ettr": 0.8882,
+          "ettr": 0.8875,
           "availability": 0.9236,
           "mttf_h": 6.05,
           "mttr_h": 0.5,
           "interruptions": 110,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10477455.8,
-          "waste_gpu_h": 1319024.2,
-          "waste_dollars": 3297560.0
+          "productive_gpu_h": 10469808.4,
+          "waste_gpu_h": 1326671.6,
+          "waste_dollars": 3316679.0
         }
       },
       "winner": "auto-spares"
@@ -7843,15 +7843,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 10,
-          "ettr": 0.8831,
+          "ettr": 0.8824,
           "availability": 0.9188,
           "mttf_h": 5.65,
           "mttr_h": 0.5,
           "interruptions": 117,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10416951.7,
-          "waste_gpu_h": 1379528.3,
-          "waste_dollars": 3448821.0
+          "productive_gpu_h": 10408702.5,
+          "waste_gpu_h": 1387777.5,
+          "waste_dollars": 3469444.0
         }
       },
       "winner": "auto-spares"
@@ -7909,15 +7909,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 11,
-          "ettr": 0.8897,
+          "ettr": 0.8891,
           "availability": 0.925,
           "mttf_h": 6.17,
           "mttr_h": 0.5,
           "interruptions": 108,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10494941.0,
-          "waste_gpu_h": 1301539.0,
-          "waste_dollars": 3253847.0
+          "productive_gpu_h": 10488102.9,
+          "waste_gpu_h": 1308377.1,
+          "waste_dollars": 3270943.0
         }
       },
       "winner": "auto-spares"
@@ -7975,15 +7975,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 0,
-          "ettr": 0.9005,
+          "ettr": 0.8992,
           "availability": 0.9354,
           "mttf_h": 7.24,
           "mttr_h": 0.5,
           "interruptions": 93,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10622265.9,
-          "waste_gpu_h": 1174214.1,
-          "waste_dollars": 2935535.0
+          "productive_gpu_h": 10607862.0,
+          "waste_gpu_h": 1188618.0,
+          "waste_dollars": 2971545.0
         }
       },
       "winner": "auto-spares"
@@ -8041,15 +8041,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 1,
-          "ettr": 0.896,
+          "ettr": 0.8947,
           "availability": 0.9313,
           "mttf_h": 6.77,
           "mttr_h": 0.5,
           "interruptions": 99,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10569262.6,
-          "waste_gpu_h": 1227217.4,
-          "waste_dollars": 3068043.0
+          "productive_gpu_h": 10554054.8,
+          "waste_gpu_h": 1242425.2,
+          "waste_dollars": 3106063.0
         }
       },
       "winner": "auto-spares"
@@ -8107,15 +8107,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 2,
-          "ettr": 0.8876,
+          "ettr": 0.8863,
           "availability": 0.9236,
           "mttf_h": 6.05,
           "mttr_h": 0.5,
           "interruptions": 110,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10470634.6,
-          "waste_gpu_h": 1325845.4,
-          "waste_dollars": 3314613.0
+          "productive_gpu_h": 10455372.0,
+          "waste_gpu_h": 1341108.0,
+          "waste_dollars": 3352770.0
         }
       },
       "winner": "auto-spares"
@@ -8173,15 +8173,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 3,
-          "ettr": 0.8952,
+          "ettr": 0.894,
           "availability": 0.9306,
           "mttf_h": 6.7,
           "mttr_h": 0.5,
           "interruptions": 100,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10560021.7,
-          "waste_gpu_h": 1236458.3,
-          "waste_dollars": 3091146.0
+          "productive_gpu_h": 10545582.7,
+          "waste_gpu_h": 1250897.3,
+          "waste_dollars": 3127243.0
         }
       },
       "winner": "auto-spares"
@@ -8239,15 +8239,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 4,
-          "ettr": 0.8936,
+          "ettr": 0.8924,
           "availability": 0.9292,
           "mttf_h": 6.56,
           "mttr_h": 0.5,
           "interruptions": 102,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10541402.6,
-          "waste_gpu_h": 1255077.4,
-          "waste_dollars": 3137693.0
+          "productive_gpu_h": 10527033.0,
+          "waste_gpu_h": 1269447.0,
+          "waste_dollars": 3173617.0
         }
       },
       "winner": "auto-spares"
@@ -8305,15 +8305,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 5,
-          "ettr": 0.8892,
+          "ettr": 0.8878,
           "availability": 0.925,
           "mttf_h": 6.17,
           "mttr_h": 0.5,
           "interruptions": 108,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10489592.7,
-          "waste_gpu_h": 1306887.3,
-          "waste_dollars": 3267218.0
+          "productive_gpu_h": 10472731.2,
+          "waste_gpu_h": 1323748.8,
+          "waste_dollars": 3309372.0
         }
       },
       "winner": "auto-spares"
@@ -8371,15 +8371,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 6,
-          "ettr": 0.8884,
+          "ettr": 0.8871,
           "availability": 0.9243,
           "mttf_h": 6.11,
           "mttr_h": 0.5,
           "interruptions": 109,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10479434.2,
-          "waste_gpu_h": 1317045.8,
-          "waste_dollars": 3292615.0
+          "productive_gpu_h": 10464284.9,
+          "waste_gpu_h": 1332195.1,
+          "waste_dollars": 3330488.0
         }
       },
       "winner": "auto-spares"
@@ -8437,15 +8437,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 7,
-          "ettr": 0.8931,
+          "ettr": 0.8916,
           "availability": 0.9285,
           "mttf_h": 6.49,
           "mttr_h": 0.5,
           "interruptions": 103,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10534882.3,
-          "waste_gpu_h": 1261597.7,
-          "waste_dollars": 3153994.0
+          "productive_gpu_h": 10518097.5,
+          "waste_gpu_h": 1278382.5,
+          "waste_dollars": 3195956.0
         }
       },
       "winner": "auto-spares"
@@ -8503,15 +8503,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 8,
-          "ettr": 0.8863,
+          "ettr": 0.885,
           "availability": 0.9222,
           "mttf_h": 5.93,
           "mttr_h": 0.5,
           "interruptions": 112,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10455803.8,
-          "waste_gpu_h": 1340676.2,
-          "waste_dollars": 3351691.0
+          "productive_gpu_h": 10439712.5,
+          "waste_gpu_h": 1356767.5,
+          "waste_dollars": 3391919.0
         }
       },
       "winner": "auto-spares"
@@ -8569,15 +8569,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 9,
-          "ettr": 0.8877,
+          "ettr": 0.8863,
           "availability": 0.9236,
           "mttf_h": 6.05,
           "mttr_h": 0.5,
           "interruptions": 110,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10472054.9,
-          "waste_gpu_h": 1324425.1,
-          "waste_dollars": 3311063.0
+          "productive_gpu_h": 10455152.7,
+          "waste_gpu_h": 1341327.3,
+          "waste_dollars": 3353318.0
         }
       },
       "winner": "auto-spares"
@@ -8635,15 +8635,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 10,
-          "ettr": 0.8824,
+          "ettr": 0.8811,
           "availability": 0.9188,
           "mttf_h": 5.65,
           "mttr_h": 0.5,
           "interruptions": 117,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10409465.7,
-          "waste_gpu_h": 1387014.3,
-          "waste_dollars": 3467536.0
+          "productive_gpu_h": 10393311.2,
+          "waste_gpu_h": 1403168.8,
+          "waste_dollars": 3507922.0
         }
       },
       "winner": "auto-spares"
@@ -8701,15 +8701,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 11,
-          "ettr": 0.8892,
+          "ettr": 0.888,
           "availability": 0.925,
           "mttf_h": 6.17,
           "mttr_h": 0.5,
           "interruptions": 108,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10489820.7,
-          "waste_gpu_h": 1306659.3,
-          "waste_dollars": 3266648.0
+          "productive_gpu_h": 10475462.0,
+          "waste_gpu_h": 1321018.0,
+          "waste_dollars": 3302545.0
         }
       },
       "winner": "auto-spares"
@@ -8767,15 +8767,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 0,
-          "ettr": 0.8991,
+          "ettr": 0.8976,
           "availability": 0.9354,
           "mttf_h": 7.24,
           "mttr_h": 0.5,
           "interruptions": 93,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10605764.3,
-          "waste_gpu_h": 1190715.7,
-          "waste_dollars": 2976789.0
+          "productive_gpu_h": 10587982.1,
+          "waste_gpu_h": 1208497.9,
+          "waste_dollars": 3021245.0
         }
       },
       "winner": "auto-spares"
@@ -8833,15 +8833,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 1,
-          "ettr": 0.8943,
+          "ettr": 0.8928,
           "availability": 0.9313,
           "mttf_h": 6.77,
           "mttr_h": 0.5,
           "interruptions": 99,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10549299.0,
-          "waste_gpu_h": 1247181.0,
-          "waste_dollars": 3117952.0
+          "productive_gpu_h": 10531624.9,
+          "waste_gpu_h": 1264855.1,
+          "waste_dollars": 3162138.0
         }
       },
       "winner": "auto-spares"
@@ -8899,15 +8899,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 2,
-          "ettr": 0.8858,
+          "ettr": 0.8844,
           "availability": 0.9236,
           "mttf_h": 6.05,
           "mttr_h": 0.5,
           "interruptions": 110,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10448903.9,
-          "waste_gpu_h": 1347576.1,
-          "waste_dollars": 3368940.0
+          "productive_gpu_h": 10433089.3,
+          "waste_gpu_h": 1363390.7,
+          "waste_dollars": 3408477.0
         }
       },
       "winner": "auto-spares"
@@ -8965,15 +8965,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 3,
-          "ettr": 0.8938,
+          "ettr": 0.892,
           "availability": 0.9306,
           "mttf_h": 6.7,
           "mttr_h": 0.5,
           "interruptions": 100,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10543660.4,
-          "waste_gpu_h": 1252819.6,
-          "waste_dollars": 3132049.0
+          "productive_gpu_h": 10522845.4,
+          "waste_gpu_h": 1273634.6,
+          "waste_dollars": 3184086.0
         }
       },
       "winner": "auto-spares"
@@ -9031,15 +9031,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 4,
-          "ettr": 0.8919,
+          "ettr": 0.8905,
           "availability": 0.9292,
           "mttf_h": 6.56,
           "mttr_h": 0.5,
           "interruptions": 102,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10521268.2,
-          "waste_gpu_h": 1275211.8,
-          "waste_dollars": 3188029.0
+          "productive_gpu_h": 10504568.1,
+          "waste_gpu_h": 1291911.9,
+          "waste_dollars": 3229780.0
         }
       },
       "winner": "auto-spares"
@@ -9097,15 +9097,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 5,
-          "ettr": 0.8871,
+          "ettr": 0.8856,
           "availability": 0.925,
           "mttf_h": 6.17,
           "mttr_h": 0.5,
           "interruptions": 108,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10464422.0,
-          "waste_gpu_h": 1332058.0,
-          "waste_dollars": 3330145.0
+          "productive_gpu_h": 10447198.4,
+          "waste_gpu_h": 1349281.6,
+          "waste_dollars": 3373204.0
         }
       },
       "winner": "auto-spares"
@@ -9163,15 +9163,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 6,
-          "ettr": 0.8864,
+          "ettr": 0.8849,
           "availability": 0.9243,
           "mttf_h": 6.11,
           "mttr_h": 0.5,
           "interruptions": 109,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10456272.4,
-          "waste_gpu_h": 1340207.6,
-          "waste_dollars": 3350519.0
+          "productive_gpu_h": 10438922.1,
+          "waste_gpu_h": 1357557.9,
+          "waste_dollars": 3393895.0
         }
       },
       "winner": "auto-spares"
@@ -9229,15 +9229,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 7,
-          "ettr": 0.8911,
+          "ettr": 0.8899,
           "availability": 0.9285,
           "mttf_h": 6.49,
           "mttr_h": 0.5,
           "interruptions": 103,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10511938.5,
-          "waste_gpu_h": 1284541.5,
-          "waste_dollars": 3211354.0
+          "productive_gpu_h": 10497128.4,
+          "waste_gpu_h": 1299351.6,
+          "waste_dollars": 3248379.0
         }
       },
       "winner": "auto-spares"
@@ -9295,15 +9295,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 8,
-          "ettr": 0.8847,
+          "ettr": 0.8834,
           "availability": 0.9222,
           "mttf_h": 5.93,
           "mttr_h": 0.5,
           "interruptions": 112,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10436077.3,
-          "waste_gpu_h": 1360402.7,
-          "waste_dollars": 3401007.0
+          "productive_gpu_h": 10421081.9,
+          "waste_gpu_h": 1375398.1,
+          "waste_dollars": 3438495.0
         }
       },
       "winner": "auto-spares"
@@ -9361,15 +9361,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 9,
-          "ettr": 0.8857,
+          "ettr": 0.8844,
           "availability": 0.9236,
           "mttf_h": 6.05,
           "mttr_h": 0.5,
           "interruptions": 110,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10447759.1,
-          "waste_gpu_h": 1348720.9,
-          "waste_dollars": 3371802.0
+          "productive_gpu_h": 10432240.9,
+          "waste_gpu_h": 1364239.1,
+          "waste_dollars": 3410598.0
         }
       },
       "winner": "auto-spares"
@@ -9427,15 +9427,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 10,
-          "ettr": 0.8803,
+          "ettr": 0.879,
           "availability": 0.9188,
           "mttf_h": 5.65,
           "mttr_h": 0.5,
           "interruptions": 117,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10384584.5,
-          "waste_gpu_h": 1411895.5,
-          "waste_dollars": 3529739.0
+          "productive_gpu_h": 10368756.8,
+          "waste_gpu_h": 1427723.2,
+          "waste_dollars": 3569308.0
         }
       },
       "winner": "auto-spares"
@@ -9493,15 +9493,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 11,
-          "ettr": 0.8876,
+          "ettr": 0.8863,
           "availability": 0.925,
           "mttf_h": 6.17,
           "mttr_h": 0.5,
           "interruptions": 108,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10470491.5,
-          "waste_gpu_h": 1325988.5,
-          "waste_dollars": 3314971.0
+          "productive_gpu_h": 10455153.3,
+          "waste_gpu_h": 1341326.7,
+          "waste_dollars": 3353317.0
         }
       },
       "winner": "auto-spares"
@@ -9559,15 +9559,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 0,
-          "ettr": 0.9009,
+          "ettr": 0.9003,
           "availability": 0.9354,
           "mttf_h": 7.24,
           "mttr_h": 0.5,
           "interruptions": 93,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10626934.9,
-          "waste_gpu_h": 1169545.1,
-          "waste_dollars": 2923863.0
+          "productive_gpu_h": 10620152.9,
+          "waste_gpu_h": 1176327.1,
+          "waste_dollars": 2940818.0
         }
       },
       "winner": "auto-spares"
@@ -9625,15 +9625,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 1,
-          "ettr": 0.8964,
+          "ettr": 0.8958,
           "availability": 0.9313,
           "mttf_h": 6.77,
           "mttr_h": 0.5,
           "interruptions": 99,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10574000.5,
-          "waste_gpu_h": 1222479.5,
-          "waste_dollars": 3056199.0
+          "productive_gpu_h": 10567156.5,
+          "waste_gpu_h": 1229323.5,
+          "waste_dollars": 3073309.0
         }
       },
       "winner": "auto-spares"
@@ -9691,15 +9691,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 2,
-          "ettr": 0.8882,
+          "ettr": 0.8875,
           "availability": 0.9236,
           "mttf_h": 6.05,
           "mttr_h": 0.5,
           "interruptions": 110,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10477625.9,
-          "waste_gpu_h": 1318854.1,
-          "waste_dollars": 3297135.0
+          "productive_gpu_h": 10469506.0,
+          "waste_gpu_h": 1326974.0,
+          "waste_dollars": 3317435.0
         }
       },
       "winner": "auto-spares"
@@ -9757,15 +9757,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 3,
-          "ettr": 0.8956,
+          "ettr": 0.895,
           "availability": 0.9306,
           "mttf_h": 6.7,
           "mttr_h": 0.5,
           "interruptions": 100,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10565135.5,
-          "waste_gpu_h": 1231344.5,
-          "waste_dollars": 3078361.0
+          "productive_gpu_h": 10558207.2,
+          "waste_gpu_h": 1238272.8,
+          "waste_dollars": 3095682.0
         }
       },
       "winner": "auto-spares"
@@ -9823,15 +9823,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 4,
-          "ettr": 0.8941,
+          "ettr": 0.8935,
           "availability": 0.9292,
           "mttf_h": 6.56,
           "mttr_h": 0.5,
           "interruptions": 102,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10547519.9,
-          "waste_gpu_h": 1248960.1,
-          "waste_dollars": 3122400.0
+          "productive_gpu_h": 10540533.8,
+          "waste_gpu_h": 1255946.2,
+          "waste_dollars": 3139866.0
         }
       },
       "winner": "auto-spares"
@@ -9889,15 +9889,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 5,
-          "ettr": 0.8897,
+          "ettr": 0.889,
           "availability": 0.925,
           "mttf_h": 6.17,
           "mttr_h": 0.5,
           "interruptions": 108,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10495269.6,
-          "waste_gpu_h": 1301210.4,
-          "waste_dollars": 3253026.0
+          "productive_gpu_h": 10487609.1,
+          "waste_gpu_h": 1308870.9,
+          "waste_dollars": 3272177.0
         }
       },
       "winner": "auto-spares"
@@ -9955,15 +9955,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 6,
-          "ettr": 0.8889,
+          "ettr": 0.8883,
           "availability": 0.9243,
           "mttf_h": 6.11,
           "mttr_h": 0.5,
           "interruptions": 109,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10486404.1,
-          "waste_gpu_h": 1310075.9,
-          "waste_dollars": 3275190.0
+          "productive_gpu_h": 10478512.9,
+          "waste_gpu_h": 1317967.1,
+          "waste_dollars": 3294918.0
         }
       },
       "winner": "auto-spares"
@@ -10021,15 +10021,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 7,
-          "ettr": 0.8934,
+          "ettr": 0.8928,
           "availability": 0.9285,
           "mttf_h": 6.49,
           "mttr_h": 0.5,
           "interruptions": 103,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10538968.3,
-          "waste_gpu_h": 1257511.7,
-          "waste_dollars": 3143779.0
+          "productive_gpu_h": 10531882.6,
+          "waste_gpu_h": 1264597.4,
+          "waste_dollars": 3161493.0
         }
       },
       "winner": "auto-spares"
@@ -10087,15 +10087,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 8,
-          "ettr": 0.8867,
+          "ettr": 0.8861,
           "availability": 0.9222,
           "mttf_h": 5.93,
           "mttr_h": 0.5,
           "interruptions": 112,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10459942.8,
-          "waste_gpu_h": 1336537.2,
-          "waste_dollars": 3341343.0
+          "productive_gpu_h": 10452671.3,
+          "waste_gpu_h": 1343808.7,
+          "waste_dollars": 3359522.0
         }
       },
       "winner": "auto-spares"
@@ -10153,15 +10153,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 9,
-          "ettr": 0.8882,
+          "ettr": 0.8875,
           "availability": 0.9236,
           "mttf_h": 6.05,
           "mttr_h": 0.5,
           "interruptions": 110,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10477455.8,
-          "waste_gpu_h": 1319024.2,
-          "waste_dollars": 3297560.0
+          "productive_gpu_h": 10469808.4,
+          "waste_gpu_h": 1326671.6,
+          "waste_dollars": 3316679.0
         }
       },
       "winner": "auto-spares"
@@ -10219,15 +10219,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 10,
-          "ettr": 0.8831,
+          "ettr": 0.8824,
           "availability": 0.9188,
           "mttf_h": 5.65,
           "mttr_h": 0.5,
           "interruptions": 117,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10416951.7,
-          "waste_gpu_h": 1379528.3,
-          "waste_dollars": 3448821.0
+          "productive_gpu_h": 10408702.5,
+          "waste_gpu_h": 1387777.5,
+          "waste_dollars": 3469444.0
         }
       },
       "winner": "auto-spares"
@@ -10285,15 +10285,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 11,
-          "ettr": 0.8897,
+          "ettr": 0.8891,
           "availability": 0.925,
           "mttf_h": 6.17,
           "mttr_h": 0.5,
           "interruptions": 108,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10494941.0,
-          "waste_gpu_h": 1301539.0,
-          "waste_dollars": 3253847.0
+          "productive_gpu_h": 10488102.9,
+          "waste_gpu_h": 1308377.1,
+          "waste_dollars": 3270943.0
         }
       },
       "winner": "auto-spares"
@@ -10351,15 +10351,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 0,
-          "ettr": 0.9005,
+          "ettr": 0.8992,
           "availability": 0.9354,
           "mttf_h": 7.24,
           "mttr_h": 0.5,
           "interruptions": 93,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10622265.9,
-          "waste_gpu_h": 1174214.1,
-          "waste_dollars": 2935535.0
+          "productive_gpu_h": 10607862.0,
+          "waste_gpu_h": 1188618.0,
+          "waste_dollars": 2971545.0
         }
       },
       "winner": "auto-spares"
@@ -10417,15 +10417,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 1,
-          "ettr": 0.896,
+          "ettr": 0.8947,
           "availability": 0.9313,
           "mttf_h": 6.77,
           "mttr_h": 0.5,
           "interruptions": 99,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10569262.6,
-          "waste_gpu_h": 1227217.4,
-          "waste_dollars": 3068043.0
+          "productive_gpu_h": 10554054.8,
+          "waste_gpu_h": 1242425.2,
+          "waste_dollars": 3106063.0
         }
       },
       "winner": "auto-spares"
@@ -10483,15 +10483,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 2,
-          "ettr": 0.8876,
+          "ettr": 0.8863,
           "availability": 0.9236,
           "mttf_h": 6.05,
           "mttr_h": 0.5,
           "interruptions": 110,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10470634.6,
-          "waste_gpu_h": 1325845.4,
-          "waste_dollars": 3314613.0
+          "productive_gpu_h": 10455372.0,
+          "waste_gpu_h": 1341108.0,
+          "waste_dollars": 3352770.0
         }
       },
       "winner": "auto-spares"
@@ -10549,15 +10549,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 3,
-          "ettr": 0.8952,
+          "ettr": 0.894,
           "availability": 0.9306,
           "mttf_h": 6.7,
           "mttr_h": 0.5,
           "interruptions": 100,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10560021.7,
-          "waste_gpu_h": 1236458.3,
-          "waste_dollars": 3091146.0
+          "productive_gpu_h": 10545582.7,
+          "waste_gpu_h": 1250897.3,
+          "waste_dollars": 3127243.0
         }
       },
       "winner": "auto-spares"
@@ -10615,15 +10615,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 4,
-          "ettr": 0.8936,
+          "ettr": 0.8924,
           "availability": 0.9292,
           "mttf_h": 6.56,
           "mttr_h": 0.5,
           "interruptions": 102,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10541402.6,
-          "waste_gpu_h": 1255077.4,
-          "waste_dollars": 3137693.0
+          "productive_gpu_h": 10527033.0,
+          "waste_gpu_h": 1269447.0,
+          "waste_dollars": 3173617.0
         }
       },
       "winner": "auto-spares"
@@ -10681,15 +10681,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 5,
-          "ettr": 0.8892,
+          "ettr": 0.8878,
           "availability": 0.925,
           "mttf_h": 6.17,
           "mttr_h": 0.5,
           "interruptions": 108,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10489592.7,
-          "waste_gpu_h": 1306887.3,
-          "waste_dollars": 3267218.0
+          "productive_gpu_h": 10472731.2,
+          "waste_gpu_h": 1323748.8,
+          "waste_dollars": 3309372.0
         }
       },
       "winner": "auto-spares"
@@ -10747,15 +10747,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 6,
-          "ettr": 0.8884,
+          "ettr": 0.8871,
           "availability": 0.9243,
           "mttf_h": 6.11,
           "mttr_h": 0.5,
           "interruptions": 109,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10479434.2,
-          "waste_gpu_h": 1317045.8,
-          "waste_dollars": 3292615.0
+          "productive_gpu_h": 10464284.9,
+          "waste_gpu_h": 1332195.1,
+          "waste_dollars": 3330488.0
         }
       },
       "winner": "auto-spares"
@@ -10813,15 +10813,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 7,
-          "ettr": 0.8931,
+          "ettr": 0.8916,
           "availability": 0.9285,
           "mttf_h": 6.49,
           "mttr_h": 0.5,
           "interruptions": 103,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10534882.3,
-          "waste_gpu_h": 1261597.7,
-          "waste_dollars": 3153994.0
+          "productive_gpu_h": 10518097.5,
+          "waste_gpu_h": 1278382.5,
+          "waste_dollars": 3195956.0
         }
       },
       "winner": "auto-spares"
@@ -10879,15 +10879,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 8,
-          "ettr": 0.8863,
+          "ettr": 0.885,
           "availability": 0.9222,
           "mttf_h": 5.93,
           "mttr_h": 0.5,
           "interruptions": 112,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10455803.8,
-          "waste_gpu_h": 1340676.2,
-          "waste_dollars": 3351691.0
+          "productive_gpu_h": 10439712.5,
+          "waste_gpu_h": 1356767.5,
+          "waste_dollars": 3391919.0
         }
       },
       "winner": "auto-spares"
@@ -10945,15 +10945,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 9,
-          "ettr": 0.8877,
+          "ettr": 0.8863,
           "availability": 0.9236,
           "mttf_h": 6.05,
           "mttr_h": 0.5,
           "interruptions": 110,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10472054.9,
-          "waste_gpu_h": 1324425.1,
-          "waste_dollars": 3311063.0
+          "productive_gpu_h": 10455152.7,
+          "waste_gpu_h": 1341327.3,
+          "waste_dollars": 3353318.0
         }
       },
       "winner": "auto-spares"
@@ -11011,15 +11011,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 10,
-          "ettr": 0.8824,
+          "ettr": 0.8811,
           "availability": 0.9188,
           "mttf_h": 5.65,
           "mttr_h": 0.5,
           "interruptions": 117,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10409465.7,
-          "waste_gpu_h": 1387014.3,
-          "waste_dollars": 3467536.0
+          "productive_gpu_h": 10393311.2,
+          "waste_gpu_h": 1403168.8,
+          "waste_dollars": 3507922.0
         }
       },
       "winner": "auto-spares"
@@ -11077,15 +11077,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 11,
-          "ettr": 0.8892,
+          "ettr": 0.888,
           "availability": 0.925,
           "mttf_h": 6.17,
           "mttr_h": 0.5,
           "interruptions": 108,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10489820.7,
-          "waste_gpu_h": 1306659.3,
-          "waste_dollars": 3266648.0
+          "productive_gpu_h": 10475462.0,
+          "waste_gpu_h": 1321018.0,
+          "waste_dollars": 3302545.0
         }
       },
       "winner": "auto-spares"
@@ -11143,15 +11143,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 0,
-          "ettr": 0.8991,
+          "ettr": 0.8976,
           "availability": 0.9354,
           "mttf_h": 7.24,
           "mttr_h": 0.5,
           "interruptions": 93,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10605764.3,
-          "waste_gpu_h": 1190715.7,
-          "waste_dollars": 2976789.0
+          "productive_gpu_h": 10587982.1,
+          "waste_gpu_h": 1208497.9,
+          "waste_dollars": 3021245.0
         }
       },
       "winner": "auto-spares"
@@ -11209,15 +11209,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 1,
-          "ettr": 0.8943,
+          "ettr": 0.8928,
           "availability": 0.9313,
           "mttf_h": 6.77,
           "mttr_h": 0.5,
           "interruptions": 99,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10549299.0,
-          "waste_gpu_h": 1247181.0,
-          "waste_dollars": 3117952.0
+          "productive_gpu_h": 10531624.9,
+          "waste_gpu_h": 1264855.1,
+          "waste_dollars": 3162138.0
         }
       },
       "winner": "auto-spares"
@@ -11275,15 +11275,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 2,
-          "ettr": 0.8858,
+          "ettr": 0.8844,
           "availability": 0.9236,
           "mttf_h": 6.05,
           "mttr_h": 0.5,
           "interruptions": 110,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10448903.9,
-          "waste_gpu_h": 1347576.1,
-          "waste_dollars": 3368940.0
+          "productive_gpu_h": 10433089.3,
+          "waste_gpu_h": 1363390.7,
+          "waste_dollars": 3408477.0
         }
       },
       "winner": "auto-spares"
@@ -11341,15 +11341,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 3,
-          "ettr": 0.8938,
+          "ettr": 0.892,
           "availability": 0.9306,
           "mttf_h": 6.7,
           "mttr_h": 0.5,
           "interruptions": 100,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10543660.4,
-          "waste_gpu_h": 1252819.6,
-          "waste_dollars": 3132049.0
+          "productive_gpu_h": 10522845.4,
+          "waste_gpu_h": 1273634.6,
+          "waste_dollars": 3184086.0
         }
       },
       "winner": "auto-spares"
@@ -11407,15 +11407,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 4,
-          "ettr": 0.8919,
+          "ettr": 0.8905,
           "availability": 0.9292,
           "mttf_h": 6.56,
           "mttr_h": 0.5,
           "interruptions": 102,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10521268.2,
-          "waste_gpu_h": 1275211.8,
-          "waste_dollars": 3188029.0
+          "productive_gpu_h": 10504568.1,
+          "waste_gpu_h": 1291911.9,
+          "waste_dollars": 3229780.0
         }
       },
       "winner": "auto-spares"
@@ -11473,15 +11473,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 5,
-          "ettr": 0.8871,
+          "ettr": 0.8856,
           "availability": 0.925,
           "mttf_h": 6.17,
           "mttr_h": 0.5,
           "interruptions": 108,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10464422.0,
-          "waste_gpu_h": 1332058.0,
-          "waste_dollars": 3330145.0
+          "productive_gpu_h": 10447198.4,
+          "waste_gpu_h": 1349281.6,
+          "waste_dollars": 3373204.0
         }
       },
       "winner": "auto-spares"
@@ -11539,15 +11539,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 6,
-          "ettr": 0.8864,
+          "ettr": 0.8849,
           "availability": 0.9243,
           "mttf_h": 6.11,
           "mttr_h": 0.5,
           "interruptions": 109,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10456272.4,
-          "waste_gpu_h": 1340207.6,
-          "waste_dollars": 3350519.0
+          "productive_gpu_h": 10438922.1,
+          "waste_gpu_h": 1357557.9,
+          "waste_dollars": 3393895.0
         }
       },
       "winner": "auto-spares"
@@ -11605,15 +11605,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 7,
-          "ettr": 0.8911,
+          "ettr": 0.8899,
           "availability": 0.9285,
           "mttf_h": 6.49,
           "mttr_h": 0.5,
           "interruptions": 103,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10511938.5,
-          "waste_gpu_h": 1284541.5,
-          "waste_dollars": 3211354.0
+          "productive_gpu_h": 10497128.4,
+          "waste_gpu_h": 1299351.6,
+          "waste_dollars": 3248379.0
         }
       },
       "winner": "auto-spares"
@@ -11671,15 +11671,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 8,
-          "ettr": 0.8847,
+          "ettr": 0.8834,
           "availability": 0.9222,
           "mttf_h": 5.93,
           "mttr_h": 0.5,
           "interruptions": 112,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10436077.3,
-          "waste_gpu_h": 1360402.7,
-          "waste_dollars": 3401007.0
+          "productive_gpu_h": 10421081.9,
+          "waste_gpu_h": 1375398.1,
+          "waste_dollars": 3438495.0
         }
       },
       "winner": "auto-spares"
@@ -11737,15 +11737,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 9,
-          "ettr": 0.8857,
+          "ettr": 0.8844,
           "availability": 0.9236,
           "mttf_h": 6.05,
           "mttr_h": 0.5,
           "interruptions": 110,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10447759.1,
-          "waste_gpu_h": 1348720.9,
-          "waste_dollars": 3371802.0
+          "productive_gpu_h": 10432240.9,
+          "waste_gpu_h": 1364239.1,
+          "waste_dollars": 3410598.0
         }
       },
       "winner": "auto-spares"
@@ -11803,15 +11803,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 10,
-          "ettr": 0.8803,
+          "ettr": 0.879,
           "availability": 0.9188,
           "mttf_h": 5.65,
           "mttr_h": 0.5,
           "interruptions": 117,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10384584.5,
-          "waste_gpu_h": 1411895.5,
-          "waste_dollars": 3529739.0
+          "productive_gpu_h": 10368756.8,
+          "waste_gpu_h": 1427723.2,
+          "waste_dollars": 3569308.0
         }
       },
       "winner": "auto-spares"
@@ -11869,15 +11869,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 11,
-          "ettr": 0.8876,
+          "ettr": 0.8863,
           "availability": 0.925,
           "mttf_h": 6.17,
           "mttr_h": 0.5,
           "interruptions": 108,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10470491.5,
-          "waste_gpu_h": 1325988.5,
-          "waste_dollars": 3314971.0
+          "productive_gpu_h": 10455153.3,
+          "waste_gpu_h": 1341326.7,
+          "waste_dollars": 3353317.0
         }
       },
       "winner": "auto-spares"
@@ -11935,15 +11935,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 0,
-          "ettr": 0.9009,
+          "ettr": 0.9003,
           "availability": 0.9354,
           "mttf_h": 7.24,
           "mttr_h": 0.5,
           "interruptions": 93,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10626934.9,
-          "waste_gpu_h": 1169545.1,
-          "waste_dollars": 2923863.0
+          "productive_gpu_h": 10620152.9,
+          "waste_gpu_h": 1176327.1,
+          "waste_dollars": 2940818.0
         }
       },
       "winner": "elastic"
@@ -12001,15 +12001,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 1,
-          "ettr": 0.8964,
+          "ettr": 0.8958,
           "availability": 0.9313,
           "mttf_h": 6.77,
           "mttr_h": 0.5,
           "interruptions": 99,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10574000.5,
-          "waste_gpu_h": 1222479.5,
-          "waste_dollars": 3056199.0
+          "productive_gpu_h": 10567156.5,
+          "waste_gpu_h": 1229323.5,
+          "waste_dollars": 3073309.0
         }
       },
       "winner": "elastic"
@@ -12067,15 +12067,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 2,
-          "ettr": 0.8882,
+          "ettr": 0.8875,
           "availability": 0.9236,
           "mttf_h": 6.05,
           "mttr_h": 0.5,
           "interruptions": 110,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10477625.9,
-          "waste_gpu_h": 1318854.1,
-          "waste_dollars": 3297135.0
+          "productive_gpu_h": 10469506.0,
+          "waste_gpu_h": 1326974.0,
+          "waste_dollars": 3317435.0
         }
       },
       "winner": "elastic"
@@ -12133,15 +12133,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 3,
-          "ettr": 0.8956,
+          "ettr": 0.895,
           "availability": 0.9306,
           "mttf_h": 6.7,
           "mttr_h": 0.5,
           "interruptions": 100,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10565135.5,
-          "waste_gpu_h": 1231344.5,
-          "waste_dollars": 3078361.0
+          "productive_gpu_h": 10558207.2,
+          "waste_gpu_h": 1238272.8,
+          "waste_dollars": 3095682.0
         }
       },
       "winner": "elastic"
@@ -12199,15 +12199,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 4,
-          "ettr": 0.8941,
+          "ettr": 0.8935,
           "availability": 0.9292,
           "mttf_h": 6.56,
           "mttr_h": 0.5,
           "interruptions": 102,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10547519.9,
-          "waste_gpu_h": 1248960.1,
-          "waste_dollars": 3122400.0
+          "productive_gpu_h": 10540533.8,
+          "waste_gpu_h": 1255946.2,
+          "waste_dollars": 3139866.0
         }
       },
       "winner": "elastic"
@@ -12265,15 +12265,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 5,
-          "ettr": 0.8897,
+          "ettr": 0.889,
           "availability": 0.925,
           "mttf_h": 6.17,
           "mttr_h": 0.5,
           "interruptions": 108,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10495269.6,
-          "waste_gpu_h": 1301210.4,
-          "waste_dollars": 3253026.0
+          "productive_gpu_h": 10487609.1,
+          "waste_gpu_h": 1308870.9,
+          "waste_dollars": 3272177.0
         }
       },
       "winner": "elastic"
@@ -12331,15 +12331,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 6,
-          "ettr": 0.8889,
+          "ettr": 0.8883,
           "availability": 0.9243,
           "mttf_h": 6.11,
           "mttr_h": 0.5,
           "interruptions": 109,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10486404.1,
-          "waste_gpu_h": 1310075.9,
-          "waste_dollars": 3275190.0
+          "productive_gpu_h": 10478512.9,
+          "waste_gpu_h": 1317967.1,
+          "waste_dollars": 3294918.0
         }
       },
       "winner": "elastic"
@@ -12397,15 +12397,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 7,
-          "ettr": 0.8934,
+          "ettr": 0.8928,
           "availability": 0.9285,
           "mttf_h": 6.49,
           "mttr_h": 0.5,
           "interruptions": 103,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10538968.3,
-          "waste_gpu_h": 1257511.7,
-          "waste_dollars": 3143779.0
+          "productive_gpu_h": 10531882.6,
+          "waste_gpu_h": 1264597.4,
+          "waste_dollars": 3161493.0
         }
       },
       "winner": "elastic"
@@ -12463,15 +12463,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 8,
-          "ettr": 0.8867,
+          "ettr": 0.8861,
           "availability": 0.9222,
           "mttf_h": 5.93,
           "mttr_h": 0.5,
           "interruptions": 112,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10459942.8,
-          "waste_gpu_h": 1336537.2,
-          "waste_dollars": 3341343.0
+          "productive_gpu_h": 10452671.3,
+          "waste_gpu_h": 1343808.7,
+          "waste_dollars": 3359522.0
         }
       },
       "winner": "elastic"
@@ -12529,15 +12529,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 9,
-          "ettr": 0.8882,
+          "ettr": 0.8875,
           "availability": 0.9236,
           "mttf_h": 6.05,
           "mttr_h": 0.5,
           "interruptions": 110,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10477455.8,
-          "waste_gpu_h": 1319024.2,
-          "waste_dollars": 3297560.0
+          "productive_gpu_h": 10469808.4,
+          "waste_gpu_h": 1326671.6,
+          "waste_dollars": 3316679.0
         }
       },
       "winner": "elastic"
@@ -12595,15 +12595,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 10,
-          "ettr": 0.8831,
+          "ettr": 0.8824,
           "availability": 0.9188,
           "mttf_h": 5.65,
           "mttr_h": 0.5,
           "interruptions": 117,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10416951.7,
-          "waste_gpu_h": 1379528.3,
-          "waste_dollars": 3448821.0
+          "productive_gpu_h": 10408702.5,
+          "waste_gpu_h": 1387777.5,
+          "waste_dollars": 3469444.0
         }
       },
       "winner": "elastic"
@@ -12661,15 +12661,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 11,
-          "ettr": 0.8897,
+          "ettr": 0.8891,
           "availability": 0.925,
           "mttf_h": 6.17,
           "mttr_h": 0.5,
           "interruptions": 108,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10494941.0,
-          "waste_gpu_h": 1301539.0,
-          "waste_dollars": 3253847.0
+          "productive_gpu_h": 10488102.9,
+          "waste_gpu_h": 1308377.1,
+          "waste_dollars": 3270943.0
         }
       },
       "winner": "elastic"
@@ -12727,15 +12727,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 0,
-          "ettr": 0.9005,
+          "ettr": 0.8992,
           "availability": 0.9354,
           "mttf_h": 7.24,
           "mttr_h": 0.5,
           "interruptions": 93,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10622265.9,
-          "waste_gpu_h": 1174214.1,
-          "waste_dollars": 2935535.0
+          "productive_gpu_h": 10607862.0,
+          "waste_gpu_h": 1188618.0,
+          "waste_dollars": 2971545.0
         }
       },
       "winner": "elastic"
@@ -12793,15 +12793,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 1,
-          "ettr": 0.896,
+          "ettr": 0.8947,
           "availability": 0.9313,
           "mttf_h": 6.77,
           "mttr_h": 0.5,
           "interruptions": 99,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10569262.6,
-          "waste_gpu_h": 1227217.4,
-          "waste_dollars": 3068043.0
+          "productive_gpu_h": 10554054.8,
+          "waste_gpu_h": 1242425.2,
+          "waste_dollars": 3106063.0
         }
       },
       "winner": "elastic"
@@ -12859,15 +12859,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 2,
-          "ettr": 0.8876,
+          "ettr": 0.8863,
           "availability": 0.9236,
           "mttf_h": 6.05,
           "mttr_h": 0.5,
           "interruptions": 110,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10470634.6,
-          "waste_gpu_h": 1325845.4,
-          "waste_dollars": 3314613.0
+          "productive_gpu_h": 10455372.0,
+          "waste_gpu_h": 1341108.0,
+          "waste_dollars": 3352770.0
         }
       },
       "winner": "elastic"
@@ -12925,15 +12925,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 3,
-          "ettr": 0.8952,
+          "ettr": 0.894,
           "availability": 0.9306,
           "mttf_h": 6.7,
           "mttr_h": 0.5,
           "interruptions": 100,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10560021.7,
-          "waste_gpu_h": 1236458.3,
-          "waste_dollars": 3091146.0
+          "productive_gpu_h": 10545582.7,
+          "waste_gpu_h": 1250897.3,
+          "waste_dollars": 3127243.0
         }
       },
       "winner": "elastic"
@@ -12991,15 +12991,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 4,
-          "ettr": 0.8936,
+          "ettr": 0.8924,
           "availability": 0.9292,
           "mttf_h": 6.56,
           "mttr_h": 0.5,
           "interruptions": 102,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10541402.6,
-          "waste_gpu_h": 1255077.4,
-          "waste_dollars": 3137693.0
+          "productive_gpu_h": 10527033.0,
+          "waste_gpu_h": 1269447.0,
+          "waste_dollars": 3173617.0
         }
       },
       "winner": "elastic"
@@ -13057,15 +13057,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 5,
-          "ettr": 0.8892,
+          "ettr": 0.8878,
           "availability": 0.925,
           "mttf_h": 6.17,
           "mttr_h": 0.5,
           "interruptions": 108,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10489592.7,
-          "waste_gpu_h": 1306887.3,
-          "waste_dollars": 3267218.0
+          "productive_gpu_h": 10472731.2,
+          "waste_gpu_h": 1323748.8,
+          "waste_dollars": 3309372.0
         }
       },
       "winner": "elastic"
@@ -13123,15 +13123,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 6,
-          "ettr": 0.8884,
+          "ettr": 0.8871,
           "availability": 0.9243,
           "mttf_h": 6.11,
           "mttr_h": 0.5,
           "interruptions": 109,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10479434.2,
-          "waste_gpu_h": 1317045.8,
-          "waste_dollars": 3292615.0
+          "productive_gpu_h": 10464284.9,
+          "waste_gpu_h": 1332195.1,
+          "waste_dollars": 3330488.0
         }
       },
       "winner": "elastic"
@@ -13189,15 +13189,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 7,
-          "ettr": 0.8931,
+          "ettr": 0.8916,
           "availability": 0.9285,
           "mttf_h": 6.49,
           "mttr_h": 0.5,
           "interruptions": 103,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10534882.3,
-          "waste_gpu_h": 1261597.7,
-          "waste_dollars": 3153994.0
+          "productive_gpu_h": 10518097.5,
+          "waste_gpu_h": 1278382.5,
+          "waste_dollars": 3195956.0
         }
       },
       "winner": "elastic"
@@ -13255,15 +13255,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 8,
-          "ettr": 0.8863,
+          "ettr": 0.885,
           "availability": 0.9222,
           "mttf_h": 5.93,
           "mttr_h": 0.5,
           "interruptions": 112,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10455803.8,
-          "waste_gpu_h": 1340676.2,
-          "waste_dollars": 3351691.0
+          "productive_gpu_h": 10439712.5,
+          "waste_gpu_h": 1356767.5,
+          "waste_dollars": 3391919.0
         }
       },
       "winner": "elastic"
@@ -13321,15 +13321,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 9,
-          "ettr": 0.8877,
+          "ettr": 0.8863,
           "availability": 0.9236,
           "mttf_h": 6.05,
           "mttr_h": 0.5,
           "interruptions": 110,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10472054.9,
-          "waste_gpu_h": 1324425.1,
-          "waste_dollars": 3311063.0
+          "productive_gpu_h": 10455152.7,
+          "waste_gpu_h": 1341327.3,
+          "waste_dollars": 3353318.0
         }
       },
       "winner": "elastic"
@@ -13387,15 +13387,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 10,
-          "ettr": 0.8824,
+          "ettr": 0.8811,
           "availability": 0.9188,
           "mttf_h": 5.65,
           "mttr_h": 0.5,
           "interruptions": 117,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10409465.7,
-          "waste_gpu_h": 1387014.3,
-          "waste_dollars": 3467536.0
+          "productive_gpu_h": 10393311.2,
+          "waste_gpu_h": 1403168.8,
+          "waste_dollars": 3507922.0
         }
       },
       "winner": "elastic"
@@ -13453,15 +13453,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 11,
-          "ettr": 0.8892,
+          "ettr": 0.888,
           "availability": 0.925,
           "mttf_h": 6.17,
           "mttr_h": 0.5,
           "interruptions": 108,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10489820.7,
-          "waste_gpu_h": 1306659.3,
-          "waste_dollars": 3266648.0
+          "productive_gpu_h": 10475462.0,
+          "waste_gpu_h": 1321018.0,
+          "waste_dollars": 3302545.0
         }
       },
       "winner": "elastic"
@@ -13519,15 +13519,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 0,
-          "ettr": 0.8991,
+          "ettr": 0.8976,
           "availability": 0.9354,
           "mttf_h": 7.24,
           "mttr_h": 0.5,
           "interruptions": 93,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10605764.3,
-          "waste_gpu_h": 1190715.7,
-          "waste_dollars": 2976789.0
+          "productive_gpu_h": 10587982.1,
+          "waste_gpu_h": 1208497.9,
+          "waste_dollars": 3021245.0
         }
       },
       "winner": "elastic"
@@ -13585,15 +13585,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 1,
-          "ettr": 0.8943,
+          "ettr": 0.8928,
           "availability": 0.9313,
           "mttf_h": 6.77,
           "mttr_h": 0.5,
           "interruptions": 99,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10549299.0,
-          "waste_gpu_h": 1247181.0,
-          "waste_dollars": 3117952.0
+          "productive_gpu_h": 10531624.9,
+          "waste_gpu_h": 1264855.1,
+          "waste_dollars": 3162138.0
         }
       },
       "winner": "elastic"
@@ -13651,15 +13651,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 2,
-          "ettr": 0.8858,
+          "ettr": 0.8844,
           "availability": 0.9236,
           "mttf_h": 6.05,
           "mttr_h": 0.5,
           "interruptions": 110,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10448903.9,
-          "waste_gpu_h": 1347576.1,
-          "waste_dollars": 3368940.0
+          "productive_gpu_h": 10433089.3,
+          "waste_gpu_h": 1363390.7,
+          "waste_dollars": 3408477.0
         }
       },
       "winner": "elastic"
@@ -13717,15 +13717,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 3,
-          "ettr": 0.8938,
+          "ettr": 0.892,
           "availability": 0.9306,
           "mttf_h": 6.7,
           "mttr_h": 0.5,
           "interruptions": 100,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10543660.4,
-          "waste_gpu_h": 1252819.6,
-          "waste_dollars": 3132049.0
+          "productive_gpu_h": 10522845.4,
+          "waste_gpu_h": 1273634.6,
+          "waste_dollars": 3184086.0
         }
       },
       "winner": "elastic"
@@ -13783,15 +13783,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 4,
-          "ettr": 0.8919,
+          "ettr": 0.8905,
           "availability": 0.9292,
           "mttf_h": 6.56,
           "mttr_h": 0.5,
           "interruptions": 102,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10521268.2,
-          "waste_gpu_h": 1275211.8,
-          "waste_dollars": 3188029.0
+          "productive_gpu_h": 10504568.1,
+          "waste_gpu_h": 1291911.9,
+          "waste_dollars": 3229780.0
         }
       },
       "winner": "elastic"
@@ -13849,15 +13849,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 5,
-          "ettr": 0.8871,
+          "ettr": 0.8856,
           "availability": 0.925,
           "mttf_h": 6.17,
           "mttr_h": 0.5,
           "interruptions": 108,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10464422.0,
-          "waste_gpu_h": 1332058.0,
-          "waste_dollars": 3330145.0
+          "productive_gpu_h": 10447198.4,
+          "waste_gpu_h": 1349281.6,
+          "waste_dollars": 3373204.0
         }
       },
       "winner": "elastic"
@@ -13915,15 +13915,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 6,
-          "ettr": 0.8864,
+          "ettr": 0.8849,
           "availability": 0.9243,
           "mttf_h": 6.11,
           "mttr_h": 0.5,
           "interruptions": 109,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10456272.4,
-          "waste_gpu_h": 1340207.6,
-          "waste_dollars": 3350519.0
+          "productive_gpu_h": 10438922.1,
+          "waste_gpu_h": 1357557.9,
+          "waste_dollars": 3393895.0
         }
       },
       "winner": "elastic"
@@ -13981,15 +13981,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 7,
-          "ettr": 0.8911,
+          "ettr": 0.8899,
           "availability": 0.9285,
           "mttf_h": 6.49,
           "mttr_h": 0.5,
           "interruptions": 103,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10511938.5,
-          "waste_gpu_h": 1284541.5,
-          "waste_dollars": 3211354.0
+          "productive_gpu_h": 10497128.4,
+          "waste_gpu_h": 1299351.6,
+          "waste_dollars": 3248379.0
         }
       },
       "winner": "elastic"
@@ -14047,15 +14047,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 8,
-          "ettr": 0.8847,
+          "ettr": 0.8834,
           "availability": 0.9222,
           "mttf_h": 5.93,
           "mttr_h": 0.5,
           "interruptions": 112,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10436077.3,
-          "waste_gpu_h": 1360402.7,
-          "waste_dollars": 3401007.0
+          "productive_gpu_h": 10421081.9,
+          "waste_gpu_h": 1375398.1,
+          "waste_dollars": 3438495.0
         }
       },
       "winner": "elastic"
@@ -14113,15 +14113,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 9,
-          "ettr": 0.8857,
+          "ettr": 0.8844,
           "availability": 0.9236,
           "mttf_h": 6.05,
           "mttr_h": 0.5,
           "interruptions": 110,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10447759.1,
-          "waste_gpu_h": 1348720.9,
-          "waste_dollars": 3371802.0
+          "productive_gpu_h": 10432240.9,
+          "waste_gpu_h": 1364239.1,
+          "waste_dollars": 3410598.0
         }
       },
       "winner": "elastic"
@@ -14179,15 +14179,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 10,
-          "ettr": 0.8803,
+          "ettr": 0.879,
           "availability": 0.9188,
           "mttf_h": 5.65,
           "mttr_h": 0.5,
           "interruptions": 117,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10384584.5,
-          "waste_gpu_h": 1411895.5,
-          "waste_dollars": 3529739.0
+          "productive_gpu_h": 10368756.8,
+          "waste_gpu_h": 1427723.2,
+          "waste_dollars": 3569308.0
         }
       },
       "winner": "elastic"
@@ -14245,15 +14245,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 11,
-          "ettr": 0.8876,
+          "ettr": 0.8863,
           "availability": 0.925,
           "mttf_h": 6.17,
           "mttr_h": 0.5,
           "interruptions": 108,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10470491.5,
-          "waste_gpu_h": 1325988.5,
-          "waste_dollars": 3314971.0
+          "productive_gpu_h": 10455153.3,
+          "waste_gpu_h": 1341326.7,
+          "waste_dollars": 3353317.0
         }
       },
       "winner": "elastic"
@@ -14311,15 +14311,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 0,
-          "ettr": 0.9068,
+          "ettr": 0.9062,
           "availability": 0.941,
           "mttf_h": 7.97,
           "mttr_h": 0.5,
           "interruptions": 85,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10696653.8,
-          "waste_gpu_h": 1099826.2,
-          "waste_dollars": 2749565.0
+          "productive_gpu_h": 10689824.7,
+          "waste_gpu_h": 1106655.3,
+          "waste_dollars": 2766638.0
         }
       },
       "winner": "auto-spares"
@@ -14377,15 +14377,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 1,
-          "ettr": 0.9083,
+          "ettr": 0.9077,
           "availability": 0.9424,
           "mttf_h": 8.17,
           "mttr_h": 0.5,
           "interruptions": 83,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10714357.7,
-          "waste_gpu_h": 1082122.3,
-          "waste_dollars": 2705306.0
+          "productive_gpu_h": 10707478.2,
+          "waste_gpu_h": 1089001.8,
+          "waste_dollars": 2722504.0
         }
       },
       "winner": "auto-spares"
@@ -14443,15 +14443,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 2,
-          "ettr": 0.8964,
+          "ettr": 0.8956,
           "availability": 0.9313,
           "mttf_h": 6.77,
           "mttr_h": 0.5,
           "interruptions": 99,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10574054.9,
-          "waste_gpu_h": 1222425.1,
-          "waste_dollars": 3056063.0
+          "productive_gpu_h": 10565228.5,
+          "waste_gpu_h": 1231251.5,
+          "waste_dollars": 3078129.0
         }
       },
       "winner": "auto-spares"
@@ -14509,15 +14509,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 3,
-          "ettr": 0.9045,
+          "ettr": 0.9039,
           "availability": 0.9389,
           "mttf_h": 7.68,
           "mttr_h": 0.5,
           "interruptions": 88,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10670293.4,
-          "waste_gpu_h": 1126186.6,
-          "waste_dollars": 2815466.0
+          "productive_gpu_h": 10663256.7,
+          "waste_gpu_h": 1133223.3,
+          "waste_dollars": 2833058.0
         }
       },
       "winner": "auto-spares"
@@ -14575,15 +14575,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 4,
-          "ettr": 0.9046,
+          "ettr": 0.9039,
           "availability": 0.9389,
           "mttf_h": 7.68,
           "mttr_h": 0.5,
           "interruptions": 88,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10670727.7,
-          "waste_gpu_h": 1125752.3,
-          "waste_dollars": 2814381.0
+          "productive_gpu_h": 10662915.0,
+          "waste_gpu_h": 1133565.0,
+          "waste_dollars": 2833913.0
         }
       },
       "winner": "auto-spares"
@@ -14641,15 +14641,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 5,
-          "ettr": 0.9016,
+          "ettr": 0.9009,
           "availability": 0.9361,
           "mttf_h": 7.33,
           "mttr_h": 0.5,
           "interruptions": 92,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10635712.4,
-          "waste_gpu_h": 1160767.6,
-          "waste_dollars": 2901919.0
+          "productive_gpu_h": 10627686.5,
+          "waste_gpu_h": 1168793.5,
+          "waste_dollars": 2921984.0
         }
       },
       "winner": "auto-spares"
@@ -14707,15 +14707,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 6,
-          "ettr": 0.8994,
+          "ettr": 0.8986,
           "availability": 0.934,
           "mttf_h": 7.08,
           "mttr_h": 0.5,
           "interruptions": 95,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10609382.3,
-          "waste_gpu_h": 1187097.7,
-          "waste_dollars": 2967744.0
+          "productive_gpu_h": 10600227.6,
+          "waste_gpu_h": 1196252.4,
+          "waste_dollars": 2990631.0
         }
       },
       "winner": "auto-spares"
@@ -14773,15 +14773,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 7,
-          "ettr": 0.9023,
+          "ettr": 0.9017,
           "availability": 0.9368,
           "mttf_h": 7.41,
           "mttr_h": 0.5,
           "interruptions": 91,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10644198.7,
-          "waste_gpu_h": 1152281.3,
-          "waste_dollars": 2880703.0
+          "productive_gpu_h": 10637116.8,
+          "waste_gpu_h": 1159363.2,
+          "waste_dollars": 2898408.0
         }
       },
       "winner": "auto-spares"
@@ -14839,15 +14839,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 8,
-          "ettr": 0.8919,
+          "ettr": 0.8913,
           "availability": 0.9271,
           "mttf_h": 6.36,
           "mttr_h": 0.5,
           "interruptions": 105,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10521077.3,
-          "waste_gpu_h": 1275402.7,
-          "waste_dollars": 3188507.0
+          "productive_gpu_h": 10514200.9,
+          "waste_gpu_h": 1282279.1,
+          "waste_dollars": 3205698.0
         }
       },
       "winner": "auto-spares"
@@ -14905,15 +14905,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 9,
-          "ettr": 0.8993,
+          "ettr": 0.8986,
           "availability": 0.934,
           "mttf_h": 7.08,
           "mttr_h": 0.5,
           "interruptions": 95,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10608610.5,
-          "waste_gpu_h": 1187869.5,
-          "waste_dollars": 2969674.0
+          "productive_gpu_h": 10600845.9,
+          "waste_gpu_h": 1195634.1,
+          "waste_dollars": 2989085.0
         }
       },
       "winner": "auto-spares"
@@ -14971,15 +14971,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 10,
-          "ettr": 0.8942,
+          "ettr": 0.8934,
           "availability": 0.9293,
           "mttf_h": 6.56,
           "mttr_h": 0.5,
           "interruptions": 102,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10548455.6,
-          "waste_gpu_h": 1248024.4,
-          "waste_dollars": 3120061.0
+          "productive_gpu_h": 10539373.1,
+          "waste_gpu_h": 1257106.9,
+          "waste_dollars": 3142767.0
         }
       },
       "winner": "auto-spares"
@@ -15037,15 +15037,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 11,
-          "ettr": 0.8963,
+          "ettr": 0.8957,
           "availability": 0.9313,
           "mttf_h": 6.77,
           "mttr_h": 0.5,
           "interruptions": 99,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10573359.0,
-          "waste_gpu_h": 1223121.0,
-          "waste_dollars": 3057802.0
+          "productive_gpu_h": 10566199.1,
+          "waste_gpu_h": 1230280.9,
+          "waste_dollars": 3075702.0
         }
       },
       "winner": "auto-spares"
@@ -15103,15 +15103,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 0,
-          "ettr": 0.9063,
+          "ettr": 0.9051,
           "availability": 0.941,
           "mttf_h": 7.97,
           "mttr_h": 0.5,
           "interruptions": 85,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10691351.0,
-          "waste_gpu_h": 1105129.0,
-          "waste_dollars": 2762823.0
+          "productive_gpu_h": 10677255.0,
+          "waste_gpu_h": 1119225.0,
+          "waste_dollars": 2798063.0
         }
       },
       "winner": "auto-spares"
@@ -15169,15 +15169,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 1,
-          "ettr": 0.9078,
+          "ettr": 0.9066,
           "availability": 0.9424,
           "mttf_h": 8.17,
           "mttr_h": 0.5,
           "interruptions": 83,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10709004.4,
-          "waste_gpu_h": 1087475.6,
-          "waste_dollars": 2718689.0
+          "productive_gpu_h": 10695003.9,
+          "waste_gpu_h": 1101476.1,
+          "waste_dollars": 2753690.0
         }
       },
       "winner": "auto-spares"
@@ -15235,15 +15235,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 2,
-          "ettr": 0.8957,
+          "ettr": 0.8943,
           "availability": 0.9313,
           "mttf_h": 6.77,
           "mttr_h": 0.5,
           "interruptions": 99,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10566202.5,
-          "waste_gpu_h": 1230277.5,
-          "waste_dollars": 3075694.0
+          "productive_gpu_h": 10549273.2,
+          "waste_gpu_h": 1247206.8,
+          "waste_dollars": 3118017.0
         }
       },
       "winner": "auto-spares"
@@ -15301,15 +15301,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 3,
-          "ettr": 0.9041,
+          "ettr": 0.9028,
           "availability": 0.9389,
           "mttf_h": 7.68,
           "mttr_h": 0.5,
           "interruptions": 88,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10664771.8,
-          "waste_gpu_h": 1131708.2,
-          "waste_dollars": 2829271.0
+          "productive_gpu_h": 10650217.0,
+          "waste_gpu_h": 1146263.0,
+          "waste_dollars": 2865658.0
         }
       },
       "winner": "auto-spares"
@@ -15367,15 +15367,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 4,
-          "ettr": 0.904,
+          "ettr": 0.9026,
           "availability": 0.9389,
           "mttf_h": 7.68,
           "mttr_h": 0.5,
           "interruptions": 88,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10664587.9,
-          "waste_gpu_h": 1131892.1,
-          "waste_dollars": 2829730.0
+          "productive_gpu_h": 10647817.3,
+          "waste_gpu_h": 1148662.7,
+          "waste_dollars": 2871657.0
         }
       },
       "winner": "auto-spares"
@@ -15433,15 +15433,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 5,
-          "ettr": 0.9012,
+          "ettr": 0.8997,
           "availability": 0.9361,
           "mttf_h": 7.33,
           "mttr_h": 0.5,
           "interruptions": 92,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10630982.7,
-          "waste_gpu_h": 1165497.3,
-          "waste_dollars": 2913743.0
+          "productive_gpu_h": 10613073.7,
+          "waste_gpu_h": 1183406.3,
+          "waste_dollars": 2958516.0
         }
       },
       "winner": "auto-spares"
@@ -15499,15 +15499,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 6,
-          "ettr": 0.8989,
+          "ettr": 0.8973,
           "availability": 0.934,
           "mttf_h": 7.08,
           "mttr_h": 0.5,
           "interruptions": 95,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10603743.9,
-          "waste_gpu_h": 1192736.1,
-          "waste_dollars": 2981840.0
+          "productive_gpu_h": 10584441.6,
+          "waste_gpu_h": 1212038.4,
+          "waste_dollars": 3030096.0
         }
       },
       "winner": "auto-spares"
@@ -15565,15 +15565,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 7,
-          "ettr": 0.902,
+          "ettr": 0.9006,
           "availability": 0.9368,
           "mttf_h": 7.41,
           "mttr_h": 0.5,
           "interruptions": 91,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10640312.5,
-          "waste_gpu_h": 1156167.5,
-          "waste_dollars": 2890419.0
+          "productive_gpu_h": 10623809.1,
+          "waste_gpu_h": 1172670.9,
+          "waste_dollars": 2931677.0
         }
       },
       "winner": "auto-spares"
@@ -15631,15 +15631,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 8,
-          "ettr": 0.8915,
+          "ettr": 0.8903,
           "availability": 0.9271,
           "mttf_h": 6.36,
           "mttr_h": 0.5,
           "interruptions": 105,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10517092.8,
-          "waste_gpu_h": 1279387.2,
-          "waste_dollars": 3198468.0
+          "productive_gpu_h": 10501990.1,
+          "waste_gpu_h": 1294489.9,
+          "waste_dollars": 3236225.0
         }
       },
       "winner": "auto-spares"
@@ -15697,15 +15697,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 9,
-          "ettr": 0.8988,
+          "ettr": 0.8974,
           "availability": 0.934,
           "mttf_h": 7.08,
           "mttr_h": 0.5,
           "interruptions": 95,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10602727.8,
-          "waste_gpu_h": 1193752.2,
-          "waste_dollars": 2984381.0
+          "productive_gpu_h": 10585766.8,
+          "waste_gpu_h": 1210713.2,
+          "waste_dollars": 3026783.0
         }
       },
       "winner": "auto-spares"
@@ -15763,15 +15763,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 10,
-          "ettr": 0.8935,
+          "ettr": 0.892,
           "availability": 0.9293,
           "mttf_h": 6.56,
           "mttr_h": 0.5,
           "interruptions": 102,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10540075.8,
-          "waste_gpu_h": 1256404.2,
-          "waste_dollars": 3141010.0
+          "productive_gpu_h": 10522946.1,
+          "waste_gpu_h": 1273533.9,
+          "waste_dollars": 3183835.0
         }
       },
       "winner": "auto-spares"
@@ -15829,15 +15829,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 11,
-          "ettr": 0.8958,
+          "ettr": 0.8945,
           "availability": 0.9313,
           "mttf_h": 6.77,
           "mttr_h": 0.5,
           "interruptions": 99,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10567323.4,
-          "waste_gpu_h": 1229156.6,
-          "waste_dollars": 3072891.0
+          "productive_gpu_h": 10552392.9,
+          "waste_gpu_h": 1244087.1,
+          "waste_dollars": 3110218.0
         }
       },
       "winner": "auto-spares"
@@ -15895,15 +15895,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 0,
-          "ettr": 0.9051,
+          "ettr": 0.9033,
           "availability": 0.941,
           "mttf_h": 7.97,
           "mttr_h": 0.5,
           "interruptions": 85,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10676544.3,
-          "waste_gpu_h": 1119935.7,
-          "waste_dollars": 2799839.0
+          "productive_gpu_h": 10655457.2,
+          "waste_gpu_h": 1141022.8,
+          "waste_dollars": 2852557.0
         }
       },
       "winner": "elastic"
@@ -15961,15 +15961,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 1,
-          "ettr": 0.9062,
+          "ettr": 0.9049,
           "availability": 0.9424,
           "mttf_h": 8.17,
           "mttr_h": 0.5,
           "interruptions": 83,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10689691.9,
-          "waste_gpu_h": 1106788.1,
-          "waste_dollars": 2766970.0
+          "productive_gpu_h": 10674456.9,
+          "waste_gpu_h": 1122023.1,
+          "waste_dollars": 2805058.0
         }
       },
       "winner": "elastic"
@@ -16027,15 +16027,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 2,
-          "ettr": 0.894,
+          "ettr": 0.892,
           "availability": 0.9313,
           "mttf_h": 6.77,
           "mttr_h": 0.5,
           "interruptions": 99,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10545749.5,
-          "waste_gpu_h": 1250730.5,
-          "waste_dollars": 3126826.0
+          "productive_gpu_h": 10522083.0,
+          "waste_gpu_h": 1274397.0,
+          "waste_dollars": 3185992.0
         }
       },
       "winner": "elastic"
@@ -16093,15 +16093,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 3,
-          "ettr": 0.9025,
+          "ettr": 0.901,
           "availability": 0.9389,
           "mttf_h": 7.68,
           "mttr_h": 0.5,
           "interruptions": 88,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10646448.2,
-          "waste_gpu_h": 1150031.8,
-          "waste_dollars": 2875080.0
+          "productive_gpu_h": 10628956.3,
+          "waste_gpu_h": 1167523.7,
+          "waste_dollars": 2918809.0
         }
       },
       "winner": "elastic"
@@ -16159,15 +16159,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 4,
-          "ettr": 0.9021,
+          "ettr": 0.9005,
           "availability": 0.9389,
           "mttf_h": 7.68,
           "mttr_h": 0.5,
           "interruptions": 88,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10641360.0,
-          "waste_gpu_h": 1155120.0,
-          "waste_dollars": 2887800.0
+          "productive_gpu_h": 10622314.0,
+          "waste_gpu_h": 1174166.0,
+          "waste_dollars": 2935415.0
         }
       },
       "winner": "elastic"
@@ -16225,15 +16225,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 5,
-          "ettr": 0.8989,
+          "ettr": 0.8975,
           "availability": 0.9361,
           "mttf_h": 7.33,
           "mttr_h": 0.5,
           "interruptions": 92,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10604236.8,
-          "waste_gpu_h": 1192243.2,
-          "waste_dollars": 2980608.0
+          "productive_gpu_h": 10587717.4,
+          "waste_gpu_h": 1208762.6,
+          "waste_dollars": 3021907.0
         }
       },
       "winner": "elastic"
@@ -16291,15 +16291,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 6,
-          "ettr": 0.8964,
+          "ettr": 0.8948,
           "availability": 0.934,
           "mttf_h": 7.08,
           "mttr_h": 0.5,
           "interruptions": 95,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10574376.1,
-          "waste_gpu_h": 1222103.9,
-          "waste_dollars": 3055260.0
+          "productive_gpu_h": 10555903.0,
+          "waste_gpu_h": 1240577.0,
+          "waste_dollars": 3101443.0
         }
       },
       "winner": "elastic"
@@ -16357,15 +16357,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 7,
-          "ettr": 0.9004,
+          "ettr": 0.8989,
           "availability": 0.9368,
           "mttf_h": 7.41,
           "mttr_h": 0.5,
           "interruptions": 91,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10621217.0,
-          "waste_gpu_h": 1175263.0,
-          "waste_dollars": 2938157.0
+          "productive_gpu_h": 10603490.0,
+          "waste_gpu_h": 1192990.0,
+          "waste_dollars": 2982475.0
         }
       },
       "winner": "elastic"
@@ -16423,15 +16423,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 8,
-          "ettr": 0.89,
+          "ettr": 0.8889,
           "availability": 0.9271,
           "mttf_h": 6.36,
           "mttr_h": 0.5,
           "interruptions": 105,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10498544.2,
-          "waste_gpu_h": 1297935.8,
-          "waste_dollars": 3244839.0
+          "productive_gpu_h": 10485345.9,
+          "waste_gpu_h": 1311134.1,
+          "waste_dollars": 3277835.0
         }
       },
       "winner": "auto-spares"
@@ -16489,15 +16489,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 9,
-          "ettr": 0.8969,
+          "ettr": 0.8953,
           "availability": 0.934,
           "mttf_h": 7.08,
           "mttr_h": 0.5,
           "interruptions": 95,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10579975.3,
-          "waste_gpu_h": 1216504.7,
-          "waste_dollars": 3041262.0
+          "productive_gpu_h": 10560966.6,
+          "waste_gpu_h": 1235513.4,
+          "waste_dollars": 3088783.0
         }
       },
       "winner": "elastic"
@@ -16555,15 +16555,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 10,
-          "ettr": 0.8911,
+          "ettr": 0.8897,
           "availability": 0.9293,
           "mttf_h": 6.56,
           "mttr_h": 0.5,
           "interruptions": 102,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10511382.2,
-          "waste_gpu_h": 1285097.8,
-          "waste_dollars": 3212745.0
+          "productive_gpu_h": 10495292.0,
+          "waste_gpu_h": 1301188.0,
+          "waste_dollars": 3252970.0
         }
       },
       "winner": "elastic"
@@ -16621,15 +16621,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 11,
-          "ettr": 0.8945,
+          "ettr": 0.8926,
           "availability": 0.9313,
           "mttf_h": 6.77,
           "mttr_h": 0.5,
           "interruptions": 99,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10551742.6,
-          "waste_gpu_h": 1244737.4,
-          "waste_dollars": 3111843.0
+          "productive_gpu_h": 10530119.9,
+          "waste_gpu_h": 1266360.1,
+          "waste_dollars": 3165900.0
         }
       },
       "winner": "elastic"
@@ -16687,15 +16687,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 0,
-          "ettr": 0.9068,
+          "ettr": 0.9062,
           "availability": 0.941,
           "mttf_h": 7.97,
           "mttr_h": 0.5,
           "interruptions": 85,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10696653.8,
-          "waste_gpu_h": 1099826.2,
-          "waste_dollars": 2749565.0
+          "productive_gpu_h": 10689824.7,
+          "waste_gpu_h": 1106655.3,
+          "waste_dollars": 2766638.0
         }
       },
       "winner": "auto-spares"
@@ -16753,15 +16753,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 1,
-          "ettr": 0.9083,
+          "ettr": 0.9077,
           "availability": 0.9424,
           "mttf_h": 8.17,
           "mttr_h": 0.5,
           "interruptions": 83,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10714357.7,
-          "waste_gpu_h": 1082122.3,
-          "waste_dollars": 2705306.0
+          "productive_gpu_h": 10707478.2,
+          "waste_gpu_h": 1089001.8,
+          "waste_dollars": 2722504.0
         }
       },
       "winner": "auto-spares"
@@ -16819,15 +16819,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 2,
-          "ettr": 0.8964,
+          "ettr": 0.8956,
           "availability": 0.9313,
           "mttf_h": 6.77,
           "mttr_h": 0.5,
           "interruptions": 99,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10574054.9,
-          "waste_gpu_h": 1222425.1,
-          "waste_dollars": 3056063.0
+          "productive_gpu_h": 10565228.5,
+          "waste_gpu_h": 1231251.5,
+          "waste_dollars": 3078129.0
         }
       },
       "winner": "auto-spares"
@@ -16885,15 +16885,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 3,
-          "ettr": 0.9045,
+          "ettr": 0.9039,
           "availability": 0.9389,
           "mttf_h": 7.68,
           "mttr_h": 0.5,
           "interruptions": 88,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10670293.4,
-          "waste_gpu_h": 1126186.6,
-          "waste_dollars": 2815466.0
+          "productive_gpu_h": 10663256.7,
+          "waste_gpu_h": 1133223.3,
+          "waste_dollars": 2833058.0
         }
       },
       "winner": "auto-spares"
@@ -16951,15 +16951,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 4,
-          "ettr": 0.9046,
+          "ettr": 0.9039,
           "availability": 0.9389,
           "mttf_h": 7.68,
           "mttr_h": 0.5,
           "interruptions": 88,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10670727.7,
-          "waste_gpu_h": 1125752.3,
-          "waste_dollars": 2814381.0
+          "productive_gpu_h": 10662915.0,
+          "waste_gpu_h": 1133565.0,
+          "waste_dollars": 2833913.0
         }
       },
       "winner": "auto-spares"
@@ -17017,15 +17017,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 5,
-          "ettr": 0.9016,
+          "ettr": 0.9009,
           "availability": 0.9361,
           "mttf_h": 7.33,
           "mttr_h": 0.5,
           "interruptions": 92,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10635712.4,
-          "waste_gpu_h": 1160767.6,
-          "waste_dollars": 2901919.0
+          "productive_gpu_h": 10627686.5,
+          "waste_gpu_h": 1168793.5,
+          "waste_dollars": 2921984.0
         }
       },
       "winner": "auto-spares"
@@ -17083,15 +17083,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 6,
-          "ettr": 0.8994,
+          "ettr": 0.8986,
           "availability": 0.934,
           "mttf_h": 7.08,
           "mttr_h": 0.5,
           "interruptions": 95,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10609382.3,
-          "waste_gpu_h": 1187097.7,
-          "waste_dollars": 2967744.0
+          "productive_gpu_h": 10600227.6,
+          "waste_gpu_h": 1196252.4,
+          "waste_dollars": 2990631.0
         }
       },
       "winner": "auto-spares"
@@ -17149,15 +17149,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 7,
-          "ettr": 0.9023,
+          "ettr": 0.9017,
           "availability": 0.9368,
           "mttf_h": 7.41,
           "mttr_h": 0.5,
           "interruptions": 91,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10644198.7,
-          "waste_gpu_h": 1152281.3,
-          "waste_dollars": 2880703.0
+          "productive_gpu_h": 10637116.8,
+          "waste_gpu_h": 1159363.2,
+          "waste_dollars": 2898408.0
         }
       },
       "winner": "auto-spares"
@@ -17215,15 +17215,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 8,
-          "ettr": 0.8919,
+          "ettr": 0.8913,
           "availability": 0.9271,
           "mttf_h": 6.36,
           "mttr_h": 0.5,
           "interruptions": 105,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10521077.3,
-          "waste_gpu_h": 1275402.7,
-          "waste_dollars": 3188507.0
+          "productive_gpu_h": 10514200.9,
+          "waste_gpu_h": 1282279.1,
+          "waste_dollars": 3205698.0
         }
       },
       "winner": "auto-spares"
@@ -17281,15 +17281,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 9,
-          "ettr": 0.8993,
+          "ettr": 0.8986,
           "availability": 0.934,
           "mttf_h": 7.08,
           "mttr_h": 0.5,
           "interruptions": 95,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10608610.5,
-          "waste_gpu_h": 1187869.5,
-          "waste_dollars": 2969674.0
+          "productive_gpu_h": 10600845.9,
+          "waste_gpu_h": 1195634.1,
+          "waste_dollars": 2989085.0
         }
       },
       "winner": "auto-spares"
@@ -17347,15 +17347,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 10,
-          "ettr": 0.8942,
+          "ettr": 0.8934,
           "availability": 0.9293,
           "mttf_h": 6.56,
           "mttr_h": 0.5,
           "interruptions": 102,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10548455.6,
-          "waste_gpu_h": 1248024.4,
-          "waste_dollars": 3120061.0
+          "productive_gpu_h": 10539373.1,
+          "waste_gpu_h": 1257106.9,
+          "waste_dollars": 3142767.0
         }
       },
       "winner": "auto-spares"
@@ -17413,15 +17413,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 11,
-          "ettr": 0.8963,
+          "ettr": 0.8957,
           "availability": 0.9313,
           "mttf_h": 6.77,
           "mttr_h": 0.5,
           "interruptions": 99,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10573359.0,
-          "waste_gpu_h": 1223121.0,
-          "waste_dollars": 3057802.0
+          "productive_gpu_h": 10566199.1,
+          "waste_gpu_h": 1230280.9,
+          "waste_dollars": 3075702.0
         }
       },
       "winner": "auto-spares"
@@ -17479,15 +17479,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 0,
-          "ettr": 0.9063,
+          "ettr": 0.9051,
           "availability": 0.941,
           "mttf_h": 7.97,
           "mttr_h": 0.5,
           "interruptions": 85,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10691351.0,
-          "waste_gpu_h": 1105129.0,
-          "waste_dollars": 2762823.0
+          "productive_gpu_h": 10677255.0,
+          "waste_gpu_h": 1119225.0,
+          "waste_dollars": 2798063.0
         }
       },
       "winner": "elastic"
@@ -17545,15 +17545,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 1,
-          "ettr": 0.9078,
+          "ettr": 0.9066,
           "availability": 0.9424,
           "mttf_h": 8.17,
           "mttr_h": 0.5,
           "interruptions": 83,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10709004.4,
-          "waste_gpu_h": 1087475.6,
-          "waste_dollars": 2718689.0
+          "productive_gpu_h": 10695003.9,
+          "waste_gpu_h": 1101476.1,
+          "waste_dollars": 2753690.0
         }
       },
       "winner": "elastic"
@@ -17611,15 +17611,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 2,
-          "ettr": 0.8957,
+          "ettr": 0.8943,
           "availability": 0.9313,
           "mttf_h": 6.77,
           "mttr_h": 0.5,
           "interruptions": 99,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10566202.5,
-          "waste_gpu_h": 1230277.5,
-          "waste_dollars": 3075694.0
+          "productive_gpu_h": 10549273.2,
+          "waste_gpu_h": 1247206.8,
+          "waste_dollars": 3118017.0
         }
       },
       "winner": "elastic"
@@ -17677,15 +17677,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 3,
-          "ettr": 0.9041,
+          "ettr": 0.9028,
           "availability": 0.9389,
           "mttf_h": 7.68,
           "mttr_h": 0.5,
           "interruptions": 88,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10664771.8,
-          "waste_gpu_h": 1131708.2,
-          "waste_dollars": 2829271.0
+          "productive_gpu_h": 10650217.0,
+          "waste_gpu_h": 1146263.0,
+          "waste_dollars": 2865658.0
         }
       },
       "winner": "elastic"
@@ -17743,15 +17743,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 4,
-          "ettr": 0.904,
+          "ettr": 0.9026,
           "availability": 0.9389,
           "mttf_h": 7.68,
           "mttr_h": 0.5,
           "interruptions": 88,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10664587.9,
-          "waste_gpu_h": 1131892.1,
-          "waste_dollars": 2829730.0
+          "productive_gpu_h": 10647817.3,
+          "waste_gpu_h": 1148662.7,
+          "waste_dollars": 2871657.0
         }
       },
       "winner": "elastic"
@@ -17809,15 +17809,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 5,
-          "ettr": 0.9012,
+          "ettr": 0.8997,
           "availability": 0.9361,
           "mttf_h": 7.33,
           "mttr_h": 0.5,
           "interruptions": 92,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10630982.7,
-          "waste_gpu_h": 1165497.3,
-          "waste_dollars": 2913743.0
+          "productive_gpu_h": 10613073.7,
+          "waste_gpu_h": 1183406.3,
+          "waste_dollars": 2958516.0
         }
       },
       "winner": "elastic"
@@ -17875,15 +17875,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 6,
-          "ettr": 0.8989,
+          "ettr": 0.8973,
           "availability": 0.934,
           "mttf_h": 7.08,
           "mttr_h": 0.5,
           "interruptions": 95,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10603743.9,
-          "waste_gpu_h": 1192736.1,
-          "waste_dollars": 2981840.0
+          "productive_gpu_h": 10584441.6,
+          "waste_gpu_h": 1212038.4,
+          "waste_dollars": 3030096.0
         }
       },
       "winner": "elastic"
@@ -17941,15 +17941,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 7,
-          "ettr": 0.902,
+          "ettr": 0.9006,
           "availability": 0.9368,
           "mttf_h": 7.41,
           "mttr_h": 0.5,
           "interruptions": 91,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10640312.5,
-          "waste_gpu_h": 1156167.5,
-          "waste_dollars": 2890419.0
+          "productive_gpu_h": 10623809.1,
+          "waste_gpu_h": 1172670.9,
+          "waste_dollars": 2931677.0
         }
       },
       "winner": "auto-spares"
@@ -18007,15 +18007,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 8,
-          "ettr": 0.8915,
+          "ettr": 0.8903,
           "availability": 0.9271,
           "mttf_h": 6.36,
           "mttr_h": 0.5,
           "interruptions": 105,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10517092.8,
-          "waste_gpu_h": 1279387.2,
-          "waste_dollars": 3198468.0
+          "productive_gpu_h": 10501990.1,
+          "waste_gpu_h": 1294489.9,
+          "waste_dollars": 3236225.0
         }
       },
       "winner": "auto-spares"
@@ -18073,15 +18073,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 9,
-          "ettr": 0.8988,
+          "ettr": 0.8974,
           "availability": 0.934,
           "mttf_h": 7.08,
           "mttr_h": 0.5,
           "interruptions": 95,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10602727.8,
-          "waste_gpu_h": 1193752.2,
-          "waste_dollars": 2984381.0
+          "productive_gpu_h": 10585766.8,
+          "waste_gpu_h": 1210713.2,
+          "waste_dollars": 3026783.0
         }
       },
       "winner": "elastic"
@@ -18139,15 +18139,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 10,
-          "ettr": 0.8935,
+          "ettr": 0.892,
           "availability": 0.9293,
           "mttf_h": 6.56,
           "mttr_h": 0.5,
           "interruptions": 102,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10540075.8,
-          "waste_gpu_h": 1256404.2,
-          "waste_dollars": 3141010.0
+          "productive_gpu_h": 10522946.1,
+          "waste_gpu_h": 1273533.9,
+          "waste_dollars": 3183835.0
         }
       },
       "winner": "elastic"
@@ -18205,15 +18205,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 11,
-          "ettr": 0.8958,
+          "ettr": 0.8945,
           "availability": 0.9313,
           "mttf_h": 6.77,
           "mttr_h": 0.5,
           "interruptions": 99,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10567323.4,
-          "waste_gpu_h": 1229156.6,
-          "waste_dollars": 3072891.0
+          "productive_gpu_h": 10552392.9,
+          "waste_gpu_h": 1244087.1,
+          "waste_dollars": 3110218.0
         }
       },
       "winner": "elastic"
@@ -18271,15 +18271,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 0,
-          "ettr": 0.9051,
+          "ettr": 0.9033,
           "availability": 0.941,
           "mttf_h": 7.97,
           "mttr_h": 0.5,
           "interruptions": 85,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10676544.3,
-          "waste_gpu_h": 1119935.7,
-          "waste_dollars": 2799839.0
+          "productive_gpu_h": 10655457.2,
+          "waste_gpu_h": 1141022.8,
+          "waste_dollars": 2852557.0
         }
       },
       "winner": "elastic"
@@ -18337,15 +18337,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 1,
-          "ettr": 0.9062,
+          "ettr": 0.9049,
           "availability": 0.9424,
           "mttf_h": 8.17,
           "mttr_h": 0.5,
           "interruptions": 83,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10689691.9,
-          "waste_gpu_h": 1106788.1,
-          "waste_dollars": 2766970.0
+          "productive_gpu_h": 10674456.9,
+          "waste_gpu_h": 1122023.1,
+          "waste_dollars": 2805058.0
         }
       },
       "winner": "elastic"
@@ -18403,15 +18403,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 2,
-          "ettr": 0.894,
+          "ettr": 0.892,
           "availability": 0.9313,
           "mttf_h": 6.77,
           "mttr_h": 0.5,
           "interruptions": 99,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10545749.5,
-          "waste_gpu_h": 1250730.5,
-          "waste_dollars": 3126826.0
+          "productive_gpu_h": 10522083.0,
+          "waste_gpu_h": 1274397.0,
+          "waste_dollars": 3185992.0
         }
       },
       "winner": "elastic"
@@ -18469,15 +18469,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 3,
-          "ettr": 0.9025,
+          "ettr": 0.901,
           "availability": 0.9389,
           "mttf_h": 7.68,
           "mttr_h": 0.5,
           "interruptions": 88,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10646448.2,
-          "waste_gpu_h": 1150031.8,
-          "waste_dollars": 2875080.0
+          "productive_gpu_h": 10628956.3,
+          "waste_gpu_h": 1167523.7,
+          "waste_dollars": 2918809.0
         }
       },
       "winner": "elastic"
@@ -18535,15 +18535,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 4,
-          "ettr": 0.9021,
+          "ettr": 0.9005,
           "availability": 0.9389,
           "mttf_h": 7.68,
           "mttr_h": 0.5,
           "interruptions": 88,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10641360.0,
-          "waste_gpu_h": 1155120.0,
-          "waste_dollars": 2887800.0
+          "productive_gpu_h": 10622314.0,
+          "waste_gpu_h": 1174166.0,
+          "waste_dollars": 2935415.0
         }
       },
       "winner": "elastic"
@@ -18601,15 +18601,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 5,
-          "ettr": 0.8989,
+          "ettr": 0.8975,
           "availability": 0.9361,
           "mttf_h": 7.33,
           "mttr_h": 0.5,
           "interruptions": 92,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10604236.8,
-          "waste_gpu_h": 1192243.2,
-          "waste_dollars": 2980608.0
+          "productive_gpu_h": 10587717.4,
+          "waste_gpu_h": 1208762.6,
+          "waste_dollars": 3021907.0
         }
       },
       "winner": "elastic"
@@ -18667,15 +18667,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 6,
-          "ettr": 0.8964,
+          "ettr": 0.8948,
           "availability": 0.934,
           "mttf_h": 7.08,
           "mttr_h": 0.5,
           "interruptions": 95,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10574376.1,
-          "waste_gpu_h": 1222103.9,
-          "waste_dollars": 3055260.0
+          "productive_gpu_h": 10555903.0,
+          "waste_gpu_h": 1240577.0,
+          "waste_dollars": 3101443.0
         }
       },
       "winner": "elastic"
@@ -18733,15 +18733,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 7,
-          "ettr": 0.9004,
+          "ettr": 0.8989,
           "availability": 0.9368,
           "mttf_h": 7.41,
           "mttr_h": 0.5,
           "interruptions": 91,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10621217.0,
-          "waste_gpu_h": 1175263.0,
-          "waste_dollars": 2938157.0
+          "productive_gpu_h": 10603490.0,
+          "waste_gpu_h": 1192990.0,
+          "waste_dollars": 2982475.0
         }
       },
       "winner": "elastic"
@@ -18799,15 +18799,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 8,
-          "ettr": 0.89,
+          "ettr": 0.8889,
           "availability": 0.9271,
           "mttf_h": 6.36,
           "mttr_h": 0.5,
           "interruptions": 105,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10498544.2,
-          "waste_gpu_h": 1297935.8,
-          "waste_dollars": 3244839.0
+          "productive_gpu_h": 10485345.9,
+          "waste_gpu_h": 1311134.1,
+          "waste_dollars": 3277835.0
         }
       },
       "winner": "elastic"
@@ -18865,15 +18865,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 9,
-          "ettr": 0.8969,
+          "ettr": 0.8953,
           "availability": 0.934,
           "mttf_h": 7.08,
           "mttr_h": 0.5,
           "interruptions": 95,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10579975.3,
-          "waste_gpu_h": 1216504.7,
-          "waste_dollars": 3041262.0
+          "productive_gpu_h": 10560966.6,
+          "waste_gpu_h": 1235513.4,
+          "waste_dollars": 3088783.0
         }
       },
       "winner": "elastic"
@@ -18931,15 +18931,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 10,
-          "ettr": 0.8911,
+          "ettr": 0.8897,
           "availability": 0.9293,
           "mttf_h": 6.56,
           "mttr_h": 0.5,
           "interruptions": 102,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10511382.2,
-          "waste_gpu_h": 1285097.8,
-          "waste_dollars": 3212745.0
+          "productive_gpu_h": 10495292.0,
+          "waste_gpu_h": 1301188.0,
+          "waste_dollars": 3252970.0
         }
       },
       "winner": "elastic"
@@ -18997,15 +18997,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 11,
-          "ettr": 0.8945,
+          "ettr": 0.8926,
           "availability": 0.9313,
           "mttf_h": 6.77,
           "mttr_h": 0.5,
           "interruptions": 99,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10551742.6,
-          "waste_gpu_h": 1244737.4,
-          "waste_dollars": 3111843.0
+          "productive_gpu_h": 10530119.9,
+          "waste_gpu_h": 1266360.1,
+          "waste_dollars": 3165900.0
         }
       },
       "winner": "elastic"
@@ -19063,15 +19063,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 0,
-          "ettr": 0.9068,
+          "ettr": 0.9062,
           "availability": 0.941,
           "mttf_h": 7.97,
           "mttr_h": 0.5,
           "interruptions": 85,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10696653.8,
-          "waste_gpu_h": 1099826.2,
-          "waste_dollars": 2749565.0
+          "productive_gpu_h": 10689824.7,
+          "waste_gpu_h": 1106655.3,
+          "waste_dollars": 2766638.0
         }
       },
       "winner": "elastic"
@@ -19129,15 +19129,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 1,
-          "ettr": 0.9083,
+          "ettr": 0.9077,
           "availability": 0.9424,
           "mttf_h": 8.17,
           "mttr_h": 0.5,
           "interruptions": 83,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10714357.7,
-          "waste_gpu_h": 1082122.3,
-          "waste_dollars": 2705306.0
+          "productive_gpu_h": 10707478.2,
+          "waste_gpu_h": 1089001.8,
+          "waste_dollars": 2722504.0
         }
       },
       "winner": "elastic"
@@ -19195,15 +19195,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 2,
-          "ettr": 0.8964,
+          "ettr": 0.8956,
           "availability": 0.9313,
           "mttf_h": 6.77,
           "mttr_h": 0.5,
           "interruptions": 99,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10574054.9,
-          "waste_gpu_h": 1222425.1,
-          "waste_dollars": 3056063.0
+          "productive_gpu_h": 10565228.5,
+          "waste_gpu_h": 1231251.5,
+          "waste_dollars": 3078129.0
         }
       },
       "winner": "elastic"
@@ -19261,15 +19261,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 3,
-          "ettr": 0.9045,
+          "ettr": 0.9039,
           "availability": 0.9389,
           "mttf_h": 7.68,
           "mttr_h": 0.5,
           "interruptions": 88,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10670293.4,
-          "waste_gpu_h": 1126186.6,
-          "waste_dollars": 2815466.0
+          "productive_gpu_h": 10663256.7,
+          "waste_gpu_h": 1133223.3,
+          "waste_dollars": 2833058.0
         }
       },
       "winner": "elastic"
@@ -19327,15 +19327,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 4,
-          "ettr": 0.9046,
+          "ettr": 0.9039,
           "availability": 0.9389,
           "mttf_h": 7.68,
           "mttr_h": 0.5,
           "interruptions": 88,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10670727.7,
-          "waste_gpu_h": 1125752.3,
-          "waste_dollars": 2814381.0
+          "productive_gpu_h": 10662915.0,
+          "waste_gpu_h": 1133565.0,
+          "waste_dollars": 2833913.0
         }
       },
       "winner": "elastic"
@@ -19393,15 +19393,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 5,
-          "ettr": 0.9016,
+          "ettr": 0.9009,
           "availability": 0.9361,
           "mttf_h": 7.33,
           "mttr_h": 0.5,
           "interruptions": 92,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10635712.4,
-          "waste_gpu_h": 1160767.6,
-          "waste_dollars": 2901919.0
+          "productive_gpu_h": 10627686.5,
+          "waste_gpu_h": 1168793.5,
+          "waste_dollars": 2921984.0
         }
       },
       "winner": "elastic"
@@ -19459,15 +19459,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 6,
-          "ettr": 0.8994,
+          "ettr": 0.8986,
           "availability": 0.934,
           "mttf_h": 7.08,
           "mttr_h": 0.5,
           "interruptions": 95,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10609382.3,
-          "waste_gpu_h": 1187097.7,
-          "waste_dollars": 2967744.0
+          "productive_gpu_h": 10600227.6,
+          "waste_gpu_h": 1196252.4,
+          "waste_dollars": 2990631.0
         }
       },
       "winner": "elastic"
@@ -19525,15 +19525,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 7,
-          "ettr": 0.9023,
+          "ettr": 0.9017,
           "availability": 0.9368,
           "mttf_h": 7.41,
           "mttr_h": 0.5,
           "interruptions": 91,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10644198.7,
-          "waste_gpu_h": 1152281.3,
-          "waste_dollars": 2880703.0
+          "productive_gpu_h": 10637116.8,
+          "waste_gpu_h": 1159363.2,
+          "waste_dollars": 2898408.0
         }
       },
       "winner": "elastic"
@@ -19591,15 +19591,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 8,
-          "ettr": 0.8919,
+          "ettr": 0.8913,
           "availability": 0.9271,
           "mttf_h": 6.36,
           "mttr_h": 0.5,
           "interruptions": 105,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10521077.3,
-          "waste_gpu_h": 1275402.7,
-          "waste_dollars": 3188507.0
+          "productive_gpu_h": 10514200.9,
+          "waste_gpu_h": 1282279.1,
+          "waste_dollars": 3205698.0
         }
       },
       "winner": "elastic"
@@ -19657,15 +19657,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 9,
-          "ettr": 0.8993,
+          "ettr": 0.8986,
           "availability": 0.934,
           "mttf_h": 7.08,
           "mttr_h": 0.5,
           "interruptions": 95,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10608610.5,
-          "waste_gpu_h": 1187869.5,
-          "waste_dollars": 2969674.0
+          "productive_gpu_h": 10600845.9,
+          "waste_gpu_h": 1195634.1,
+          "waste_dollars": 2989085.0
         }
       },
       "winner": "elastic"
@@ -19723,15 +19723,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 10,
-          "ettr": 0.8942,
+          "ettr": 0.8934,
           "availability": 0.9293,
           "mttf_h": 6.56,
           "mttr_h": 0.5,
           "interruptions": 102,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10548455.6,
-          "waste_gpu_h": 1248024.4,
-          "waste_dollars": 3120061.0
+          "productive_gpu_h": 10539373.1,
+          "waste_gpu_h": 1257106.9,
+          "waste_dollars": 3142767.0
         }
       },
       "winner": "elastic"
@@ -19789,15 +19789,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 11,
-          "ettr": 0.8963,
+          "ettr": 0.8957,
           "availability": 0.9313,
           "mttf_h": 6.77,
           "mttr_h": 0.5,
           "interruptions": 99,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10573359.0,
-          "waste_gpu_h": 1223121.0,
-          "waste_dollars": 3057802.0
+          "productive_gpu_h": 10566199.1,
+          "waste_gpu_h": 1230280.9,
+          "waste_dollars": 3075702.0
         }
       },
       "winner": "elastic"
@@ -19855,15 +19855,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 0,
-          "ettr": 0.9063,
+          "ettr": 0.9051,
           "availability": 0.941,
           "mttf_h": 7.97,
           "mttr_h": 0.5,
           "interruptions": 85,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10691351.0,
-          "waste_gpu_h": 1105129.0,
-          "waste_dollars": 2762823.0
+          "productive_gpu_h": 10677255.0,
+          "waste_gpu_h": 1119225.0,
+          "waste_dollars": 2798063.0
         }
       },
       "winner": "elastic"
@@ -19921,15 +19921,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 1,
-          "ettr": 0.9078,
+          "ettr": 0.9066,
           "availability": 0.9424,
           "mttf_h": 8.17,
           "mttr_h": 0.5,
           "interruptions": 83,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10709004.4,
-          "waste_gpu_h": 1087475.6,
-          "waste_dollars": 2718689.0
+          "productive_gpu_h": 10695003.9,
+          "waste_gpu_h": 1101476.1,
+          "waste_dollars": 2753690.0
         }
       },
       "winner": "elastic"
@@ -19987,15 +19987,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 2,
-          "ettr": 0.8957,
+          "ettr": 0.8943,
           "availability": 0.9313,
           "mttf_h": 6.77,
           "mttr_h": 0.5,
           "interruptions": 99,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10566202.5,
-          "waste_gpu_h": 1230277.5,
-          "waste_dollars": 3075694.0
+          "productive_gpu_h": 10549273.2,
+          "waste_gpu_h": 1247206.8,
+          "waste_dollars": 3118017.0
         }
       },
       "winner": "elastic"
@@ -20053,15 +20053,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 3,
-          "ettr": 0.9041,
+          "ettr": 0.9028,
           "availability": 0.9389,
           "mttf_h": 7.68,
           "mttr_h": 0.5,
           "interruptions": 88,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10664771.8,
-          "waste_gpu_h": 1131708.2,
-          "waste_dollars": 2829271.0
+          "productive_gpu_h": 10650217.0,
+          "waste_gpu_h": 1146263.0,
+          "waste_dollars": 2865658.0
         }
       },
       "winner": "elastic"
@@ -20119,15 +20119,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 4,
-          "ettr": 0.904,
+          "ettr": 0.9026,
           "availability": 0.9389,
           "mttf_h": 7.68,
           "mttr_h": 0.5,
           "interruptions": 88,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10664587.9,
-          "waste_gpu_h": 1131892.1,
-          "waste_dollars": 2829730.0
+          "productive_gpu_h": 10647817.3,
+          "waste_gpu_h": 1148662.7,
+          "waste_dollars": 2871657.0
         }
       },
       "winner": "elastic"
@@ -20185,15 +20185,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 5,
-          "ettr": 0.9012,
+          "ettr": 0.8997,
           "availability": 0.9361,
           "mttf_h": 7.33,
           "mttr_h": 0.5,
           "interruptions": 92,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10630982.7,
-          "waste_gpu_h": 1165497.3,
-          "waste_dollars": 2913743.0
+          "productive_gpu_h": 10613073.7,
+          "waste_gpu_h": 1183406.3,
+          "waste_dollars": 2958516.0
         }
       },
       "winner": "elastic"
@@ -20251,15 +20251,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 6,
-          "ettr": 0.8989,
+          "ettr": 0.8973,
           "availability": 0.934,
           "mttf_h": 7.08,
           "mttr_h": 0.5,
           "interruptions": 95,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10603743.9,
-          "waste_gpu_h": 1192736.1,
-          "waste_dollars": 2981840.0
+          "productive_gpu_h": 10584441.6,
+          "waste_gpu_h": 1212038.4,
+          "waste_dollars": 3030096.0
         }
       },
       "winner": "elastic"
@@ -20317,15 +20317,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 7,
-          "ettr": 0.902,
+          "ettr": 0.9006,
           "availability": 0.9368,
           "mttf_h": 7.41,
           "mttr_h": 0.5,
           "interruptions": 91,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10640312.5,
-          "waste_gpu_h": 1156167.5,
-          "waste_dollars": 2890419.0
+          "productive_gpu_h": 10623809.1,
+          "waste_gpu_h": 1172670.9,
+          "waste_dollars": 2931677.0
         }
       },
       "winner": "elastic"
@@ -20383,15 +20383,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 8,
-          "ettr": 0.8915,
+          "ettr": 0.8903,
           "availability": 0.9271,
           "mttf_h": 6.36,
           "mttr_h": 0.5,
           "interruptions": 105,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10517092.8,
-          "waste_gpu_h": 1279387.2,
-          "waste_dollars": 3198468.0
+          "productive_gpu_h": 10501990.1,
+          "waste_gpu_h": 1294489.9,
+          "waste_dollars": 3236225.0
         }
       },
       "winner": "elastic"
@@ -20449,15 +20449,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 9,
-          "ettr": 0.8988,
+          "ettr": 0.8974,
           "availability": 0.934,
           "mttf_h": 7.08,
           "mttr_h": 0.5,
           "interruptions": 95,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10602727.8,
-          "waste_gpu_h": 1193752.2,
-          "waste_dollars": 2984381.0
+          "productive_gpu_h": 10585766.8,
+          "waste_gpu_h": 1210713.2,
+          "waste_dollars": 3026783.0
         }
       },
       "winner": "elastic"
@@ -20515,15 +20515,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 10,
-          "ettr": 0.8935,
+          "ettr": 0.892,
           "availability": 0.9293,
           "mttf_h": 6.56,
           "mttr_h": 0.5,
           "interruptions": 102,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10540075.8,
-          "waste_gpu_h": 1256404.2,
-          "waste_dollars": 3141010.0
+          "productive_gpu_h": 10522946.1,
+          "waste_gpu_h": 1273533.9,
+          "waste_dollars": 3183835.0
         }
       },
       "winner": "elastic"
@@ -20581,15 +20581,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 11,
-          "ettr": 0.8958,
+          "ettr": 0.8945,
           "availability": 0.9313,
           "mttf_h": 6.77,
           "mttr_h": 0.5,
           "interruptions": 99,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10567323.4,
-          "waste_gpu_h": 1229156.6,
-          "waste_dollars": 3072891.0
+          "productive_gpu_h": 10552392.9,
+          "waste_gpu_h": 1244087.1,
+          "waste_dollars": 3110218.0
         }
       },
       "winner": "elastic"
@@ -20647,15 +20647,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 0,
-          "ettr": 0.9051,
+          "ettr": 0.9033,
           "availability": 0.941,
           "mttf_h": 7.97,
           "mttr_h": 0.5,
           "interruptions": 85,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10676544.3,
-          "waste_gpu_h": 1119935.7,
-          "waste_dollars": 2799839.0
+          "productive_gpu_h": 10655457.2,
+          "waste_gpu_h": 1141022.8,
+          "waste_dollars": 2852557.0
         }
       },
       "winner": "elastic"
@@ -20713,15 +20713,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 1,
-          "ettr": 0.9062,
+          "ettr": 0.9049,
           "availability": 0.9424,
           "mttf_h": 8.17,
           "mttr_h": 0.5,
           "interruptions": 83,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10689691.9,
-          "waste_gpu_h": 1106788.1,
-          "waste_dollars": 2766970.0
+          "productive_gpu_h": 10674456.9,
+          "waste_gpu_h": 1122023.1,
+          "waste_dollars": 2805058.0
         }
       },
       "winner": "elastic"
@@ -20779,15 +20779,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 2,
-          "ettr": 0.894,
+          "ettr": 0.892,
           "availability": 0.9313,
           "mttf_h": 6.77,
           "mttr_h": 0.5,
           "interruptions": 99,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10545749.5,
-          "waste_gpu_h": 1250730.5,
-          "waste_dollars": 3126826.0
+          "productive_gpu_h": 10522083.0,
+          "waste_gpu_h": 1274397.0,
+          "waste_dollars": 3185992.0
         }
       },
       "winner": "elastic"
@@ -20845,15 +20845,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 3,
-          "ettr": 0.9025,
+          "ettr": 0.901,
           "availability": 0.9389,
           "mttf_h": 7.68,
           "mttr_h": 0.5,
           "interruptions": 88,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10646448.2,
-          "waste_gpu_h": 1150031.8,
-          "waste_dollars": 2875080.0
+          "productive_gpu_h": 10628956.3,
+          "waste_gpu_h": 1167523.7,
+          "waste_dollars": 2918809.0
         }
       },
       "winner": "elastic"
@@ -20911,15 +20911,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 4,
-          "ettr": 0.9021,
+          "ettr": 0.9005,
           "availability": 0.9389,
           "mttf_h": 7.68,
           "mttr_h": 0.5,
           "interruptions": 88,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10641360.0,
-          "waste_gpu_h": 1155120.0,
-          "waste_dollars": 2887800.0
+          "productive_gpu_h": 10622314.0,
+          "waste_gpu_h": 1174166.0,
+          "waste_dollars": 2935415.0
         }
       },
       "winner": "elastic"
@@ -20977,15 +20977,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 5,
-          "ettr": 0.8989,
+          "ettr": 0.8975,
           "availability": 0.9361,
           "mttf_h": 7.33,
           "mttr_h": 0.5,
           "interruptions": 92,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10604236.8,
-          "waste_gpu_h": 1192243.2,
-          "waste_dollars": 2980608.0
+          "productive_gpu_h": 10587717.4,
+          "waste_gpu_h": 1208762.6,
+          "waste_dollars": 3021907.0
         }
       },
       "winner": "elastic"
@@ -21043,15 +21043,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 6,
-          "ettr": 0.8964,
+          "ettr": 0.8948,
           "availability": 0.934,
           "mttf_h": 7.08,
           "mttr_h": 0.5,
           "interruptions": 95,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10574376.1,
-          "waste_gpu_h": 1222103.9,
-          "waste_dollars": 3055260.0
+          "productive_gpu_h": 10555903.0,
+          "waste_gpu_h": 1240577.0,
+          "waste_dollars": 3101443.0
         }
       },
       "winner": "elastic"
@@ -21109,15 +21109,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 7,
-          "ettr": 0.9004,
+          "ettr": 0.8989,
           "availability": 0.9368,
           "mttf_h": 7.41,
           "mttr_h": 0.5,
           "interruptions": 91,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10621217.0,
-          "waste_gpu_h": 1175263.0,
-          "waste_dollars": 2938157.0
+          "productive_gpu_h": 10603490.0,
+          "waste_gpu_h": 1192990.0,
+          "waste_dollars": 2982475.0
         }
       },
       "winner": "elastic"
@@ -21175,15 +21175,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 8,
-          "ettr": 0.89,
+          "ettr": 0.8889,
           "availability": 0.9271,
           "mttf_h": 6.36,
           "mttr_h": 0.5,
           "interruptions": 105,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10498544.2,
-          "waste_gpu_h": 1297935.8,
-          "waste_dollars": 3244839.0
+          "productive_gpu_h": 10485345.9,
+          "waste_gpu_h": 1311134.1,
+          "waste_dollars": 3277835.0
         }
       },
       "winner": "elastic"
@@ -21241,15 +21241,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 9,
-          "ettr": 0.8969,
+          "ettr": 0.8953,
           "availability": 0.934,
           "mttf_h": 7.08,
           "mttr_h": 0.5,
           "interruptions": 95,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10579975.3,
-          "waste_gpu_h": 1216504.7,
-          "waste_dollars": 3041262.0
+          "productive_gpu_h": 10560966.6,
+          "waste_gpu_h": 1235513.4,
+          "waste_dollars": 3088783.0
         }
       },
       "winner": "elastic"
@@ -21307,15 +21307,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 10,
-          "ettr": 0.8911,
+          "ettr": 0.8897,
           "availability": 0.9293,
           "mttf_h": 6.56,
           "mttr_h": 0.5,
           "interruptions": 102,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10511382.2,
-          "waste_gpu_h": 1285097.8,
-          "waste_dollars": 3212745.0
+          "productive_gpu_h": 10495292.0,
+          "waste_gpu_h": 1301188.0,
+          "waste_dollars": 3252970.0
         }
       },
       "winner": "elastic"
@@ -21373,15 +21373,15 @@
         "elastic": {
           "policy": "elastic",
           "seed": 11,
-          "ettr": 0.8945,
+          "ettr": 0.8926,
           "availability": 0.9313,
           "mttf_h": 6.77,
           "mttr_h": 0.5,
           "interruptions": 99,
           "reserved_spare_gpu_h": 0.0,
-          "productive_gpu_h": 10551742.6,
-          "waste_gpu_h": 1244737.4,
-          "waste_dollars": 3111843.0
+          "productive_gpu_h": 10530119.9,
+          "waste_gpu_h": 1266360.1,
+          "waste_dollars": 3165900.0
         }
       },
       "winner": "elastic"
