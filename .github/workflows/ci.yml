@@ -8,9 +8,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: pip install -r sim/requirements.txt
+      - run: pip install -r sim/requirements.txt pytest
       - name: Invariants + validation anchors
         run: cd sim && python3 test_reliability_sim.py
+      - name: Event order regressions (D-M4)
+        run: cd sim && python3 -m pytest -q test_event_permutations.py test_timeline_order.py
       - name: Validation registry (model vs public record)
         run: cd sim && python3 test_validation.py && python3 validation.py
       - name: Figures + results regenerate without error

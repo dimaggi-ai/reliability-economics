@@ -2,6 +2,7 @@
 all: test
 test: validation        ## invariants + the validation registry
 	cd sim && python3 test_reliability_sim.py
+	cd sim && python3 -m pytest -q test_event_permutations.py test_timeline_order.py
 validation:          ## model vs the public record, plus its negative controls
 	cd sim && python3 test_validation.py && python3 validation.py
 figures:             ## phase diagram, crossover, checkpoint optimum, validation
