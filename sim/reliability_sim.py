@@ -128,7 +128,11 @@ class Sim:
         self.policy = policy
         timeline = tuple((te, nfail) for te, nfail in events)
         for te, nfail in timeline:
-            if not math.isfinite(te) or not 0 <= te < cfg.horizon_h:
+            try:
+                valid_time = math.isfinite(te) and 0 <= te < cfg.horizon_h
+            except (TypeError, OverflowError):
+                valid_time = False
+            if not valid_time:
                 raise ValueError("event time must be finite and in [0, horizon_h)")
             if isinstance(nfail, bool) or not isinstance(nfail, int) or nfail <= 0:
                 raise ValueError("event failed-node count must be a positive integer")

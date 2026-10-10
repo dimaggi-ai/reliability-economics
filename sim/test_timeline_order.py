@@ -57,3 +57,10 @@ def test_caller_list_mutation_does_not_reorder_admitted_timeline(cfg, policy):
     expected = sim.run()
     events.reverse()
     assert sim.run() == expected
+
+
+@pytest.mark.parametrize('policy', Sim.POLICIES)
+@pytest.mark.parametrize('time', [None, '1.0', 10**1000], ids=['none', 'string', 'huge-int'])
+def test_invalid_time_types_raise_value_error(cfg, policy, time):
+    with pytest.raises(ValueError, match=r'event time must be finite and in \[0, horizon_h\)'):
+        Sim(cfg, policy, [(time, 1)])
