@@ -1,9 +1,16 @@
 import copy
+import json
+from pathlib import Path
 import unittest
 from validate_evidence import validate
 
 
 class ManifestTests(unittest.TestCase):
+    def test_repository_manifest_matches_artifacts(self):
+        root = Path(__file__).resolve().parents[1]
+        document = json.loads((root / 'evidence.json').read_text())
+        self.assertEqual(validate(document, root), [])
+
     def test_mutations(self):
         row = dict(name='pue',value=1.2,unit='dimensionless',evidence_class='scenario',sources=['s'],
                    transformation='identity',uncertainty='hypothetical',affected_outputs=['power'],valid_bounds=[1,5])
