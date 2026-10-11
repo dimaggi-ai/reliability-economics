@@ -112,7 +112,13 @@ def latent_events(cfg: Config, rng) -> list[tuple[float, int]]:
 
 
 class Sim:
-    """Run one policy against a fixed latent-event timeline."""
+    """Run one policy against a fixed latent-event timeline.
+
+    Snapshot and sort faults by (time, failed-node count), keeping duplicates.
+    At equal times, smaller faults consume spares first. Repair/spare returns
+    and recovery completion take effect before faults at that time. Elastic
+    reshard stops remain serialized, including for simultaneous faults.
+    """
 
     POLICIES = ("manual", "auto-restart", "auto-spares", "auto-spares-ckpt", "elastic")
 
@@ -120,7 +126,17 @@ class Sim:
         assert policy in self.POLICIES, policy
         self.cfg = cfg
         self.policy = policy
-        self.events = events
+        timeline = tuple((te, nfail) for te, nfail in events)
+        for te, nfail in timeline:
+            try:
+                valid_time = math.isfinite(te) and 0 <= te < cfg.horizon_h
+            except (TypeError, OverflowError):
+                valid_time = False
+            if not valid_time:
+                raise ValueError("event time must be finite and in [0, horizon_h)")
+            if isinstance(nfail, bool) or not isinstance(nfail, int) or nfail <= 0:
+                raise ValueError("event failed-node count must be a positive integer")
+        self.events = tuple(sorted(timeline))
 
     def run(self) -> dict:
         c = self.cfg
@@ -163,10 +179,10 @@ class Sim:
             for (te, nfail) in self.events:
                 if t >= c.horizon_h:
                     break
-                down_until = [d for d in down_until if d > te]
                 base = max(t, te)
                 credit_elastic(t, base)
                 uptime_h += base - t
+                down_until = [d for d in down_until if d > te]
                 usable_now = c.nodes - _legal_loss(len([d for d in down_until if d > te]),
                                                    c.legal_shape_nodes)
                 productive_nodeh = max(0.0, productive_nodeh - _expected_lost(ckpt) * usable_now)

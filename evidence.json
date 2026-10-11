@@ -5,7 +5,7 @@
     "sim/reliability_sim.py": {
       "source_type": "model-assumption",
       "location": "sim/reliability_sim.py",
-      "version_date": "2026-09-10 closure working tree; SHA-256 bound below",
+      "version_date": "2026-09-29 D-M4 working tree; SHA-256 bound below",
       "license_or_reuse": "Repository-authored analysis; third-party facts referenced, no new external raw data redistributed",
       "scope": "Local authoritative definition or claim. External provenance retained in SOURCES/REFERENCES and inline citations; scenario choices are not empirical measurements."
     },
@@ -316,7 +316,7 @@
   "artifacts": [
     {
       "path": "sim/reliability_sim.py",
-      "sha256": "320821f1c26a1c55e504b867abd52926bd3af2965baf4edbca84fe48c1b0f4a2"
+      "sha256": "95f1c6d47c91163792ddf5c7dff19e999f85bb74c191a18a4ca34deefc10c1db"
     },
     {
       "path": "sim/recovery_sensitivity.py",

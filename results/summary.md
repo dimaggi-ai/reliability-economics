@@ -14,7 +14,7 @@
 | independent | auto-spares-ckpt | 2 | 0.637 | 0.668 | 3.1 | 1.55 | 154 | $10,713,711 |
 | independent | auto-spares-ckpt | 8 | 0.870 | 0.915 | 3.2 | 0.29 | 208 | $3,862,800 |
 | independent | auto-spares-ckpt | 32 | 0.859 | 0.915 | 3.2 | 0.29 | 208 | $4,208,400 |
-| independent | elastic | 0 | 0.801 | 0.843 | 2.7 | 0.50 | 226 | $5,875,774 |
+| independent | elastic | 0 | 0.800 | 0.843 | 2.7 | 0.50 | 226 | $5,907,456 |
 | rack-bursts-b16 | manual | 0 | 0.387 | 0.421 | 6.1 | 8.31 | 50 | $18,079,432 |
 | rack-bursts-b16 | auto-restart | 0 | 0.454 | 0.495 | 6.0 | 6.11 | 60 | $16,097,856 |
 | rack-bursts-b16 | auto-spares | 0 | 0.454 | 0.495 | 6.0 | 6.11 | 60 | $16,097,856 |
@@ -25,4 +25,4 @@
 | rack-bursts-b16 | auto-spares-ckpt | 2 | 0.826 | 0.860 | 6.1 | 1.00 | 101 | $5,127,197 |
 | rack-bursts-b16 | auto-spares-ckpt | 8 | 0.883 | 0.922 | 6.2 | 0.52 | 108 | $3,458,047 |
 | rack-bursts-b16 | auto-spares-ckpt | 32 | 0.904 | 0.955 | 6.2 | 0.29 | 111 | $2,870,242 |
-| rack-bursts-b16 | elastic | 0 | 0.883 | 0.919 | 5.7 | 0.50 | 116 | $3,456,755 |
+| rack-bursts-b16 | elastic | 0 | 0.881 | 0.919 | 5.7 | 0.50 | 116 | $3,496,876 |
