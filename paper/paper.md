@@ -16,7 +16,7 @@ A first-generation version of this model reported a single headline ("a two-node
 
 ## 2. Model
 
-One gang-scheduled training job of *N* GPUs runs for a horizon *H*. Hardware faults occur on **one absolute-time latent timeline per random seed**, shared by every policy; a policy differs only in how it detects and recovers, so a policy that recovers well genuinely experiences fewer job interruptions and no policy is scored against another's interruption stream. The failure process is a base rate of single-node faults plus rarer common-cause **bursts** of a blast radius *b* (rack/PDU/switch), with the total node-failure rate held fixed as *b* varies so correlation is isolated from rate.
+One gang-scheduled training job of *N* GPUs runs for a horizon *H*. Hardware faults occur on **one absolute-time latent timeline per random seed**, shared by every policy; a policy differs only in how it detects and recovers, so interruptions and their duration depend on the policy. Faster recovery can expose more separate, shorter interruptions while lengthy outages coalesce faults; fewer counted interruptions alone is not a reliability advantage. No policy is scored against another's interruption stream. The failure process is a base rate of single-node faults plus rarer common-cause **bursts** of a blast radius *b* (rack/PDU/switch), with the total node-failure rate held fixed as *b* varies so correlation is isolated from rate.
 
 Five recovery policies are compared: **manual** (page a human), **auto-restart** (no spares), **auto-spares** (a finite warm pool of *k* nodes with three distinct clocks — swap-in-and-reload, repair, requalification (return-to-pool being their sum)), **auto-spares + overlapped checkpointing**, and **elastic-shrink** (run narrower to the next legal data-parallel shape, paying a reshard cost). Checkpoint cadence is a lever with a write cost (blocking vs overlapped/async), giving a Young–Daly optimum. Crucially, the **reserved spare pool is priced into the envelope**: a pool held out of production is a cost, so a larger pool must earn its keep to raise ETTR.
 
@@ -40,7 +40,7 @@ The eight spare nodes are an additional 64 GPUs, charged $115,200 over 720 hours
 
 ## 4. Validation
 
-*(Figure: `figures/validation.png`.)* A provisioned configuration yields a modeled reserved-envelope productive ratio of ~0.87, while naive recovery yields ~0.16–0.22. Meta's published >90% effective training time supplies external context; differing denominators and workloads prevent treating that comparison as quantitative validation. MTTF between job interruptions falls with cluster size, consistent with Meta RSC's ∝1/N scaling (slightly steeper at the top end).
+*(Figure: `figures/validation.png`.)* A provisioned configuration yields a modeled reserved-envelope productive ratio of ~0.87, while naive recovery yields ~0.16–0.22. Meta's published >90% effective training time supplies external context; differing denominators and workloads prevent treating that comparison as quantitative validation. The elastic MTTF diagnostic falls with cluster size under the imposed fault rate and serialized reshard stops; this is an internal model relationship, not a fitted reproduction of Meta RSC's scaling curve. See the study for the denominator and mechanism.
 
 ## 5. Related work
 

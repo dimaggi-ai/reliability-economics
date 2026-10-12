@@ -387,7 +387,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "2e2c2c3f511234617f01d31fb6c80ba572f3b41c3c5f491642a7e4e1dcce5d74"
+      "sha256": "44ad6d0d056f702a8d6f5b662a92d0e05797da293649b06b6c0eaec7cedf3727"
     },
     {
       "path": "REFERENCES.md",
@@ -395,7 +395,7 @@
     },
     {
       "path": "docs/study.md",
-      "sha256": "0b7d3781a30600d51f81e15ac88161429ddcefd88341f51ad8dbb6e8bc05491f"
+      "sha256": "f7819860639a436d3b83df8618ba544e5c7315fecb0859cada2849ace755ff0d"
     },
     {
       "path": "figures/checkpoint_optimum.png",
@@ -411,11 +411,11 @@
     },
     {
       "path": "figures/validation.png",
-      "sha256": "aa174a666634a764e4476512d5c9f6a1d484205aa83d6c05ea951dc9bf112e6d"
+      "sha256": "f32595c6a9fb7f8440f53c16c8831fe275992d9ed3f077eb8c0d10b6a050b10e"
     },
     {
       "path": "paper/paper.md",
-      "sha256": "0c0bf5cef6fd137d3f3577debbb7ad963ccf5b2ec4ab63a54d96580bdb1582fe"
+      "sha256": "b672583479ee291a4256b8ab2236ec3f1655392e3e3587bc5ea336d577a1d9f5"
     },
     {
       "path": "results/recovery-sensitivity.json",
@@ -439,11 +439,11 @@
     },
     {
       "path": "sim/run.py",
-      "sha256": "922f48121299665eaa65272823b956df10f6ca861f43bb2df6ff0de29b43f7fb"
+      "sha256": "80fc353758f1d077b20d0abb1caa1348672296f30938986936e56c2284fb547a"
     },
     {
       "path": "sim/validation.py",
-      "sha256": "8db698c9746855f55921a94e61bc7c96fb7f2b09002d01018ca201522ae6776a"
+      "sha256": "66f8284d0136fbbf981ef237d5550d75e21f7bf0d73b1ed3db86bf677adecd45"
     },
     {
       "path": "tools/check_research_claims.py",

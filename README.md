@@ -34,7 +34,7 @@ The pool is **eight additional nodes / 64 GPUs**, not eight GPUs removed from th
 
 ![Validation](figures/validation.png)
 
-A configuration with a right-sized pool, overlapped checkpointing and fast detection reaches a modeled productive ratio of ~0.87. Meta reports >90% effective training time [1], but this is contextual evidence with a different scope; MTTF falls with cluster size, consistent with Meta RSC's ∝ 1/N (slightly steeper at the top end) [2] — though rate ∝ N is an *input* of the fault generator, so this is a direction check, not a fitted validation. The model compares recovery policies; it does not reproduce Meta's production result or establish that hardware, workloads and accounting boundaries are identical.
+A configuration with a right-sized pool, overlapped checkpointing and fast detection reaches a modeled productive ratio of ~0.87. Meta reports >90% effective training time [1], but this is contextual evidence with a different scope; MTTF falls with cluster size, in the direction of Meta RSC's scale relationship [2] — though rate ∝ N is an *input* of the fault generator, so this is a direction check, not a fitted validation. The model compares recovery policies; it does not reproduce Meta's production result or establish that hardware, workloads and accounting boundaries are identical.
 
 These anchors are machine-checked by a six-point validation registry
 ([sim/validation.py](sim/validation.py)) run in CI, split into three
@@ -59,9 +59,10 @@ interruptions (vs a naive no-spare posture's 107, a 3.5× gap that *is*
 policy-conditioned — the repo's core point). And MTTF degradation
 steepens past linear across four doublings (2.07×, 2.25×, 2.53×,
 4.07×): a ~2× ratio is *structural*, since rate ∝ N is an input of the
-generator, so only the excess above 2× — the recovery layer saturating
-at width — is a model result. Agreement with Meta's ∝1/N [2] and the
-LANL study [10] is a direction check discussed in
+generator. This diagnostic divides remaining uptime by counted interruptions;
+the elastic policy charges serialized 0.5-hour reshard stops, reducing the
+numerator increasingly at width. It uses no spare pool. This is an internal
+model relationship; comparison with Meta [2] and LANL [10] is qualitative context in
 [docs/study.md](docs/study.md), not evidence produced here.
 
 The registry also prints the external outcomes it **declines** to reproduce: [1]'s >90% training-time figure as a matched metric, [2]'s absolute ~1.8 h MTTF projection, and [3]'s <1% checkpoint overhead. Synthetic data is the seeded

@@ -127,12 +127,13 @@ def points() -> list[Point]:
         actual=Config().single_rate_per_node_h * 1e4,
         note="Default single-node fault rate (x1e4 /node-h) vs the rate "
              "implied by 419 interruptions / 54 days / 2,048 nodes [1]. "
-             "Tuned to it; pinned so it cannot drift. Two simplifications "
-             "both push this rate DOWN (and so ETTR up), and a skeptic "
-             "should push on them: the job is assumed to hold all 16,384 "
-             "GPUs for the full 54 days (the paper says 'up to' 16K), and "
-             "every unexpected interruption is counted as one node fault "
-             "(the paper attributes ~78% to confirmed hardware).",
+             "Tuned to it; pinned so it cannot drift. The exposure assumes all "
+             "16,384 GPUs for 54 days (the paper says 'up to' 16K), "
+             "which can overstate node-hours. Treating every interruption "
+             "as a hardware fault includes nonhardware incidents: only "
+             "~78% were confirmed or suspected hardware. Multiple-node "
+             "faults add another uncertainty. These transfers do not establish "
+             "a common direction of bias in the inferred hardware hazard.",
     ))
 
     latent = statistics.mean(
@@ -221,7 +222,9 @@ def points() -> list[Point]:
              f"policy-conditioned — and is the repo's core point — is the "
              f"contrast with a naive no-spare posture, which surfaces "
              f"{naive:.1f} of the SAME latent faults, "
-             f"{surfaced / naive:.1f}x fewer.",
+             f"{surfaced / naive:.1f} times as many are counted in the faster-recovery "
+             "posture. Long outages coalesce faults; fewer counted stops "
+             "alone does not establish better recovery.",
     ))
 
     widths = (512, 1024, 2048, 4096, 8192)
@@ -236,10 +239,12 @@ def points() -> list[Point]:
              "STRUCTURAL and cannot fail: latent_events sets "
              "total_node_rate = single_rate x nodes, so rate ~ N is an input "
              "of the generator, not a finding. What this point pins is the "
-             "EXCESS above 2x — the recovery layer degrading faster than "
-             "linearly as a fixed spare pool and repair queue saturate at "
-             "width. Cites nothing: the agreement with Meta's ~1/N [2] and "
-             "the LANL study [10] is a consistency check on direction, "
+             "EXCESS above 2x in this elastic-policy diagnostic: MTTF divides "
+             "remaining uptime by interruptions, while each event charges "
+             "a serialized reshard stop. The shrinking numerator steepens "
+             "the decline. Elastic uses no spare pool, so this is not "
+             "spare-pool saturation. Cites nothing; Meta [2] and LANL [10] "
+             "supply qualitative context, "
              "discussed in docs/study.md, not evidence produced here.",
     ))
 

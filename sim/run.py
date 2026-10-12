@@ -136,8 +136,8 @@ def fig_validation(seeds, figdir):
     axR.loglog(gpus, ref, ls="--", color="#888888", label="∝ 1/N reference")
     axR.set_xlabel("GPUs")
     axR.set_ylabel("MTTF (h, between job interruptions)")
-    axR.set_title("Anchor 2 — MTTF falls with N, consistent with Meta RSC\n"
-                  "(slightly steeper than 1/N at the top end)")
+    axR.set_title("Diagnostic: MTTF falls with cluster size\n"
+                  "(imposed fault rate and serialized reshard stops)")
     axR.legend(fontsize=8)
     fig.tight_layout()
     fig.savefig(figdir / "validation.png", dpi=150)
