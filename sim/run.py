@@ -110,21 +110,22 @@ def fig_ckpt(seeds, figdir):
 # --------------------------------------------------------- validation panel
 def fig_validation(seeds, figdir):
     fig, (axL, axR) = plt.subplots(1, 2, figsize=(11, 4.4))
-    # left: Meta-like config approaches >90% ETTR; naive does not
+    # left: contextual comparison; model ratio and reported training time differ
     configs = [
         ("manual\n(no spares)", "manual", dict(spare_nodes=0)),
         ("auto-restart\n(no spares)", "auto-restart", dict(spare_nodes=0)),
         ("auto-spares\nk=8", "auto-spares", dict(spare_nodes=8)),
-        ("Meta-like\nk=16 + overlap ckpt", "auto-spares-ckpt", dict(spare_nodes=16)),
+        ("Provisioned\nk=16 + overlap ckpt", "auto-spares-ckpt", dict(spare_nodes=16)),
     ]
     vals = [ettr(p, seeds, **kw) for _, p, kw in configs]
     axL.bar(range(len(configs)), vals, color=["#c0504d", "#e08050", "#4f81bd", "#4e9a06"])
     axL.axhline(0.90, color="#888888", ls="--", lw=1)
     axL.text(0.05, 0.905, "Meta Llama 3: >90% effective training time", fontsize=8, color="#555")
     axL.set_xticks(range(len(configs)), [c[0] for c in configs], fontsize=8)
-    axL.set_ylabel("ETTR")
+    axL.set_ylabel("Reserved-envelope productive ratio (legacy ETTR)")
     axL.set_ylim(0, 1)
-    axL.set_title("Anchor 1 — modeled ETTR versus Meta's reported >90%")
+    axL.set_title("Context: model ratio and Meta's reported training time\n"
+                  "Different accounting boundaries; not a matched validation")
     # right: MTTF ~ 1/N (RSC anchor)
     Ns = [512, 1024, 2048, 4096, 8192]
     mttf = [statistics.mean(run_policy(Config(seed=s, nodes=n, spare_nodes=8), "elastic")["mttf_h"]
@@ -161,7 +162,7 @@ def write_results(seeds, outdir):
                     row[key] = round(statistics.mean(v[key] for v in vs), 3)
                 rows.append(row)
     with (outdir / "results.csv").open("w", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
+        w = csv.DictWriter(f, fieldnames=list(rows[0].keys()), lineterminator="\n")
         w.writeheader(); w.writerows(rows)
     lines = ["# Reliability-economics results (v1)", "",
              f"16,384-GPU gang training job, 30 days, {len(list(seeds))} seeds. "

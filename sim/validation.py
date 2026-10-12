@@ -47,11 +47,9 @@ LLAMA3_NODES = 2048             # 16,384 H100s / 8 GPUs per server [1]
 LLAMA3_COUNT = 419              # unexpected interruptions in that window [1]
 LLAMA3_RATE = LLAMA3_COUNT / (LLAMA3_H * LLAMA3_NODES)
 
-# Meta publishes ">90% effective training time" — a LOWER BOUND, not a
-# point estimate. The ETTR anchor is therefore one-sided: the model must
-# approach the bound without crossing it. The floor is the same 5-point
-# width the two-sided band used before, so this is strictly stricter
-# than a +/-0.05 tolerance, never looser.
+# Historical regression band for this model's reserved-envelope ratio.
+# Retained to catch unreviewed recovery-assumption drift, not to validate
+# Meta's >90% training-time result; the accounting boundaries differ.
 ETTR_BOUND = 0.90
 ETTR_FLOOR = 0.85
 
@@ -62,6 +60,11 @@ def ettr_in_band(ettr: float) -> bool:
 # Anchors in the public record that this model does NOT reproduce, and
 # why it does not try. Printed with the table.
 DECLINED: tuple[tuple[str, str], ...] = (
+    ("[1] >90% effective training time as a matched metric",
+     "the local productive-GPU-hour ratio charges a reserved spare envelope "
+     "and has no scheduling queue; it is not a reproduction of Meta's "
+     "training-time measure. The 0.85-0.90 band is an internal regression "
+     "condition, not empirical validation."),
     ("[2] absolute MTTF (~1.8 h projected at 16,384 GPUs)",
      "this model gives 2.7-3.2 h at that width. [2] measures A100 research "
      "clusters over a different period and job mix than the H100 production "
@@ -155,30 +158,19 @@ def points() -> list[Point]:
     ettr_slow_reload = _ettr(reload_h=Config().reload_h * 2)
     ettr_no_latency = _ettr(detect_h=0.0, reload_h=0.0)
     pts.append(Point(
-        "ettr-approaches-published-bound-from-below", "emergent", "[1]",
+        "reserved-envelope-ratio-regression-band", "sanity", "-",
         expected=1.0, tolerance=0.0,
         actual=float(ettr_in_band(ettr)),
-        note=f"ETTR of the automation-class policy at the published 54-day "
-             f"exposure, against Meta's >90% effective training time [1] — a "
-             f"MEASURED figure from the production run, not one computed at "
-             f"an assumed checkpoint interval. The assertion is DIRECTIONAL, "
-             f"{ETTR_FLOOR:.2f} <= ETTR < {ETTR_BOUND:.2f}, and the model "
-             f"gives {ettr:.4f}. A two-sided band around 0.90 would have been "
-             f"worthless here: >90% is a published LOWER BOUND, so a model "
-             f"with zero detection and zero reload — recovery in no time at "
-             f"all — scores {ettr_no_latency:.4f} and would have passed it, "
-             f"landing nearer the reference than the honest model does. "
-             f"Requiring the model to stay UNDER the bound is what makes the "
-             f"point falsifiable: it fails if recovery costs are ever quietly "
-             f"removed. It is tight in both directions and should be. The "
-             f"clocks that carry the number are detect_h=0.033 h (a TUNED "
-             f"detection posture — the ~30 s NCCL transport timeout rather "
-             f"than the 600 s watchdog [7]), reload_h=0.25 h, and the "
-             f"overlapped-checkpoint pair (0.1 h interval / 0.003 h write). "
-             f"None was taken from [1], but none is swept either, and the "
-             f"point is sensitive along exactly those axes: tripling "
-             f"detection gives {ettr_slow_detect:.4f} and doubling reload "
-             f"gives {ettr_slow_reload:.4f} — both outside the band.",
+        note=f"Local reserved-envelope productive ratio at a 54-day exposure: "
+             f"{ettr:.4f}, checked against the internal regression band "
+             f"[{ETTR_FLOOR:.2f}, {ETTR_BOUND:.2f}). This is not a matched "
+             f"metric or a validation against Meta's >90% training time. "
+             f"Selected recovery assumptions are detect_h=0.033 h, "
+             f"reload_h=0.25 h and overlapped checkpoint interval/write "
+             f"0.1/0.003 h. Zero latency gives {ettr_no_latency:.4f}; "
+             f"tripled detection gives {ettr_slow_detect:.4f}; doubled "
+             f"reload gives {ettr_slow_reload:.4f}. These controls detect "
+             f"assumption drift, not empirical accuracy.",
     ))
 
     def waste(iv: float) -> float:
@@ -277,7 +269,7 @@ def main() -> int:
     if ok:
         print("all points reproduced — calibrated points prove the model has "
               "not drifted from the citations it was fitted to, emergent "
-              "points meet the record on axes nothing was tuned to, sanity "
+              "points check an analytical comparison, sanity "
               "points pin the model's own machinery and claim no evidence")
     else:
         print("VALIDATION FAILED")

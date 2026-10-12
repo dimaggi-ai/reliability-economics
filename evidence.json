@@ -5,7 +5,7 @@
     "sim/reliability_sim.py": {
       "source_type": "model-assumption",
       "location": "sim/reliability_sim.py",
-      "version_date": "2026-09-10 closure working tree; SHA-256 bound below",
+      "version_date": "2026-10-12 reviewed correction; SHA-256 bound below",
       "license_or_reuse": "Repository-authored analysis; third-party facts referenced, no new external raw data redistributed",
       "scope": "Local authoritative definition or claim. External provenance retained in SOURCES/REFERENCES and inline citations; scenario choices are not empirical measurements."
     },
@@ -19,14 +19,14 @@
     "REFERENCES.md": {
       "source_type": "model-assumption",
       "location": "REFERENCES.md",
-      "version_date": "2026-09-10 closure working tree; SHA-256 bound below",
+      "version_date": "2026-10-12 reviewed metric-scope correction; SHA-256 bound below",
       "license_or_reuse": "Repository-authored analysis; third-party facts referenced, no new external raw data redistributed",
       "scope": "Local authoritative definition or claim. External provenance retained in SOURCES/REFERENCES and inline citations; scenario choices are not empirical measurements."
     },
     "README.md": {
       "source_type": "model-assumption",
       "location": "README.md",
-      "version_date": "2026-09-10 closure working tree; SHA-256 bound below",
+      "version_date": "2026-10-12 reviewed correction; SHA-256 bound below",
       "license_or_reuse": "Repository-authored analysis; third-party facts referenced, no new external raw data redistributed",
       "scope": "Local authoritative definition or claim. External provenance retained in SOURCES/REFERENCES and inline citations; scenario choices are not empirical measurements."
     },
@@ -36,6 +36,13 @@
       "version_date": "2024; section3.3.4",
       "license_or_reuse": "Facts/aggregates with attribution only; 419 interruptions / (54 days *24 hours *2048 nodes); assumes homogeneous independent hazards",
       "scope": "419 interruptions / (54 days *24 hours *2048 nodes); assumes homogeneous independent hazards"
+    },
+    "results/results.csv": {
+      "source_type": "experiment-output",
+      "location": "results/results.csv",
+      "version_date": "2026-10-12 elastic interval-credit correction; SHA-256 bound below",
+      "license_or_reuse": "Repository-authored seeded simulation",
+      "scope": "22 scenario-policy rows; mean of seeds0\u20137 with per-seed dollar rounding; not production observations"
     }
   },
   "inputs": [
@@ -284,7 +291,7 @@
       "sources": [
         "README.md"
       ],
-      "transformation": "Rounded scenario phase-map outcome; below reported >90% reference ETTR",
+      "transformation": "Rounded reserved-envelope productive ratio; not comparable to Meta training-time denominator",
       "uncertainty": "Rounded published model output; conditional scenario, not production benefit",
       "affected_outputs": [
         "published headline"
@@ -311,24 +318,136 @@
         0,
         1000000000000
       ]
+    },
+    {
+      "name": "manual-to-eight-spare difference",
+      "value": 20953975,
+      "unit": "USD/30-day scenario",
+      "evidence_class": "derived",
+      "sources": [
+        "results/results.csv"
+      ],
+      "transformation": "Independent scenario: manual/0 waste_dollars minus auto-spares-ckpt/8 waste_dollars",
+      "uncertainty": "GPU-hour valuation at assumed2.50USD/hour, not realized savings or a confidence bound; see docs/study.md for exclusions and historical snapshot",
+      "affected_outputs": [
+        "README.md",
+        "docs/study.md",
+        "paper/paper.md"
+      ],
+      "valid_bounds": [
+        0,
+        1000000000
+      ]
+    },
+    {
+      "name": "elastic-to-eight-spare difference",
+      "value": 2044656,
+      "unit": "USD/30-day scenario",
+      "evidence_class": "derived",
+      "sources": [
+        "results/results.csv"
+      ],
+      "transformation": "Independent scenario after interval-credit correction: elastic/0 waste_dollars minus auto-spares-ckpt/8 waste_dollars",
+      "uncertainty": "GPU-hour valuation at assumed2.50USD/hour, not realized savings or a confidence bound; see docs/study.md for exclusions and historical snapshot",
+      "affected_outputs": [
+        "README.md",
+        "docs/study.md",
+        "paper/paper.md"
+      ],
+      "valid_bounds": [
+        0,
+        1000000000
+      ]
+    },
+    {
+      "name": "eight-spare nonproductive capacity value",
+      "value": 3862799.875,
+      "unit": "USD/30-day scenario",
+      "evidence_class": "derived",
+      "sources": [
+        "results/results.csv"
+      ],
+      "transformation": "Independent scenario: auto-spares-ckpt/8 waste_dollars includes reserved spare envelope and nonproductive active capacity",
+      "uncertainty": "GPU-hour valuation at assumed2.50USD/hour, not realized savings or a confidence bound; see docs/study.md for exclusions and historical snapshot",
+      "affected_outputs": [
+        "README.md",
+        "docs/study.md",
+        "paper/paper.md"
+      ],
+      "valid_bounds": [
+        0,
+        1000000000
+      ]
     }
   ],
   "artifacts": [
     {
-      "path": "sim/reliability_sim.py",
-      "sha256": "320821f1c26a1c55e504b867abd52926bd3af2965baf4edbca84fe48c1b0f4a2"
+      "path": "BUILD_SPEC.md",
+      "sha256": "d2f8151372a22501674b58e288cc0be70753326de88549c7b8405c439c8f4870"
+    },
+    {
+      "path": "README.md",
+      "sha256": "2e2c2c3f511234617f01d31fb6c80ba572f3b41c3c5f491642a7e4e1dcce5d74"
+    },
+    {
+      "path": "REFERENCES.md",
+      "sha256": "cb994a94e67355f86c79d49de328d0a9682d6dbfc69de4316407864f6bb387d1"
+    },
+    {
+      "path": "docs/study.md",
+      "sha256": "0b7d3781a30600d51f81e15ac88161429ddcefd88341f51ad8dbb6e8bc05491f"
+    },
+    {
+      "path": "figures/checkpoint_optimum.png",
+      "sha256": "661bb2c0d5265190b1cd5c970d97b97ef0bb809ada579dfdccd120fdb6452790"
+    },
+    {
+      "path": "figures/crossover.png",
+      "sha256": "33f9453fa5cb8741be58abab1221dc572086fd0fe8e3b339b02f94f20f21da34"
+    },
+    {
+      "path": "figures/phase_diagram.png",
+      "sha256": "9217ce6f5a1f76a327b6a11ac2f94a8554aab293fd72fe00759f8ea8362e3ec7"
+    },
+    {
+      "path": "figures/validation.png",
+      "sha256": "aa174a666634a764e4476512d5c9f6a1d484205aa83d6c05ea951dc9bf112e6d"
+    },
+    {
+      "path": "paper/paper.md",
+      "sha256": "0c0bf5cef6fd137d3f3577debbb7ad963ccf5b2ec4ab63a54d96580bdb1582fe"
+    },
+    {
+      "path": "results/recovery-sensitivity.json",
+      "sha256": "d4b7b899adf844da4c6f838996865dd84e0af265b9a1be5384c8f6f41eaa4cc9"
+    },
+    {
+      "path": "results/results.csv",
+      "sha256": "fe0cebc8145dac53339ca32d1536cc21239c575baf863cc775fd6400f31a003b"
+    },
+    {
+      "path": "results/summary.md",
+      "sha256": "b3f7698e74930a6478a95ab7ffbd80d8a45be0bc245cf2b679834e1b6a4f0178"
     },
     {
       "path": "sim/recovery_sensitivity.py",
       "sha256": "d5d391de396d7df77b150065f7888c3daa33b62227795025def8410ee43c8696"
     },
     {
-      "path": "REFERENCES.md",
-      "sha256": "8b91a6c0e77b0e94c0e1e3a7c75381fcff796dd8cd2bd14f1bc8543a1312704f"
+      "path": "sim/reliability_sim.py",
+      "sha256": "e10907253f153d71be319ac2cce4e311a2a64063309aac31947a1fe7526d7fc9"
     },
     {
-      "path": "README.md",
-      "sha256": "0482011e9ec9b75343f8632efa6ba3bfe237b703af0c3c4c0db89f1221a486eb"
+      "path": "sim/run.py",
+      "sha256": "922f48121299665eaa65272823b956df10f6ca861f43bb2df6ff0de29b43f7fb"
+    },
+    {
+      "path": "sim/validation.py",
+      "sha256": "8db698c9746855f55921a94e61bc7c96fb7f2b09002d01018ca201522ae6776a"
+    },
+    {
+      "path": "tools/check_research_claims.py",
+      "sha256": "32a78b57a29cf94952a46f8978d228136c5d10d3089f578cf364352a5eb94802"
     }
   ]
 }

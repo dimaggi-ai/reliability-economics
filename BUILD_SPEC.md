@@ -1,8 +1,13 @@
 # Reliability Economics — build spec (flagship v1)
 
-One-page plan for the rebuild, encoding what the five expert reviews and the
-[prototype](prototype/PROTOTYPE_FINDINGS.md) established. Status: **design locked,
-build not started.** The v0 baseline (`sim/`, and `v0-baseline/`) is kept for reference and has been superseded by the v1 in `sim/` + `docs/study.md`.
+**Historical design brief, not evidence of delivered validation.** The current
+implementation and limitations are in [the study](docs/study.md); this document
+retains the original rebuild targets. Some were not delivered, including
+non-linear elastic progress and reproduction of the external training-time
+figures. The code's legacy `ettr` is a reserved-envelope productive ratio, not
+Meta's queue-inclusive ETTR. Use the current study and results for citations.
+
+The original plan below encoded the five expert reviews and prototype findings.
 
 ## Thesis (revised)
 
@@ -46,7 +51,7 @@ Everything else exists to make that diagram trustworthy.
    Google badput buckets; add a **$ layer** (configurable $/GPU-hour) so spare
    idle is a cost, not just a waste name.
 
-## Validation anchors (the model must reproduce these within stated uncertainty)
+## Original validation targets (not achieved validation claims)
 
 - Llama 3: 419 unexpected interruptions / 54 days / 16,384 GPUs at **>90% ETTR**
   under a Meta-like recovery config (so manual-ops is not a straw man).
