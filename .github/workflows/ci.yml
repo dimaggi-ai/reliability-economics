@@ -13,5 +13,7 @@ jobs:
         run: cd sim && python3 test_reliability_sim.py
       - name: Validation registry (model vs public record)
         run: cd sim && python3 test_validation.py && python3 validation.py
-      - name: Figures + results regenerate without error
-        run: cd sim && python3 run.py
+      - name: Published tables and economic prose reproduce without overwriting evidence
+        run: make research-claims
+      - name: Reviewed provenance hashes remain valid
+        run: python3 tools/validate_evidence.py evidence.json

@@ -1,8 +1,8 @@
 # Reliability Economics: which recovery policy wins in which failure regime
 
-**At scale a GPU cluster faults every few hours, so you will spend on recovery — the question is on *what*.** Warm spares, elastic degradation, frequent checkpointing, faster repair: which one buys the most usable capacity per dollar is not fixed — it depends on your failure process. This repository maps it, with a reproducible simulator that reports the answer in the field's units (ETTR/goodput) and in dollars.
+**At scale a GPU cluster faults every few hours, so you will spend on recovery — the question is on *what*.** Warm spares, elastic degradation, frequent checkpointing, faster repair: which one buys the most usable capacity per dollar is not fixed — it depends on your failure process. This repository maps it, with a reproducible simulator that reports the answer in a reserved-capacity productive ratio and recovery diagnostics and in dollars.
 
-**TL;DR:** the headline is a **phase diagram**, not a number. On a 16,384-GPU training job, no-spares always loses to elastic-shrink; **elastic-shrink is a strong robust default (~0.80)** that beats a tiny spare pool even under independent failures; a **right-sized pool + overlapped checkpointing (k ≈ 8) is the best policy (~0.87), but only in a band and by a thin margin** — and *over-provisioning the pool is charged and hurts*. The gap between a naive and a well-provisioned recovery posture is **~\$21M/month on one cluster**. A Meta-like configuration lands at ~0.87 ETTR, just under Meta's published >90% effective-training-time bound — the same regime, against ~16–22% for a naive posture; the model is checked against that and against Meta RSC's MTTF-vs-N scaling.
+**TL;DR:** the headline is a **phase diagram**, not a number. On a 16,384-GPU training job, no-spares loses to elastic-shrink in the modeled sweep; **elastic-shrink is competitive across the modeled sweep (~0.80)** that beats a tiny spare pool even under independent failures; a **right-sized pool + overlapped checkpointing (k ≈ 8) is the best policy (~0.87), but only in a band and by a thin margin** — and *over-provisioning the pool is charged and hurts*. The gap between a naive and a well-provisioned recovery posture is **~\$21M/month on one cluster**. The modeled productive ratio is ~0.87 versus ~0.16–0.22 for naive recovery. Meta's reported training-time measures supply context, not an interchangeable denominator or a validation of these capacity valuations.
 
 *Third quantitative pillar of the DIMAGGI series on turning GPU capital into usable compute, and the companion to the [Chaos Fidelity Standard](https://github.com/dimaggi-ai/ai-cluster-chaos-fidelity) — chaos certifies that a recovery behavior works; this prices what it is worth. Full analysis in [docs/study.md](docs/study.md) and the staged preprint [paper/paper.md](paper/paper.md); all claims trace to [REFERENCES.md](REFERENCES.md).*
 
@@ -18,11 +18,23 @@ An earlier model reported a single number — "two warm nodes is the biggest lev
 
 Blue = warm spares + overlapped checkpoint win; red = elastic-shrink wins. The winner is a *region* of `(failure blast radius × spare-pool size)`, not an ordering. A two-node pool — the thing the old model sold — sits on the losing side of the line for any real blast radius. Details, the crossover, the checkpoint optimum, and the dollar table are in [docs/study.md](docs/study.md).
 
-## Validated against public anchors
+## Economic claim and assumptions
+
+<!-- economics-headline:start -->
+**Committed independent-failure scenario:** 16,384 active GPUs, 30 days (720 hours), seeds 0–7, valued at an assumed $2.50/GPU-hour.
+
+Mean modeled nonproductive-capacity value: manual/no spares **$24,816,774.875**; elastic/no spares **$5,907,455.875**; automated recovery with eight spare nodes and overlapped checkpointing **$3,862,799.875**.
+
+Subtracting the committed `waste_dollars` values gives **$20,953,975.000** versus manual (about $21M), and **$2,044,656.000** versus elastic (**$2,044,656** rounded to whole dollars). These are modeled capacity valuations, not realized cash savings.
+<!-- economics-headline:end -->
+
+The pool is **eight additional nodes / 64 GPUs**, not eight GPUs removed from the 16,384-GPU job: `64 × 720 × $2.50 = $115,200` of reserved-capacity value is included. The model does not separately itemize electricity, facilities, storage/network charges, repair labor, software, capital financing or revenue. The hourly rate is a scenario valuation, not a current quote or total-cost-of-ownership estimate. [The study](docs/study.md#the-economics) gives the failure/recovery inputs, rounding order, and the prior published snapshot; [CSV](results/results.csv) and [generated table](results/summary.md) make the arithmetic inspectable without running code.
+
+## Comparison with public anchors
 
 ![Validation](figures/validation.png)
 
-A model that cannot reproduce known numbers is a toy. A Meta-like config (right-sized pool, overlapped checkpointing, fast detection) reaches ~0.87 ETTR against Meta's published >90% [1]; MTTF falls with cluster size, consistent with Meta RSC's ∝ 1/N (slightly steeper at the top end) [2] — though rate ∝ N is an *input* of the fault generator, so this is a direction check, not a fitted validation. This also explains why a naive config sits at ~16–22% ETTR while Meta hit >90% on the same hardware — different regime, same model.
+A configuration with a right-sized pool, overlapped checkpointing and fast detection reaches a modeled productive ratio of ~0.87. Meta reports >90% effective training time [1], but this is contextual evidence with a different scope; MTTF falls with cluster size, in the direction of Meta RSC's scale relationship [2] — though rate ∝ N is an *input* of the fault generator, so this is a direction check, not a fitted validation. The model compares recovery policies; it does not reproduce Meta's production result or establish that hardware, workloads and accounting boundaries are identical.
 
 These anchors are machine-checked by a six-point validation registry
 ([sim/validation.py](sim/validation.py)) run in CI, split into three
@@ -37,16 +49,9 @@ is evidence — the rate was *derived from* 419, so these points cannot
 disagree with their own reference by more than sampling noise, and the
 registry says so.
 
-**Emergent** points are behaviors nothing was tuned to produce, each
-averaged over eight seeds. ETTR lands at **0.865** against Meta's
-published >90% [1] — and the assertion is deliberately *directional*
-(0.85 ≤ ETTR < 0.90) rather than a band around 0.90, because >90% is a
-published **lower bound**: a model with zero detection and zero reload
-scores 0.947 and would have passed a two-sided band while being
-physically impossible. A companion test asserts that impossible model
-**fails**. The swept checkpoint-interval optimum lands within 0.5% of
-Young's first-order √(2wM) [5], with a band derived from grid
-resolution rather than fitted.
+**Emergent** behavior includes the swept checkpoint-interval optimum, which lands within 0.5% of Young's first-order √(2wM) [5], with a band derived from grid resolution rather than fitted.
+
+**Internal regression band:** the local reserved-envelope productive ratio (legacy `ettr` field) is **0.865** at the 54-day reference exposure. The historical `0.85 ≤ ettr < 0.90` check is retained only to detect changes to this selected model configuration. Its upper limit is not a validation against Meta's >90% lower bound: the quantities have different accounting boundaries. Zero recovery latency scores 0.947 and doubled reload time falls below the band; both are negative controls against silent changes to the recovery assumptions.
 
 **Sanity** points pin the model's own machinery and cite nothing.
 An automation-class policy surfaces 91% of latent faults as separate
@@ -54,14 +59,13 @@ interruptions (vs a naive no-spare posture's 107, a 3.5× gap that *is*
 policy-conditioned — the repo's core point). And MTTF degradation
 steepens past linear across four doublings (2.07×, 2.25×, 2.53×,
 4.07×): a ~2× ratio is *structural*, since rate ∝ N is an input of the
-generator, so only the excess above 2× — the recovery layer saturating
-at width — is a model result. Agreement with Meta's ∝1/N [2] and the
-LANL study [10] is a direction check discussed in
+generator. This diagnostic divides remaining uptime by counted interruptions;
+the elastic policy charges serialized 0.5-hour reshard stops, reducing the
+numerator increasingly at width. It uses no spare pool. This is an internal
+model relationship; comparison with Meta [2] and LANL [10] is qualitative context in
 [docs/study.md](docs/study.md), not evidence produced here.
 
-The registry also prints the two anchors it **declines** to check — [2]'s
-absolute ~1.8 h MTTF projection and [3]'s <1% checkpoint overhead — and
-why the model would miss them. Synthetic data is the seeded
+The registry also prints the external outcomes it **declines** to reproduce: [1]'s >90% training-time figure as a matched metric, [2]'s absolute ~1.8 h MTTF projection, and [3]'s <1% checkpoint overhead. Synthetic data is the seeded
 latent-event generator itself.
 
 ```
@@ -72,15 +76,17 @@ cd sim && python3 validation.py     # the registry, model vs public record
 
 ```
 pip install -r sim/requirements.txt
-make test        # invariants + the validation registry (incl. its negative controls)
-make figures     # phase diagram, crossover, checkpoint optimum, validation (~1 s)
+make test        # invariants, validation registry, result/prose consistency
+make figures     # regenerate figures/results, then refresh marked economic prose
 ```
+
+The consistency check regenerates all 22 CSV rows, the summary and 324 sensitivity scenarios (972 policy runs) in ignored temporary storage, then verifies three exact manifest values and the three marked economic claim blocks. `make figures` refreshes figures, tables and sensitivity together, then updates those blocks only after the numerical artifacts agree. It does not refresh provenance hashes; review the changed outputs before resealing `evidence.json`. Other prose is hand-maintained and must be reviewed when assumptions change.
 
 Python 3.11+, `numpy`, `matplotlib`. Seeded and deterministic; checks run in [CI](.github/workflows/ci.yml).
 
 ## Honest scope
 
-One gang **training** job (no inter-job scheduling — the [scheduling repo](https://github.com/dimaggi-ai/scheduler-vs-more-gpus); no inference — a different metric); deterministic blast radius and point recovery times; progress linear in usable width above the legal-shape floor. The contribution is the phase structure and the method, validated against anchors; absolute cell values are site-specific. The full "what a skeptic should attack" list is in [docs/study.md](docs/study.md#what-a-skeptic-should-attack) — pre-empting the critique is the point.
+One gang **training** job (no inter-job scheduling — the [scheduling repo](https://github.com/dimaggi-ai/scheduler-vs-more-gpus); no inference — a different metric); deterministic blast radius and point recovery times; progress linear in usable width above the legal-shape floor. The contribution is the phase structure and the method, with calibrated inputs and internal checks; absolute cell values are site-specific. The full "what a skeptic should attack" list is in [docs/study.md](docs/study.md#what-a-skeptic-should-attack) — pre-empting the critique is the point.
 
 ## Series — turning GPU capital into usable compute
 

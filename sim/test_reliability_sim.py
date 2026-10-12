@@ -38,12 +38,21 @@ def test_dollars_layer():
     assert abs(v["waste_dollars"] - round(v["waste_gpu_h"] * 3.0)) < 1.0
 
 
-def test_meta_like_anchor_reproduces_high_ettr():
-    """Validation: a Meta-like config — a right-sized spare pool, overlapped
-    checkpointing, fast detection — reproduces the >90% effective-training-time
-    regime (within model slack). A naive config must not come close."""
+def test_elastic_credits_interval_before_retiring_repairs():
+    # Reuses the accounting witness from Dmitry's 077eb6f correction.
+    c = Config(nodes=8, horizon_h=10, legal_shape_nodes=1, repair_h=2,
+               requal_h=0, reshard_h=0, ckpt_overlap_interval_h=1,
+               ckpt_overlap_write_h=0)
+    for events in ([(1., 1), (5., 1)], [(1., 1), (3., 1)]):
+        result = Sim(c, "elastic", events).run()
+        # 80 node-hours minus four in repair and two four-node-hour losses.
+        assert result["productive_gpu_h"] == 68 * 8, (events, result)
+
+
+def test_provisioned_configuration_has_high_local_productive_ratio():
+    """Internal policy contrast, not reproduction of Meta's different metric."""
     meta = _mean("auto-spares-ckpt", spare_nodes=16)   # right-sized, not over-provisioned
-    assert meta > 0.85, meta                      # approaches Meta's >0.90
+    assert meta > 0.85, meta                      # retained local regression threshold
     naive = _mean("auto-restart", spare_nodes=0)
     assert naive < 0.35, naive                    # a naive config is far below
 

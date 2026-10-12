@@ -57,17 +57,13 @@ def test_no_tolerance_is_wide_enough_to_be_meaningless():
 
 
 def test_negative_control_an_impossible_model_fails_the_ettr_anchor():
-    """The one test that can catch an OPTIMISTIC model.
+    """Zero-latency recovery must leave the selected internal regression band.
 
-    Every other point fails only when the model is too pessimistic. A
-    config with zero detection and zero reload — recovery in no time at
-    all — scores HIGHER than the shipped model, so it would sail through
-    any two-sided band drawn around Meta's published lower bound. It
-    must fail, or the anchor is not evidence of anything.
+    This catches assumption drift; it does not validate Meta's metric.
     """
     impossible = _ettr(detect_h=0.0, reload_h=0.0)
     assert impossible >= ETTR_BOUND, (
-        f"expected an instantaneous-recovery model to beat the published "
+        f"expected an instantaneous-recovery model to exceed the internal "
         f"bound; it scored {impossible:.4f}"
     )
     assert not ettr_in_band(impossible), (

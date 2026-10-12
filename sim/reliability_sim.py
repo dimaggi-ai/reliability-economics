@@ -19,7 +19,7 @@ design choices that matter (see ../BUILD_SPEC.md):
      exhausted. Bringing a warm spare in is folded into reload_h rather than
      charged separately; that is the optimistic reading, and ETTR is sensitive
      to it (doubling reload_h costs ~6 points), so sim/validation.py reports
-     that sensitivity next to the ETTR anchor.
+     that sensitivity next to the internal productive-ratio regression band.
   4. CHECKPOINT is a policy lever with a WRITE COST: interval c and per-write
      stall w. Lost work per interruption ~ progress since last checkpoint;
      frequent checkpointing trades lost work for write overhead (Young/Daly).
@@ -27,14 +27,15 @@ design choices that matter (see ../BUILD_SPEC.md):
      and a legal-shape tax (you shrink to whole data-parallel replicas of G
      nodes), so usable capacity falls to the next legal shape, not by one node.
 
-Metrics are the field's: ETTR / goodput (productive / envelope), MTTF/MTTR/
-availability as diagnostics, and a $ layer ($/GPU-hour) so spare idle is a cost.
+The legacy `ettr` field is productive GPU-hours / reserved envelope, including
+spares; it is not Meta's queue-inclusive ETTR or a general goodput measure.
+MTTF/MTTR/availability are diagnostics; the GPU-hour valuation charges idle spares.
 
 Deterministic per seed. Honest scope: one gang TRAINING job; deterministic
 blast radius per burst; point repair/requal/reshard times; progress linear in
-usable width above the legal-shape floor. The FINDING is the phase structure
-(which policy wins in which regime), validated against public anchors in
-validate_anchors(); absolute cell values are site-specific.
+usable width above the legal-shape floor. The finding is conditional phase
+structure (which policy wins in the modeled regimes). Public input context and
+internal checks are recorded in validation.py; production accuracy is unproven.
 """
 from __future__ import annotations
 import dataclasses
@@ -163,10 +164,12 @@ class Sim:
             for (te, nfail) in self.events:
                 if t >= c.horizon_h:
                     break
-                down_until = [d for d in down_until if d > te]
                 base = max(t, te)
+                # Credit past intervals before retiring completed repairs.
+                # Otherwise a repair completed by te vanishes retroactively.
                 credit_elastic(t, base)
                 uptime_h += base - t
+                down_until = [d for d in down_until if d > te]
                 usable_now = c.nodes - _legal_loss(len([d for d in down_until if d > te]),
                                                    c.legal_shape_nodes)
                 productive_nodeh = max(0.0, productive_nodeh - _expected_lost(ckpt) * usable_now)
