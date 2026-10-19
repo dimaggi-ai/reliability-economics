@@ -41,6 +41,7 @@ from __future__ import annotations
 import dataclasses
 import heapq
 import math
+from numbers import Real
 import numpy as np
 
 NODE_GPUS = 8
@@ -130,7 +131,8 @@ class Sim:
         timeline = tuple((te, nfail) for te, nfail in events)
         for te, nfail in timeline:
             try:
-                valid_time = math.isfinite(te) and 0 <= te < cfg.horizon_h
+                valid_time = (isinstance(te, Real) and not isinstance(te, bool)
+                              and math.isfinite(te) and 0 <= te < cfg.horizon_h)
             except (TypeError, OverflowError):
                 valid_time = False
             if not valid_time:

@@ -3,6 +3,8 @@
 Run: python3 -m unittest discover -s sim -p test_event_inputs.py -v
 """
 import dataclasses
+from decimal import Decimal
+from fractions import Fraction
 import itertools
 import math
 import random
@@ -59,7 +61,7 @@ class EventInputsTests(unittest.TestCase):
 
     def test_valid_boundaries_are_finite_and_bounded(self):
         before_end = math.nextafter(24., 0.)
-        cases = [[], [(0., 1)], [(before_end, 1)], [(before_end, 1), (0., 1)],
+        cases = [[], [(Fraction(3, 2), 1)], [(0., 1)], [(before_end, 1)], [(before_end, 1), (0., 1)],
                  [(1., 2), (1., 1)], [(0., 2), (0., 1)],
                  [(before_end, 2), (before_end, 1)],
                  [(math.nextafter(1., math.inf), 1), (1., 1)]]
@@ -89,7 +91,7 @@ class EventInputsTests(unittest.TestCase):
     def test_invalid_times_refused_at_construction_for_every_policy(self):
         for policy, time in itertools.product(Sim.POLICIES, (
                 math.nan, math.inf, -math.inf, -1., 24., 25.,
-                None, "1.0", 10**1000)):
+                None, "1.0", 10**1000, True, False, Decimal("1.5"))):
             with self.subTest(policy=policy, time=time):
                 with self.assertRaisesRegex(ValueError, "event time"):
                     Sim(self.cfg, policy, [(time, 1)])
