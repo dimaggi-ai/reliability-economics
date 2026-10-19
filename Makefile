@@ -2,6 +2,7 @@
 all: test
 test: validation        ## invariants + the validation registry
 	cd sim && python3 test_reliability_sim.py
+	python3 -m unittest discover -s sim -p test_event_inputs.py -v
 	$(MAKE) research-claims
 research-claims:         ## reproduced artifacts and economic prose must agree
 	python3 tools/check_research_claims.py
