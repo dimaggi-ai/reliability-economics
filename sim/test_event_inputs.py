@@ -30,6 +30,38 @@ class EventInputsTests(unittest.TestCase):
             "waste_dollars": 12395.,
         })
 
+    def test_review_ordering_probes_have_fixed_productive_capacity(self):
+        # Frozen CTO probe (15 October 2026), not another Sim run as oracle.
+        # Main 4f7c7c1b returned 1168 / 1072.5 for the shuffled timeline;
+        # the chronological elastic / auto-restart answers are 1120 / 760.
+        cfg = Config(nodes=8, horizon_h=20, legal_shape_nodes=1, repair_h=2,
+                     requal_h=0, reshard_h=0, ckpt_overlap_interval_h=1,
+                     ckpt_overlap_write_h=0, spare_nodes=2)
+        timelines = ([(1.0, 1), (5.0, 1), (9.0, 2)],
+                     [(9.0, 2), (1.0, 1), (5.0, 1)])
+        for policy, expected in (("elastic", 1120.0), ("auto-restart", 760.0)):
+            for events in timelines:
+                with self.subTest(policy=policy, events=events):
+                    self.assertEqual(Sim(cfg, policy, events).run()["productive_gpu_h"],
+                                     expected)
+
+    def test_review_invalid_timeline_can_be_corrected_and_resubmitted(self):
+        cfg = Config(nodes=8, horizon_h=20, legal_shape_nodes=1, repair_h=2,
+                     requal_h=0, reshard_h=0, ckpt_overlap_interval_h=1,
+                     ckpt_overlap_write_h=0, spare_nodes=2)
+        for policy, expected in (("elastic", 1120.0), ("auto-restart", 760.0)):
+            for invalid, message in (([math.nan, 1], "event time"),
+                                     ([5.0, 0], "failed-node count")):
+                with self.subTest(policy=policy, invalid=invalid):
+                    # A library caller repairs the rejected row and submits a
+                    # new simulation; refusal must not poison a later valid run.
+                    events = [[9.0, 2], [1.0, 1], invalid.copy()]
+                    with self.assertRaisesRegex(ValueError, message):
+                        Sim(cfg, policy, events)
+                    events[2] = [5.0, 1]
+                    self.assertEqual(Sim(cfg, policy, events).run()["productive_gpu_h"],
+                                     expected)
+
     def test_order_reversal(self):
         events = [(1., 1), (8., 1)]
         for policy in Sim.POLICIES:
