@@ -41,6 +41,7 @@ from __future__ import annotations
 import dataclasses
 import heapq
 import math
+from numbers import Real
 import numpy as np
 
 NODE_GPUS = 8
@@ -113,7 +114,13 @@ def latent_events(cfg: Config, rng) -> list[tuple[float, int]]:
 
 
 class Sim:
-    """Run one policy against a fixed latent-event timeline."""
+    """Run one policy against a fixed latent-event timeline.
+
+    Snapshot and sort faults by (time, failed-node count), keeping duplicates.
+    At equal times, smaller faults consume spares first. Repair/spare returns
+    and recovery completion take effect before faults at that time. Elastic
+    reshard stops remain serialized, including for simultaneous faults.
+    """
 
     POLICIES = ("manual", "auto-restart", "auto-spares", "auto-spares-ckpt", "elastic")
 
@@ -121,7 +128,18 @@ class Sim:
         assert policy in self.POLICIES, policy
         self.cfg = cfg
         self.policy = policy
-        self.events = events
+        timeline = tuple((te, nfail) for te, nfail in events)
+        for te, nfail in timeline:
+            try:
+                valid_time = (isinstance(te, Real) and not isinstance(te, bool)
+                              and math.isfinite(te) and 0 <= te < cfg.horizon_h)
+            except (TypeError, OverflowError):
+                valid_time = False
+            if not valid_time:
+                raise ValueError("event time must be finite and in [0, horizon_h)")
+            if isinstance(nfail, bool) or not isinstance(nfail, int) or nfail <= 0:
+                raise ValueError("event failed-node count must be a positive integer")
+        self.events = tuple(sorted(timeline))
 
     def run(self) -> dict:
         c = self.cfg

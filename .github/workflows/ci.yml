@@ -11,6 +11,8 @@ jobs:
       - run: pip install -r sim/requirements.txt
       - name: Invariants + validation anchors
         run: cd sim && python3 test_reliability_sim.py
+      - name: Event input validation and order invariance
+        run: python3 -m unittest discover -s sim -p test_event_inputs.py -v
       - name: Validation registry (model vs public record)
         run: cd sim && python3 test_validation.py && python3 validation.py
       - name: Published tables and economic prose reproduce without overwriting evidence
