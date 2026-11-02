@@ -26,7 +26,7 @@
     "README.md": {
       "source_type": "model-assumption",
       "location": "README.md",
-      "version_date": "2026-10-12 reviewed correction; SHA-256 bound below",
+      "version_date": "2026-10-12 reviewed correction; 2026-11-01 synthetic-fleet section added (pending review); SHA-256 bound below",
       "license_or_reuse": "Repository-authored analysis; third-party facts referenced, no new external raw data redistributed",
       "scope": "Local authoritative definition or claim. External provenance retained in SOURCES/REFERENCES and inline citations; scenario choices are not empirical measurements."
     },
@@ -387,7 +387,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "44ad6d0d056f702a8d6f5b662a92d0e05797da293649b06b6c0eaec7cedf3727"
+      "sha256": "26e62228878198f6008a03143c4d871413ee9312a142496a4963ebbcf91e712f"
     },
     {
       "path": "REFERENCES.md",
