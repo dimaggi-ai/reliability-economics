@@ -1,0 +1,21 @@
+site   region    gen vendor  devices  racks  pods  per_device_allin_w  it_mw  pue  facility_mw
+ TX1    ERCOT  GB200 NVIDIA    40968    569    72              1750.4  71.71 1.15        82.46
+ TX1    ERCOT   B200 NVIDIA    20864    652    82              1876.9  39.16 1.15        45.03
+ TX1    ERCOT   H200 NVIDIA    14624    457    58              1338.8  19.58 1.15        22.51
+ VA1      PJM   H100 NVIDIA    31616    988   124              1338.8  42.33 1.30        55.02
+ VA1      PJM   H200 NVIDIA    14368    449    57              1338.8  19.24 1.30        25.01
+ VA1      PJM   A100 NVIDIA    18048    564    71               853.1  15.40 1.30        20.02
+ IA1     MISO  TPUv7 Google    44416    694     5               787.5  34.98 1.10        38.48
+ IA1     MISO TPUv6e Google    55360   1730   217               451.5  25.00 1.10        27.49
+ IA1     MISO TPUv5p Google    38080    595     5               525.0  19.99 1.10        21.99
+ IA1     MISO TPUv5e Google    29760    930   117               336.0  10.00 1.10        11.00
+ IA1     MISO  TPUv4 Google    31744    496     8               315.0  10.00 1.10        11.00
+ FI1 NORDPOOL MI355X    AMD    12160    380    48              2205.0  26.81 1.12        30.03
+ FI1 NORDPOOL MI300X    AMD    11552    361    46              1391.2  16.07 1.12        18.00
+ FI1 NORDPOOL   H100 NVIDIA     8000    250    32              1338.8  10.71 1.12        12.00
+ KR1      KPX   H200 NVIDIA    13824    432    54              1338.8  18.51 1.35        24.98
+ KR1      KPX   H100 NVIDIA    13824    432    54              1338.8  18.51 1.35        24.98
+ OR1     WECC   TRN2    AWS    18304    286    18               787.5  14.41 1.25        18.02
+ OR1     WECC   A100 NVIDIA    11264    352    44               853.1   9.61 1.25        12.01
+
+Target facility 500.0 MW | BOM facility 500.04 MW | IT 422.00 MW | fleet PUE 1.185 | devices 428,776 | pods 1112 | jobs 531

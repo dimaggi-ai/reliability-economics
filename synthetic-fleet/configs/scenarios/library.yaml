@@ -1,0 +1,19 @@
+# Declarative chaos scenario library. Each entry: type (engine primitive), blast radius, duration, cause, responsible party.
+# All magnitudes are ASSUMPTIONS chosen to resemble publicly described incidents; they are not measured rates.
+library:
+  device_failure_burst:   {type: node_burst, desc: "Batch of bad parts: many nodes fail within a few hours", node_frac: 0.02, window_h: 6, repair_median_h: 30, cause: gpu_hw_batch, party: vendor}
+  node_failure:           {type: node_burst, desc: "Single node hard failure", nodes: 1, window_h: 0.1, repair_median_h: 20, cause: gpu, party: vendor}
+  rack_pdu_loss:          {type: rack_down, desc: "Rack PDU / busway trip takes out whole racks", racks: 4, duration_h: 5, cause: rack_pdu, party: operator}
+  cooling_thermal_event:  {type: thermal, desc: "Chiller/CDU loss: PUE up, hall throttles, some nodes trip", pue_delta: 0.25, throttle: 0.30, trip_frac: 0.01, duration_h: 6, cause: cooling, party: operator}
+  hall_outage:            {type: hall_down, desc: "Medium-voltage fault drops one data hall", duration_h: 8, cause: hall_power, party: operator}
+  site_outage:            {type: site_down, desc: "Utility loss beyond UPS/generator ride-through", duration_h: 10, cause: utility_outage, party: grid}
+  grid_curtailment:       {type: power_cap, desc: "Grid operator demand-response: facility capped", cap_frac: 0.70, duration_h: 4, cause: grid_curtailment, party: grid}
+  ocs_fault:              {type: ocs, desc: "Optical circuit switch failure in TPU superpods (NSDI'23 FT routing: 92.2% throughput, 5% of jobs opt out)", pods: 2, duration_h: 6, cause: ocs, party: vendor}
+  cable_fault_burst:      {type: cable, desc: "Cable/optic failures (IB/RoCE or ICI) after maintenance", count: 25, window_h: 12, repair_median_h: 40, cause: cable, party: operator}
+  network_partition:      {type: partition, desc: "Spine/fabric partition blocks multi-pod training", pod_frac: 0.5, duration_h: 2, cause: network_partition, party: operator}
+  silent_data_corruption: {type: sdc, desc: "Silent data corruption on one node; detected late; rollback to last good checkpoint", detect_delay_h: 6, repair_median_h: 48, cause: sdc, party: vendor}
+  straggler:              {type: straggler, desc: "Slow node/link drags synchronous training", jobs: 2, slowdown: 0.25, duration_h: 18, cause: straggler, party: operator}
+  firmware_rollout_bad:   {type: firmware, desc: "Bad firmware wave: reboots then elevated failures until rollback", waves: 4, wave_gap_h: 3, wave_frac: 0.10, reboot_min: 25, failure_mult: 8, elevated_h: 24, cause: firmware, party: vendor}
+  cascading_failure:      {type: cascade, desc: "Hall outage at primary; failover overloads others: demand surge + curtailment + partition", steps: [{use: hall_outage, lag_h: 0, same_site: true}, {use: demand_shock, lag_h: 1, other_sites: 2, mult: 1.5}, {use: grid_curtailment, lag_h: 2, other_sites: 1, cap_frac: 0.8}, {use: network_partition, lag_h: 3, other_sites: 1}], cause: cascade, party: operator}
+  supply_delay:           {type: undelivered, desc: "Late delivery: part of a generation not energized/accepted on time", pod_frac: 0.5, duration_h: 432, cause: supply_delay, party: vendor}
+  demand_shock:           {type: demand, desc: "Inference demand surge (or drop with mult<1)", mult: 1.6, duration_h: 24, cause: demand_shock, party: tenant}

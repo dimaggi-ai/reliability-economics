@@ -84,6 +84,10 @@ The consistency check regenerates all 22 CSV rows, the summary and 324 sensitivi
 
 Python 3.11+, `numpy`, `matplotlib`. Seeded and deterministic; checks run in [CI](.github/workflows/ci.yml).
 
+## Synthetic fleet: a 500 MW testbed for chaos and reliability economics
+
+[`synthetic-fleet/`](synthetic-fleet/) is a seeded generator for a **500 MW, 6-campus synthetic accelerator fleet** (GB200/B200/H200, H100/A100, TPU v4 through Ironwood, MI355X/MI300X, Trainium2) that emits device-, pod-, network-, power- and fate-level telemetry. It ships **16 chaos scenarios**, a **Monte Carlo mode** for random chaos per seed, a 1 GW scale option, and a validation run against public calibration targets. Its [calibration doc](synthetic-fleet/docs/CALIBRATION.md) traces every parameter to a source and marks **39 of 65 parameters as assumptions** (including Blackwell and TPU v5+ failure rates), so treat its outputs as test data, not measurements. Large run outputs are git-ignored; regenerate them with `python -m synthfleet run`. See [synthetic-fleet/README.md](synthetic-fleet/README.md).
+
 ## Honest scope
 
 One gang **training** job (no inter-job scheduling — the [scheduling repo](https://github.com/dimaggi-ai/scheduler-vs-more-gpus); no inference — a different metric); deterministic blast radius and point recovery times; progress linear in usable width above the legal-shape floor. The contribution is the phase structure and the method, with calibrated inputs and internal checks; absolute cell values are site-specific. The full "what a skeptic should attack" list is in [docs/study.md](docs/study.md#what-a-skeptic-should-attack) — pre-empting the critique is the point.

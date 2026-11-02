@@ -1,0 +1,96 @@
+# Every number the generator uses, with its source. status: calibrated = taken directly from a public
+# dataset/paper; derived = computed by tools/derive_calibration.py from a public dataset; assumption = no
+# public data exists, chosen by DIMAGGI and flagged as such. Units are in the `unit` field.
+sources:
+  llama3: {title: "The Llama 3 Herd of Models (Table 5, sec 3.3.4)", url: "https://arxiv.org/abs/2407.21783"}
+  meta_rsc: {title: "Revisiting Reliability in Large-Scale ML Research Clusters (Meta RSC)", url: "https://arxiv.org/abs/2410.21680"}
+  stepfun: {title: "StepFun InfiniteHBD-Trace (fault_trace.json, 400 servers, 348 days)", url: "https://github.com/stepfun-ai/InfiniteHBD-Trace"}
+  bytedance: {title: "ByteDance llm-training-alert-trace (98 jobs, 344k alerts, CC-BY-4.0)", url: "https://huggingface.co/datasets/bytedance-research/llm-training-alert-trace"}
+  delta: {title: "Story of Two GPUs: A100 vs H100 resilience on NCSA Delta (SC25)", url: "https://arxiv.org/abs/2503.11901"}
+  tpuv4_nsdi: {title: "Resiliency at Scale: Managing Google's TPUv4 ML Supercomputer (NSDI'24)", url: "https://www.usenix.org/conference/nsdi24/presentation/zu"}
+  ironwood_blog: {title: "Cluster reliability for trillion parameter models on TPUs (Google Cloud, May 2026)", url: "https://cloud.google.com/blog/products/compute/cluster-reliability-for-trillion-parameter-models-on-tpus"}
+  gemini: {title: "Gemini: A Family of Highly Capable Multimodal Models (goodput 85% -> 97%)", url: "https://arxiv.org/abs/2312.11805"}
+  powertrace: {title: "LLM-PowerTrace (Table 13 loaded idle power per GPU)", url: "https://arxiv.org/abs/2610.38315"}
+  acme: {title: "Acme trace, Shanghai AI Lab (NSDI'24)", url: "https://github.com/InternLM/AcmeTrace"}
+  nvidia_dgx: {title: "NVIDIA DGX system datasheets (max system power: DGX A100 6.5 kW, DGX H100/H200 10.2 kW, DGX B200 14.3 kW)", url: "https://www.nvidia.com/en-us/data-center/dgx-platform/"}
+  pue_ladder: {title: "dimaggi-ai/cooling-pue-ladder (survey PUE 1.56, hyperscale ~1.1, NVL72-class ~120 kW rack)", url: "https://github.com/dimaggi-ai/cooling-pue-ladder"}
+  tpu_docs: {title: "Google Cloud TPU system architecture (pod and slice sizes)", url: "https://cloud.google.com/tpu/docs/system-architecture-tpu-vm"}
+  dimaggi: {title: "DIMAGGI assumption (no public data)", url: ""}
+
+params:
+  # ---------- interruption (job-interrupting unexpected fault) rates, per device-day ----------
+  h100_interrupt_rate: {value: 4.737e-4, unit: per GPU-day, status: calibrated, source: llama3, note: "419 unexpected interruptions / 54 days / 16,384 H100"}
+  h200_interrupt_rate: {value: 4.737e-4, unit: per GPU-day, status: assumption, source: dimaggi, note: "Same Hopper platform as H100"}
+  a100_interrupt_rate: {value: 2.621e-3, unit: per GPU-day, status: calibrated, source: meta_rsc, note: "MTTF 47.7 days for 8-GPU jobs => 1/(47.7*8); research cluster, broader failure definition than Llama 3"}
+  b200_interrupt_rate: {value: 6.158e-4, unit: per GPU-day, status: assumption, source: dimaggi, note: "H100 x 1.3: new platform, early-life failures; no public Blackwell fleet data"}
+  gb200_interrupt_rate: {value: 7.106e-4, unit: per GPU-day, status: assumption, source: dimaggi, note: "H100 x 1.5: NVL72 rack-scale NVLink domain, liquid cooling, early life; no public data"}
+  mi300x_interrupt_rate: {value: 5.684e-4, unit: per GPU-day, status: assumption, source: dimaggi, note: "H100 x 1.2; no public AMD fleet reliability data"}
+  mi355x_interrupt_rate: {value: 6.632e-4, unit: per GPU-day, status: assumption, source: dimaggi, note: "H100 x 1.4; no public data"}
+  trn2_interrupt_rate: {value: 5.684e-4, unit: per chip-day, status: assumption, source: dimaggi, note: "H100 x 1.2; no public Trainium data"}
+  tpuv4_machine_rate: {value: 8.0e-4, unit: per TPU machine-day (4 chips), status: calibrated, source: tpuv4_nsdi, note: "0.08% of TPU machines fail per day"}
+  tpuv4_ici_cable_rate: {value: 5.0e-5, unit: per ICI cable-day, status: calibrated, source: tpuv4_nsdi, note: "0.005% of ICI cables per day"}
+  tpuv4_ocs_rate: {value: 4.0e-4, unit: per OCS-day, status: calibrated, source: tpuv4_nsdi, note: "0.04% of OCS per day"}
+  tpu_ici_cables_per_chip: {value: 1.5, unit: cables per chip, status: calibrated, source: tpuv4_nsdi, note: "6,144 optical ICI links per 4,096-chip pod"}
+  tpu_ocs_per_4096_chips: {value: 48, unit: OCS per 4,096 chips, status: calibrated, source: tpuv4_nsdi}
+  tpu_ocs_ft_routing_throughput: {value: 0.922, unit: fraction, status: calibrated, source: tpuv4_nsdi, note: "Throughput under one OCS outage with fault-tolerant routing (4x4x4)"}
+  tpu_ft_routing_optin: {value: 0.95, unit: fraction of jobs, status: calibrated, source: tpuv4_nsdi}
+  tpu_v5e_rate_mult: {value: 1.0, unit: x v4 machine rate, status: assumption, source: dimaggi}
+  tpu_v5p_rate_mult: {value: 1.0, unit: x v4 machine rate, status: assumption, source: dimaggi}
+  tpu_v6e_rate_mult: {value: 1.1, unit: x v4 machine rate, status: assumption, source: dimaggi}
+  tpu_v7_rate_mult: {value: 1.2, unit: x v4 machine rate, status: assumption, source: dimaggi, note: "No public Ironwood failure rates"}
+  # ---------- fault mix and repair times (node level) ----------
+  node_fault_class_mix:
+    value: {gpu: 0.3244, unknown: 0.2957, cable: 0.0821, fan: 0.0678, nic: 0.0616, psu: 0.0534, software: 0.0493, tenant_task: 0.0287, change: 0.0144, motherboard_cpu: 0.0144, other_hw: 0.0082}
+    unit: share of node faults (stress-test failures excluded)
+    status: derived
+    source: stepfun
+    note: "tools/derive_calibration.py: 584 fault starts, 97 burn-in stress-test failures removed, renormalised"
+  mttr_lognormal_median_days: {value: {gpu: 0.70, unknown: 0.65, cable: 1.97, fan: 3.06, nic: 0.49, psu: 14.63, software: 0.80, tenant_task: 0.69, motherboard_cpu: 1.05, change: 0.17, other_hw: 0.99}, unit: days, status: derived, source: stepfun, note: "Median fault_start->fault_end per class"}
+  mttr_lognormal_sigma: {value: 2.525, unit: log-sd, status: derived, source: stepfun, note: "Std of log repair time across all 584 faults (paired faults excl. zero-length: median 0.94 d, mean 5.7 d)"}
+  mttr_max_days: {value: 45, unit: days, status: assumption, source: dimaggi, note: "Truncate heavy tail (StepFun p90 13.5 d)"}
+  tpu_mttr_median_days: {value: 0.5, unit: days, status: assumption, source: dimaggi, note: "Automated TPU repair workflows (NSDI'24) but no published repair time"}
+  tpu_mttr_sigma: {value: 1.5, unit: log-sd, status: assumption, source: dimaggi}
+  multi_node_fault_prob: {value: 0.276, unit: probability a fault takes 2-3 nodes of a rack, status: derived, source: bytedance, note: "Share of jobs with >=2 faulty nodes (tools/derive_calibration.py), applied per fault"}
+  planned_maintenance_ratio: {value: 0.112, unit: planned / unexpected interruptions, status: calibrated, source: llama3, note: "47 planned vs 419 unexpected"}
+  planned_maintenance_median_h: {value: 2.0, unit: hours, status: assumption, source: dimaggi}
+  # ---------- recovery economics (tuned to reproduce public ETTR / goodput) ----------
+  gpu_restart_median_min: {value: 13, unit: minutes, status: assumption, source: dimaggi, note: "Detect + reschedule + reload; tuned so large-job ETTR lands in Meta's 0.85-0.90"}
+  gpu_checkpoint_interval_min: {value: 15, unit: minutes, status: assumption, source: dimaggi, note: "Rework ~ U(0, interval)"}
+  tpu_restart_median_min: {value: 15, unit: minutes, status: assumption, source: dimaggi, note: "Tuned so OCS-superpod training goodput lands near Gemini's 97%; the Gemini report describes the mechanism, not the minutes"}
+  tpu_checkpoint_interval_min: {value: 3, unit: minutes, status: assumption, source: dimaggi, note: "In-memory redundant state => small rework"}
+  inference_restart_min: {value: 6, unit: minutes, status: assumption, source: dimaggi}
+  target_ettr_large_gpu_jobs: {value: [0.85, 0.90], unit: ETTR, status: calibrated, source: meta_rsc, note: "Validation target, large jobs"}
+  target_tpu_goodput: {value: 0.97, unit: goodput, status: calibrated, source: gemini, note: "Validation target"}
+  target_mttf_1024_a100_h: {value: 7.9, unit: hours, status: calibrated, source: meta_rsc}
+  target_mttf_16k_h100_h: {value: 3.09, unit: hours, status: calibrated, source: llama3, note: "54*24/419"}
+  ironwood_cube_availability: {value: {cubes_needed: 130, of: 144, time_share: 0.95}, unit: fraction of month, status: calibrated, source: ironwood_blog, note: "Google's modelled target; used as a validation target"}
+  # ---------- memory errors ----------
+  a100_correctable_ecc_per_gpu_day: {value: 0.02, unit: events per GPU-day, status: assumption, source: dimaggi}
+  h100_vs_a100_memory_error_ratio: {value: 3.2, unit: x, status: calibrated, source: delta, note: "H100 per-GPU memory MTBE 3.2x lower than A100"}
+  # ---------- power and thermal ----------
+  idle_power_w: {value: {A100: 72.9, H100: 126.3, H200: 120.9}, unit: W loaded idle, status: calibrated, source: powertrace}
+  idle_power_frac_other: {value: 0.17, unit: fraction of TDP, status: assumption, source: dimaggi, note: "Hopper loaded idle is ~0.17-0.18 of TDP (PowerTrace); applied to generations without data"}
+  host_overhead_w: {value: {A100: 412.5, H100: 575.0, H200: 575.0, B200: 787.5}, unit: W per GPU (system max / 8 - GPU TDP), status: calibrated, source: nvidia_dgx}
+  network_overhead_frac: {value: 0.05, unit: fraction of IT, status: assumption, source: dimaggi, note: "Switches/optics"}
+  power_util_exponent: {value: 0.9, unit: P = Pidle + (TDP-Pidle)*util^a, status: assumption, source: dimaggi}
+  throughput_power_exponent: {value: 0.7, unit: throughput ~ power^b under caps, status: assumption, source: dimaggi}
+  pue_survey_avg: {value: 1.56, unit: PUE, status: calibrated, source: pue_ladder}
+  pue_hyperscale: {value: 1.10, unit: PUE, status: calibrated, source: pue_ladder}
+  nvl72_rack_kw: {value: 120, unit: kW per NVL72 rack, status: calibrated, source: pue_ladder}
+  # ---------- workload ----------
+  inference_load_base: {value: 0.55, unit: fraction, status: assumption, source: dimaggi}
+  inference_load_diurnal_amp: {value: 0.30, unit: fraction, status: assumption, source: dimaggi}
+  training_run_median_days: {value: 3.0, unit: days, status: assumption, source: dimaggi}
+  training_gap_median_min: {value: 45, unit: minutes, status: assumption, source: dimaggi, note: "Scheduler gap between training runs"}
+  rdma_link_flap_per_link_hour: {value: 2.7e-4, unit: per link-hour, status: derived, source: bytedance, note: "1,807 rdma_link_flap_inc alerts / 828,601 Hopper node-hours / 8 links; upper bound (sample of failing jobs)"}
+  crc_errors_per_link_hour: {value: 0.05, unit: per link-hour, status: assumption, source: dimaggi}
+  train_running_util: {value: 0.90, unit: GPU/TPU busy fraction while a training step runs, status: assumption, source: dimaggi}
+  inference_busy_util: {value: 0.75, unit: busy fraction of a serving device under load, status: assumption, source: dimaggi}
+  host_idle_frac: {value: 0.60, unit: host power when accelerators idle / host max, status: assumption, source: dimaggi}
+  restart_sigma: {value: 0.4, unit: log-sd of restart time, status: assumption, source: dimaggi}
+  pue_ambient_sensitivity: {value: 0.004, unit: PUE per degC above site mean, status: assumption, source: dimaggi}
+  ambient_diurnal_amp_c: {value: 5.0, unit: degC, status: assumption, source: dimaggi}
+  device_temp_idle_c: {value: 38, unit: degC above which load adds, status: assumption, source: dimaggi}
+  device_temp_load_rise_c: {value: 32, unit: degC rise at full power (liquid cooled x0.6), status: assumption, source: dimaggi}
+  mttr_scale_by_gen: {value: {A100: 0.18}, unit: multiplier on node repair time, status: assumption, source: dimaggi, note: "Meta RSC's A100 rate counts every job-failing node event (many cleared by reboot/health check); scaling StepFun repair times by rate_H100/rate_A100 keeps A100 steady-state downtime near H100's instead of ~15%"}
+  warmup_days: {value: 45, unit: days of pre-roll so repairs already in progress at t=0 exist (equals mttr_max), status: assumption, source: dimaggi}

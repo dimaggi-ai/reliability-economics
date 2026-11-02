@@ -1,0 +1,47 @@
+# Synthetic 500 MW distributed fleet. Facility power = IT power x PUE.
+fleet:
+  name: dimaggi-synthetic-500mw
+  target_facility_mw: 500      # nameplate facility power the BOM reconciles to
+  scale: 1.0                   # multiply target (2.0 = 1 GW); device sampling auto-caps
+  network_overhead_frac: 0.05  # see calibration.yaml
+sim:
+  seed: 42
+  start: "2026-10-01T00:00:00Z"
+  days: 30
+  interval_min: 5
+  device_sample_frac: 0.002    # sampled devices get full per-device time series
+  device_sample_min_per_group: 4
+  device_sample_max: 1200
+outputs:
+  csv_sample_rows: 5000
+
+generations:
+  #  tdp_w / host_w: per device. status notes in docs/CALIBRATION.md
+  A100:   {vendor: NVIDIA, family: gpu, tdp_w: 400,  host_w: 412.5, dev_per_node: 8, nodes_per_rack: 4,  dev_per_pod: 256,  fabric: InfiniBand, rate_param: a100_interrupt_rate,  max_train_job: 4096,  spare_frac: 0.0, release: 2020}
+  H100:   {vendor: NVIDIA, family: gpu, tdp_w: 700,  host_w: 575,   dev_per_node: 8, nodes_per_rack: 4,  dev_per_pod: 256,  fabric: InfiniBand, rate_param: h100_interrupt_rate,  max_train_job: 16384, spare_frac: 0.0, release: 2022}
+  H200:   {vendor: NVIDIA, family: gpu, tdp_w: 700,  host_w: 575,   dev_per_node: 8, nodes_per_rack: 4,  dev_per_pod: 256,  fabric: InfiniBand, rate_param: h200_interrupt_rate,  max_train_job: 8192,  spare_frac: 0.0, release: 2024}
+  B200:   {vendor: NVIDIA, family: gpu, tdp_w: 1000, host_w: 787.5, dev_per_node: 8, nodes_per_rack: 4,  dev_per_pod: 256,  fabric: InfiniBand, rate_param: b200_interrupt_rate,  max_train_job: 8192,  spare_frac: 0.0, release: 2025}
+  GB200:  {vendor: NVIDIA, family: gpu, tdp_w: 1200, host_w: 467,   dev_per_node: 4, nodes_per_rack: 18, dev_per_pod: 576,  fabric: NVLink72+InfiniBand, rate_param: gb200_interrupt_rate, max_train_job: 18432, spare_frac: 0.0, release: 2025}
+  MI300X: {vendor: AMD,    family: gpu, tdp_w: 750,  host_w: 575,   dev_per_node: 8, nodes_per_rack: 4,  dev_per_pod: 256,  fabric: RoCE,       rate_param: mi300x_interrupt_rate, max_train_job: 4096,  spare_frac: 0.0, release: 2023}
+  MI355X: {vendor: AMD,    family: gpu, tdp_w: 1400, host_w: 700,   dev_per_node: 8, nodes_per_rack: 4,  dev_per_pod: 256,  fabric: RoCE,       rate_param: mi355x_interrupt_rate, max_train_job: 4096,  spare_frac: 0.0, release: 2025}
+  TRN2:   {vendor: AWS,    family: trn, tdp_w: 500,  host_w: 250,   dev_per_node: 16, nodes_per_rack: 4, dev_per_pod: 1024, fabric: NeuronLink+EFA, rate_param: trn2_interrupt_rate, max_train_job: 8192, spare_frac: 0.0, release: 2024}
+  TPUv4:  {vendor: Google, family: tpu, tdp_w: 200,  host_w: 100,   dev_per_node: 4, nodes_per_rack: 16, dev_per_pod: 4096, fabric: ICI+OCS, rate_mult_param: null,              max_train_job: 4096, spare_frac: 0.03, release: 2021}
+  TPUv5e: {vendor: Google, family: tpu, tdp_w: 220,  host_w: 100,   dev_per_node: 8, nodes_per_rack: 4,  dev_per_pod: 256,  fabric: ICI,     rate_mult_param: tpu_v5e_rate_mult, max_train_job: 256,  spare_frac: 0.0,  release: 2023}
+  TPUv5p: {vendor: Google, family: tpu, tdp_w: 400,  host_w: 100,   dev_per_node: 4, nodes_per_rack: 16, dev_per_pod: 8960, fabric: ICI+OCS, rate_mult_param: tpu_v5p_rate_mult, max_train_job: 8960, spare_frac: 0.03, release: 2023}
+  TPUv6e: {vendor: Google, family: tpu, tdp_w: 330,  host_w: 100,   dev_per_node: 8, nodes_per_rack: 4,  dev_per_pod: 256,  fabric: ICI,     rate_mult_param: tpu_v6e_rate_mult, max_train_job: 2048, spare_frac: 0.0,  release: 2024}
+  TPUv7:  {vendor: Google, family: tpu, tdp_w: 650,  host_w: 100,   dev_per_node: 4, nodes_per_rack: 16, dev_per_pod: 9216, fabric: ICI+OCS, rate_mult_param: tpu_v7_rate_mult,  max_train_job: 8320, spare_frac: 0.0,  release: 2025}
+
+sites:
+  - {id: TX1, name: ERCOT AI campus,     region: ERCOT, utc_offset_h: -6, share: 0.30, pue: 1.15, cooling: direct_liquid,  ambient_c: 22, halls: 6, training_share: 0.85, mix: {GB200: 0.55, B200: 0.30, H200: 0.15}}
+  - {id: VA1, name: PJM colocation,      region: PJM,   utc_offset_h: -5, share: 0.20, pue: 1.30, cooling: air_rear_door,  ambient_c: 15, halls: 5, training_share: 0.60, mix: {H100: 0.55, H200: 0.25, A100: 0.20}}
+  - {id: IA1, name: MISO TPU campus,     region: MISO,  utc_offset_h: -6, share: 0.22, pue: 1.10, cooling: direct_liquid,  ambient_c: 10, halls: 5, training_share: 0.70, mix: {TPUv7: 0.35, TPUv6e: 0.25, TPUv5p: 0.20, TPUv5e: 0.10, TPUv4: 0.10}}
+  - {id: FI1, name: Nordic neocloud,     region: NORDPOOL, utc_offset_h: 2, share: 0.12, pue: 1.12, cooling: direct_liquid, ambient_c: 3, halls: 3, training_share: 0.60, mix: {MI355X: 0.50, MI300X: 0.30, H100: 0.20}}
+  - {id: KR1, name: Korea inference hub, region: KPX,   utc_offset_h: 9,  share: 0.10, pue: 1.35, cooling: air,            ambient_c: 12, halls: 3, training_share: 0.30, mix: {H200: 0.50, H100: 0.50}}
+  - {id: OR1, name: WECC legacy + Trainium, region: WECC, utc_offset_h: -8, share: 0.06, pue: 1.25, cooling: air_rear_door, ambient_c: 11, halls: 2, training_share: 0.50, mix: {TRN2: 0.60, A100: 0.40}}
+
+obligations:
+  # contract terms used for the SLA / obligation-shortfall summary
+  availability_target: 0.99          # 1 - down/installed, excluding planned maintenance
+  training_useful_target: 0.85       # useful / installed for training capacity
+  inference_served_target: 0.995     # served / demanded for inference capacity
+  credit_usd_per_shortfall_device_hour: 2.0   # illustrative only

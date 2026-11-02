@@ -1,0 +1,7 @@
+# Large generated run outputs (regenerate with `python -m synthfleet run --out runs/<name>`)
+runs/**/*.parquet
+runs/**/samples/
+# Small summary / validation reports (csv, json, md) stay committed.
+__pycache__/
+*.pyc
+.venv/

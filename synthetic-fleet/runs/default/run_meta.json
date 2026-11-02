@@ -1,0 +1,120 @@
+{
+  "seed": 42,
+  "config": "/workspace/dimaggi/synthetic-fleet/configs/fleet_500mw.yaml",
+  "chaos": "/workspace/dimaggi/synthetic-fleet/configs/chaos_curated.yaml",
+  "schedule": [
+    {
+      "use": "firmware_rollout_bad",
+      "start_h": 52,
+      "target": {
+        "site": "TX1",
+        "gen": "GB200"
+      }
+    },
+    {
+      "use": "grid_curtailment",
+      "start_h": 110,
+      "target": {
+        "site": "TX1"
+      }
+    },
+    {
+      "use": "rack_pdu_loss",
+      "start_h": 140,
+      "target": {
+        "site": "VA1",
+        "gen": "H100"
+      }
+    },
+    {
+      "use": "ocs_fault",
+      "start_h": 175,
+      "target": {
+        "site": "IA1",
+        "gen": "TPUv7"
+      }
+    },
+    {
+      "use": "cooling_thermal_event",
+      "start_h": 230,
+      "target": {
+        "site": "KR1"
+      }
+    },
+    {
+      "use": "silent_data_corruption",
+      "start_h": 260,
+      "target": {
+        "site": "TX1",
+        "gen": "B200"
+      }
+    },
+    {
+      "use": "supply_delay",
+      "start_h": 0,
+      "target": {
+        "site": "FI1",
+        "gen": "MI355X"
+      }
+    },
+    {
+      "use": "straggler",
+      "start_h": 330,
+      "target": {
+        "site": "VA1",
+        "gen": "H200"
+      }
+    },
+    {
+      "use": "network_partition",
+      "start_h": 390,
+      "target": {
+        "site": "FI1"
+      }
+    },
+    {
+      "use": "hall_outage",
+      "start_h": 450,
+      "target": {
+        "site": "VA1"
+      }
+    },
+    {
+      "use": "demand_shock",
+      "start_h": 500,
+      "target": {
+        "site": "KR1"
+      }
+    },
+    {
+      "use": "cascading_failure",
+      "start_h": 560,
+      "target": {
+        "site": "TX1"
+      }
+    },
+    {
+      "use": "device_failure_burst",
+      "start_h": 610,
+      "target": {
+        "site": "IA1",
+        "gen": "TPUv6e"
+      }
+    },
+    {
+      "use": "site_outage",
+      "start_h": 660,
+      "target": {
+        "site": "OR1"
+      }
+    }
+  ],
+  "target_facility_mw": 500.0,
+  "bom_facility_mw": 500.04203802,
+  "devices": 428776,
+  "jobs": 531,
+  "events": 24618,
+  "intervals": 8640,
+  "interval_min": 5,
+  "runtime_s": 18.9
+}
