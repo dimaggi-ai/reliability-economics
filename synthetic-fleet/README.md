@@ -50,7 +50,7 @@ device_failure_burst, node_failure, rack_pdu_loss, cooling_thermal_event, hall_o
 
 ## Where it would live
 
-Fits `dimaggi-ai/reliability-economics` (as `synthetic-fleet/`) or alongside `ai-cluster-chaos-fidelity`; the fate/party labels match the four-fate accounting in `usable-compute`. Not pushed anywhere.
+Fits `dimaggi-ai/reliability-economics` (as `synthetic-fleet/`) or alongside `ai-cluster-chaos-fidelity`; the fate/party labels match the four-fate accounting in `usable-compute`.
 
 ## What the tarball contains
 
