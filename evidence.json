@@ -5,9 +5,9 @@
     "sim/reliability_sim.py": {
       "source_type": "model-assumption",
       "location": "sim/reliability_sim.py",
-      "version_date": "2026-10-12 reviewed correction; SHA-256 bound below",
+      "version_date": "2026-11-04 horizon validation; current source SHA-256 bound below",
       "license_or_reuse": "Repository-authored analysis; third-party facts referenced, no new external raw data redistributed",
-      "scope": "Local authoritative definition or claim. External provenance retained in SOURCES/REFERENCES and inline citations; scenario choices are not empirical measurements."
+      "scope": "Current source adds finite-positive horizon refusal. Historical results and figures were not regenerated; their existing producer attribution and hashes are unchanged. External provenance retained in SOURCES/REFERENCES and inline citations; scenario choices are not empirical measurements."
     },
     "sim/recovery_sensitivity.py": {
       "source_type": "model-assumption",
@@ -435,7 +435,7 @@
     },
     {
       "path": "sim/reliability_sim.py",
-      "sha256": "072386a0b20a75e6a63a3bfd248677e6c41253e60476b119348e9a97a3c38749"
+      "sha256": "66fbe6314149aabe2b3a49ab4701e920a22f2e236c2d378a9d1a6df272389988"
     },
     {
       "path": "sim/run.py",
