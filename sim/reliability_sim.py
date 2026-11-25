@@ -47,6 +47,17 @@ import numpy as np
 NODE_GPUS = 8
 
 
+def _validate_horizon(horizon) -> None:
+    """Require a finite positive real horizon without imposing an operating cap."""
+    try:
+        valid = (isinstance(horizon, Real) and not isinstance(horizon, bool)
+                 and math.isfinite(horizon) and horizon > 0)
+    except (TypeError, ValueError, OverflowError):
+        valid = False
+    if not valid:
+        raise ValueError("horizon_h must be a finite positive real number (not bool)")
+
+
 @dataclasses.dataclass
 class Config:
     # cluster / horizon
@@ -78,6 +89,9 @@ class Config:
     spare_nodes: int = 0
     legal_shape_nodes: int = 8            # elastic shrinks by whole G-node replicas
 
+    def __post_init__(self):
+        _validate_horizon(self.horizon_h)
+
     @property
     def gpus(self) -> int:
         return self.nodes * NODE_GPUS
@@ -89,6 +103,7 @@ def latent_events(cfg: Config, rng) -> list[tuple[float, int]]:
     with the single-node RATE held fixed so burstiness is isolated from rate:
     a fraction of the single-node budget is re-expressed as bursts when
     burst_rate>0 (so mean node-failures/hour is invariant to blast radius)."""
+    _validate_horizon(cfg.horizon_h)
     evs: list[tuple[float, int]] = []
     # bursts consume part of the node-failure budget; keep total node rate fixed
     total_node_rate = cfg.single_rate_per_node_h * cfg.nodes      # node-failures/h
@@ -125,6 +140,7 @@ class Sim:
     POLICIES = ("manual", "auto-restart", "auto-spares", "auto-spares-ckpt", "elastic")
 
     def __init__(self, cfg: Config, policy: str, events: list[tuple[float, int]]):
+        _validate_horizon(cfg.horizon_h)
         assert policy in self.POLICIES, policy
         self.cfg = cfg
         self.policy = policy
@@ -143,6 +159,7 @@ class Sim:
 
     def run(self) -> dict:
         c = self.cfg
+        _validate_horizon(c.horizon_h)
         # Checkpoint regime: the ckpt-tuned spare policy AND elastic use
         # overlapped (async) checkpointing, so the spares-vs-elastic comparison
         # is not confounded by checkpoint choice; the rest use blocking.
@@ -280,6 +297,7 @@ def _last_ckpt(t: float, ckpt: float) -> float:
 
 
 def run_policy(cfg: Config, policy: str) -> dict:
+    _validate_horizon(cfg.horizon_h)
     rng = np.random.default_rng(cfg.seed)
     events = latent_events(cfg, rng)
     return Sim(cfg, policy, events).run()
@@ -287,6 +305,7 @@ def run_policy(cfg: Config, policy: str) -> dict:
 
 def run_all(cfg: Config) -> dict[str, dict]:
     """All policies on the SAME latent timeline (shared latent events)."""
+    _validate_horizon(cfg.horizon_h)
     rng = np.random.default_rng(cfg.seed)
     events = latent_events(cfg, rng)
     return {p: Sim(cfg, p, events).run() for p in Sim.POLICIES}
