@@ -41,7 +41,7 @@ from __future__ import annotations
 import dataclasses
 import heapq
 import math
-from numbers import Real
+from numbers import Real, Integral
 import numpy as np
 
 NODE_GPUS = 8
@@ -104,11 +104,41 @@ def latent_events(cfg: Config, rng) -> list[tuple[float, int]]:
     a fraction of the single-node budget is re-expressed as bursts when
     burst_rate>0 (so mean node-failures/hour is invariant to blast radius)."""
     _validate_horizon(cfg.horizon_h)
+
+    def rate(name, value):
+        try:
+            valid = (isinstance(value, Real) and not isinstance(value, bool)
+                     and math.isfinite(value) and value >= 0)
+        except (TypeError, ValueError, OverflowError):
+            valid = False
+        if not valid:
+            raise ValueError(f"{name} must be a finite nonnegative real number (not bool)")
+
+    for name in ('single_rate_per_node_h', 'burst_rate_per_h'):
+        rate(name, getattr(cfg, name))
+    for name, minimum in (('nodes', 0), ('burst_blast', 1)):
+        value = getattr(cfg, name)
+        if not isinstance(value, Integral) or isinstance(value, bool) or value < minimum:
+            raise ValueError(f"{name} must be an integer >= {minimum} (not bool)")
+
+    def node_rate(name, per_event, count):
+        try:
+            # Integral scalar arithmetic must not wrap (e.g. NumPy int64).
+            value = (int(per_event) * int(count) if isinstance(per_event, Integral)
+                     else per_event * count)
+        except OverflowError as exc:
+            raise ValueError(f"{name} must be finite") from exc
+        rate(name, value)
+        return value
+
+    # Bursts consume the declared node-failure budget, never increase it.
+    total_node_rate = node_rate('total_node_rate', cfg.single_rate_per_node_h, cfg.nodes)
+    burst_node_rate = node_rate('burst_node_rate', cfg.burst_rate_per_h, cfg.burst_blast)
+    if burst_node_rate > total_node_rate:
+        raise ValueError("burst_node_rate exceeds total_node_rate: burst_rate_per_h * "
+                         "burst_blast must not exceed single_rate_per_node_h * nodes")
+    single_node_rate = total_node_rate - burst_node_rate
     evs: list[tuple[float, int]] = []
-    # bursts consume part of the node-failure budget; keep total node rate fixed
-    total_node_rate = cfg.single_rate_per_node_h * cfg.nodes      # node-failures/h
-    burst_node_rate = cfg.burst_rate_per_h * cfg.burst_blast
-    single_node_rate = max(0.0, total_node_rate - burst_node_rate)
     # single-node faults (Poisson)
     t = 0.0
     while single_node_rate > 0:

@@ -99,3 +99,25 @@ One gang **training** job (no inter-job scheduling — the [scheduling repo](htt
 ---
 
 *Margaret (Maggie) Nanyonga — Founder & Principal Architect, [DIMAGGI AI](https://dimaggi.ai). Governed AI infrastructure: the control, reliability, and audit layer for autonomous systems operating production networks and compute.*
+
+### Latent failure-process input contract
+
+Before drawing any events, `latent_events` validates its current configuration:
+`single_rate_per_node_h` and `burst_rate_per_h` must be finite nonnegative real
+numbers; `nodes` must be a nonnegative integer and `burst_blast` a positive
+integer. Booleans are not rates or counts. Supported real/integral scalar types
+include NumPy scalars; integral products must not wrap. The existing finite
+positive horizon requirement remains in force.
+
+Both derived node-failure rates must be finite, and
+`burst_rate_per_h * burst_blast` must not exceed
+`single_rate_per_node_h * nodes`. An excess raises a field-specific `ValueError`
+before RNG use, rather than clipping or rescaling the process. Equality is valid
+and leaves no independent single-node component. Valid zero-rate/zero-node
+processes produce no events. Correct an invalid configuration and retry;
+validation also applies after mutating a `Config`.
+
+This contract preserves valid event timelines and RNG draw order; it does not
+validate unrelated recovery-policy inputs, guarantee termination for an invalid
+caller-provided RNG, or impose an event/resource cap on extreme valid workloads.
+These are synthetic failure processes, not observed production reliability.
