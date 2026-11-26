@@ -94,10 +94,80 @@ def test_correlated_failures_flip_the_winner():
     # independent, a right-sized pool: spares+ckpt beats elastic
     ind = {p: _mean(p, spare_nodes=8) for p in ("auto-spares-ckpt", "elastic")}
     assert ind["auto-spares-ckpt"] > ind["elastic"], ind
-    # correlated rack bursts with a small pool: elastic wins
-    corr = {p: _mean(p, spare_nodes=2, burst_rate_per_h=0.03, burst_blast=16)
+    # Published sweep budget: 0.2 node-failures/h in bursts, below total0.323584.
+    # The former 0.03*16 over-budget fixture is explicitly refused below.
+    # Correlated rack bursts with a small pool: elastic wins
+    corr = {p: _mean(p, spare_nodes=2, burst_rate_per_h=0.2/16, burst_blast=16)
             for p in ("auto-spares-ckpt", "elastic")}
     assert corr["elastic"] > corr["auto-spares-ckpt"], corr
+
+
+
+class _RecordingRng:
+    def __init__(self):
+        self.scales = []
+    def exponential(self, scale):
+        self.scales.append(scale)
+        return 2.0
+
+
+def _refuse_before_rng(cfg, field):
+    rng = _RecordingRng()
+    try:
+        latent_events(cfg, rng)
+    except ValueError as exc:
+        assert field in str(exc), str(exc)
+    else:
+        raise AssertionError('expected refusal: ' + field)
+    assert rng.scales == [], rng.scales
+
+
+def test_burst_budget_refusal_equality_and_below():
+    _refuse_before_rng(Config(nodes=4, single_rate_per_node_h=1, burst_rate_per_h=3, burst_blast=2, horizon_h=1), 'burst_node_rate')
+    for burst, expected in ((2, [.5]), (1, [.5, 1.0]), (0, [.25])):
+        rng = _RecordingRng()
+        assert latent_events(Config(nodes=4, single_rate_per_node_h=1, burst_rate_per_h=burst, burst_blast=2, horizon_h=1), rng) == []
+        assert rng.scales == expected, (burst, rng.scales)
+    for cfg in (Config(nodes=0), Config(single_rate_per_node_h=0)):
+        rng = _RecordingRng()
+        assert latent_events(cfg, rng) == []
+        assert rng.scales == []
+
+
+def test_failure_inputs_refused_before_rng_even_after_mutation():
+    for name in ('single_rate_per_node_h', 'burst_rate_per_h'):
+        for value in (-1, float('nan'), float('inf'), True, '0', None, 10**1000):
+            cfg = Config(); setattr(cfg, name, value)
+            _refuse_before_rng(cfg, name)
+    for name in ('nodes', 'burst_blast'):
+        for value in (-1, 1.5, float('nan'), float('inf'), True, '2', None):
+            cfg = Config(); setattr(cfg, name, value)
+            _refuse_before_rng(cfg, name)
+    _refuse_before_rng(Config(burst_blast=0), 'burst_blast')
+    _refuse_before_rng(Config(single_rate_per_node_h=1e308, nodes=100), 'total_node_rate')
+    _refuse_before_rng(Config(burst_rate_per_h=1e308, burst_blast=100), 'burst_node_rate')
+    cfg=Config();cfg.horizon_h=float('nan');_refuse_before_rng(cfg,'horizon_h')
+
+
+def test_integral_numpy_types_do_not_wrap_the_budget():
+    # 2**62 * 4 would wrap to zero in NumPy int64 multiplication.
+    cfg=Config(nodes=np.int64(2**62), single_rate_per_node_h=np.int64(4), horizon_h=1)
+    rng=_RecordingRng();assert latent_events(cfg,rng)==[]
+    assert rng.scales == [1.0 / (2**64)]
+    cfg=Config(nodes=np.int64(4),single_rate_per_node_h=np.float64(1), burst_rate_per_h=np.float64(2),burst_blast=np.int64(2),horizon_h=1)
+    rng=_RecordingRng();assert latent_events(cfg,rng)==[];assert rng.scales==[.5]
+    for field in ('nodes','burst_blast','single_rate_per_node_h','burst_rate_per_h'):
+        cfg=Config();setattr(cfg,field,np.bool_(True));_refuse_before_rng(cfg,field)
+
+
+def test_public_policy_refusal_and_recovery():
+    cfg=Config(spare_nodes=2,burst_rate_per_h=.03,burst_blast=16)
+    try:run_policy(cfg,'elastic')
+    except ValueError as exc:assert 'burst_node_rate' in str(exc)
+    else:raise AssertionError('old over-budget correlated fixture must refuse')
+    cfg.burst_rate_per_h=.2/16
+    result=run_policy(cfg,'elastic')
+    assert 0 < result['ettr'] <= result['availability'] <= 1
 
 
 if __name__ == "__main__":
