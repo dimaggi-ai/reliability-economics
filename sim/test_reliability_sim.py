@@ -1,5 +1,7 @@
 """Reliability-sim invariants + validation-against-anchors. Run: python3 test_reliability_sim.py"""
 import statistics
+from decimal import Decimal
+from fractions import Fraction
 from reliability_sim import Config, Sim, run_all, run_policy, latent_events
 import numpy as np
 
@@ -94,7 +96,7 @@ def test_correlated_failures_flip_the_winner():
     # independent, a right-sized pool: spares+ckpt beats elastic
     ind = {p: _mean(p, spare_nodes=8) for p in ("auto-spares-ckpt", "elastic")}
     assert ind["auto-spares-ckpt"] > ind["elastic"], ind
-    # Published sweep budget: 0.2 node-failures/h in bursts, below total0.323584.
+    # Published sweep budget: 0.2 node-failures/h in bursts, below total 0.323584.
     # The former 0.03*16 over-budget fixture is explicitly refused below.
     # Correlated rack bursts with a small pool: elastic wins
     corr = {p: _mean(p, spare_nodes=2, burst_rate_per_h=0.2/16, burst_blast=16)
@@ -136,11 +138,11 @@ def test_burst_budget_refusal_equality_and_below():
 
 def test_failure_inputs_refused_before_rng_even_after_mutation():
     for name in ('single_rate_per_node_h', 'burst_rate_per_h'):
-        for value in (-1, float('nan'), float('inf'), True, '0', None, 10**1000):
+        for value in (-1, float('nan'), float('inf'), -float('inf'), True, False, np.bool_(False), Decimal('1'), 1+0j, '0', None, 10**1000):
             cfg = Config(); setattr(cfg, name, value)
             _refuse_before_rng(cfg, name)
     for name in ('nodes', 'burst_blast'):
-        for value in (-1, 1.5, float('nan'), float('inf'), True, '2', None):
+        for value in (-1, 1.5, float('nan'), float('inf'), -float('inf'), True, False, np.bool_(False), Decimal('4'), 4+0j, 4.0, '2', None):
             cfg = Config(); setattr(cfg, name, value)
             _refuse_before_rng(cfg, name)
     _refuse_before_rng(Config(burst_blast=0), 'burst_blast')
@@ -168,6 +170,121 @@ def test_public_policy_refusal_and_recovery():
     cfg.burst_rate_per_h=.2/16
     result=run_policy(cfg,'elastic')
     assert 0 < result['ettr'] <= result['availability'] <= 1
+
+
+
+# Frozen old generator body from main 1c3ba66d20613c707dc47e64c44ee3f791b92cca.
+# Keep independent of the new implementation so draw/order regressions are visible.
+def _old_latent_events(cfg, rng):
+    evs: list[tuple[float, int]] = []
+    # bursts consume part of the node-failure budget; keep total node rate fixed
+    total_node_rate = cfg.single_rate_per_node_h * cfg.nodes      # node-failures/h
+    burst_node_rate = cfg.burst_rate_per_h * cfg.burst_blast
+    single_node_rate = max(0.0, total_node_rate - burst_node_rate)
+    # single-node faults (Poisson)
+    t = 0.0
+    while single_node_rate > 0:
+        t += rng.exponential(1.0 / single_node_rate)
+        if t >= cfg.horizon_h:
+            break
+        evs.append((t, 1))
+    # correlated bursts (Poisson)
+    if cfg.burst_rate_per_h > 0:
+        t = 0.0
+        while True:
+            t += rng.exponential(1.0 / cfg.burst_rate_per_h)
+            if t >= cfg.horizon_h:
+                break
+            evs.append((t, cfg.burst_blast))
+    evs.sort()
+    return evs
+
+
+def _assert_old_parity(cfg, seed):
+    actual_rng = np.random.default_rng(seed)
+    old_rng = np.random.default_rng(seed)
+    actual = latent_events(cfg, actual_rng)
+    expected = _old_latent_events(cfg, old_rng)
+    assert actual == expected, (seed, cfg)
+    assert actual_rng.bit_generator.state == old_rng.bit_generator.state
+    assert actual_rng.random() == old_rng.random()
+    return actual
+
+
+def test_old_generator_no_burst_timeline_and_rng_parity():
+    for seed in (0, 1, 7, 42, 1234):
+        events = _assert_old_parity(Config(), seed)
+        assert len(events) > 50  # A real timeline, not an empty stub result.
+
+
+def test_old_generator_exact_horizon_boundary():
+    # Make the first real seeded draw land exactly on the horizon.
+    # This catches >= becoming > without relying on a chance floating-point tie.
+    for seed in (0, 7, 42):
+        horizon = np.random.default_rng(seed).exponential(1.0)
+        cfg = Config(nodes=1, single_rate_per_node_h=1, horizon_h=horizon)
+        assert _assert_old_parity(cfg, seed) == []
+
+
+def test_old_generator_valid_burst_timeline_and_rng_parity():
+    for seed in (0, 1, 7, 42, 1234):
+        events = _assert_old_parity(Config(burst_rate_per_h=.2/16, burst_blast=16), seed)
+        assert any(n == 16 for _, n in events)
+        assert any(n == 1 for _, n in events)
+
+
+def test_old_generator_supported_scalar_parity():
+    for single, burst, nodes, blast in (
+        (1, 1, 4, 2),
+        (np.float64(1), np.float64(.5), np.int64(4), np.int64(2)),
+        (Fraction(1, 3), Fraction(1, 6), 4, 2),
+    ):
+        for seed in (0, 7, 42):
+            _assert_old_parity(Config(single_rate_per_node_h=single, burst_rate_per_h=burst,
+                                     nodes=nodes, burst_blast=blast, horizon_h=10), seed)
+
+
+def test_narrow_numpy_rates_refused_before_rng_and_float64_recovery():
+    for kind in (np.float16, np.float32, np.longdouble):
+        if np.dtype(kind) == np.dtype('float64'):
+            continue
+        for field in ('single_rate_per_node_h', 'burst_rate_per_h'):
+            cfg = Config(); setattr(cfg, field, kind(0))
+            _refuse_before_rng(cfg, field)
+            setattr(cfg, field, kind(1))
+            _refuse_before_rng(cfg, field)
+    for kind, excess in ((np.float16, 4e-4), (np.float32, 5e-8)):
+        cfg = Config(nodes=1, single_rate_per_node_h=kind(1),
+                     burst_rate_per_h=1+excess, burst_blast=1, horizon_h=1)
+        _refuse_before_rng(cfg, 'single_rate_per_node_h')
+        cfg.single_rate_per_node_h = np.float64(1)
+        _refuse_before_rng(cfg, 'burst_node_rate')
+        cfg.burst_rate_per_h = np.float64(.5)
+        _assert_old_parity(cfg, 7)
+
+
+def test_unrepresentable_positive_rates_and_scales_refuse_before_rng():
+    for field in ('single_rate_per_node_h', 'burst_rate_per_h'):
+        cfg = Config(); setattr(cfg, field, Fraction(1, 10**400))
+        _refuse_before_rng(cfg, field)
+    # A representable positive rate may still have an infinite reciprocal.
+    _refuse_before_rng(Config(nodes=1, single_rate_per_node_h=5e-324), 'single_node_rate')
+    _refuse_before_rng(Config(burst_rate_per_h=5e-324), 'burst_rate_per_h')
+    # Huge count conversion is deliberately outside the supported range even at zero rate.
+    _refuse_before_rng(Config(single_rate_per_node_h=0., nodes=10**400), 'total_node_rate')
+    _refuse_before_rng(Config(burst_rate_per_h=0., burst_blast=10**400), 'burst_node_rate')
+
+
+def test_public_run_all_refusal_and_corrected_recovery():
+    cfg = Config(burst_rate_per_h=.03, burst_blast=16)
+    try:
+        run_all(cfg)
+    except ValueError as exc:
+        assert 'burst_node_rate' in str(exc)
+    else:
+        raise AssertionError('public entry point must refuse an over-budget process')
+    cfg.burst_rate_per_h = .2/16
+    assert run_all(cfg) == run_all(Config(burst_rate_per_h=.2/16, burst_blast=16))
 
 
 if __name__ == "__main__":
