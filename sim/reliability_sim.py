@@ -108,11 +108,14 @@ def latent_events(cfg: Config, rng) -> list[tuple[float, int]]:
     def rate(name, value):
         try:
             valid = (isinstance(value, Real) and not isinstance(value, bool)
-                     and math.isfinite(value) and value >= 0)
+                     and not (isinstance(value, np.floating) and value.dtype != np.dtype("float64"))
+                     and math.isfinite(value) and value >= 0
+                     and (value == 0 or float(value) > 0))
         except (TypeError, ValueError, OverflowError):
             valid = False
         if not valid:
-            raise ValueError(f"{name} must be a finite nonnegative real number (not bool)")
+            raise ValueError(f"{name} must be a finite nonnegative real number "
+                             "representable as float64 (not bool or a non-float64 NumPy float)")
 
     for name in ('single_rate_per_node_h', 'burst_rate_per_h'):
         rate(name, getattr(cfg, name))
@@ -138,11 +141,27 @@ def latent_events(cfg: Config, rng) -> list[tuple[float, int]]:
         raise ValueError("burst_node_rate exceeds total_node_rate: burst_rate_per_h * "
                          "burst_blast must not exceed single_rate_per_node_h * nodes")
     single_node_rate = total_node_rate - burst_node_rate
+    def scale(name, value):
+        # Validate both streams before consuming either stream's randomness.
+        rate(name, value)
+        if value == 0:
+            return None
+        try:
+            result = 1.0 / value
+            valid = math.isfinite(result) and result > 0
+        except (TypeError, ValueError, OverflowError, ZeroDivisionError):
+            valid = False
+        if not valid:
+            raise ValueError(f"{name} must have a finite positive exponential scale")
+        return result
+
+    single_scale = scale('single_node_rate', single_node_rate)
+    burst_scale = scale('burst_rate_per_h', cfg.burst_rate_per_h)
     evs: list[tuple[float, int]] = []
     # single-node faults (Poisson)
     t = 0.0
     while single_node_rate > 0:
-        t += rng.exponential(1.0 / single_node_rate)
+        t += rng.exponential(single_scale)
         if t >= cfg.horizon_h:
             break
         evs.append((t, 1))
@@ -150,7 +169,7 @@ def latent_events(cfg: Config, rng) -> list[tuple[float, int]]:
     if cfg.burst_rate_per_h > 0:
         t = 0.0
         while True:
-            t += rng.exponential(1.0 / cfg.burst_rate_per_h)
+            t += rng.exponential(burst_scale)
             if t >= cfg.horizon_h:
                 break
             evs.append((t, cfg.burst_blast))
