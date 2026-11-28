@@ -226,6 +226,16 @@ def test_old_generator_exact_horizon_boundary():
         assert _assert_old_parity(cfg, seed) == []
 
 
+def test_old_generator_burst_exact_horizon_boundary():
+    # Equality budget leaves only bursts. The first real seeded burst draw
+    # lands exactly on the horizon and must not emit an event or draw again.
+    for seed in (0, 7, 42):
+        horizon = np.random.default_rng(seed).exponential(1.0)
+        cfg = Config(nodes=1, single_rate_per_node_h=1.0,
+                     burst_rate_per_h=1.0, burst_blast=1, horizon_h=horizon)
+        assert _assert_old_parity(cfg, seed) == []
+
+
 def test_old_generator_valid_burst_timeline_and_rng_parity():
     for seed in (0, 1, 7, 42, 1234):
         events = _assert_old_parity(Config(burst_rate_per_h=.2/16, burst_blast=16), seed)
